@@ -1,0 +1,44 @@
+body{
+    background:linear-gradient(135deg, #e3ffe7, rgb(151, 255, 255),cyan);
+    font-family: "Montserrat", sans-serif;
+  }
+  .outline-thick{
+    border: var(--primary) 8px solid;
+    border-radius: 21px;
+  }
+  .outline-thick img{
+    border-radius: 10px;
+  }
+  section{
+    text-align: center;
+  }
+  h1{
+    color: black;
+    font-size: 4rem;
+  }
+  h2{
+    color: black;
+    font-size: 3rem;
+  }
+  h3{
+    color: black;
+    font-size: 2rem;
+  }
+  .img-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    text-align: center;
+    transition: .5s ease;
+    border-radius: 13px;
+    background-color: var(--secondary);
+  }
+  .col:hover .img-overlay{
+    opacity: 1;
+  }
