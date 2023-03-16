@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/activities.css">
+  <link rel="stylesheet" href="css/testing.css">
+  <link rel="stylesheet" href="css/button.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <link rel="icon" type="image/png" href="logo.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -131,147 +132,217 @@
   <div class="heading">
     <h1>Events and activities</h1>
   </div>
-  <div class="heading">
-    <button class="top-button" id="show-tech">technical</button>
-    <button class="top-button" id="show-cultural">cultural</button>
-    <button class="top-button" id="show-splash">Splash</button>
+  <div class="top-button">
+    <!-- <button class="btn btn-outline-primary" id="show-tech">technical</button>
+    <button class="btn btn-outline-primary" id="show-cultural">cultural</button>
+    <button class="btn btn-outline-primary" id="show-splash">Splash</button> -->
+    <button class="button-top cultural-btn"  onclick="addAnimation()" id="show-tech">
+      CULTURAL
+      </button>
+      <button class="button-top tech-btn"  onclick="addAnimation2()" id="show-cultural">
+      TECHNICAL
+      </button>
+      <button class="button-top splash-btn"  onclick="addAnimation2()" id="show-splash">
+       SPLASH
+      </button>
   </div>
 
   <!-- card section -->
 
   <!-- tech section -->
-
   <section id="tech" class="visible-section">
-    <section class="hero-section">
-      <div class="card-grid">
-        <a class="card" href="#">
-          <div class="card__background"
-            style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
-          </div>
-          <div class="card__content">
-            <p class="card__category">Category</p>
-            <h3 class="card__heading">Example Card Heading</h3>
-          </div>
-        </a>
-        <a class="card" href="#">
-          <div class="card__background"
-            style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
-          </div>
-          <div class="card__content">
-            <p class="card__category">Category</p>
-            <h3 class="card__heading">Example Card Heading</h3>
-          </div>
-        </a>
-        <a class="card" href="#">
-          <div class="card__background"
-            style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
-          </div>
-          <div class="card__content">
-            <p class="card__category">Category</p>
-            <h3 class="card__heading">Example Card Heading</h3>
-          </div>
-        </a>
-        <a class="card" href="#">
-          <div class="card__background"
-            style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
-          </div>
-          <div class="card__content">
-            <p class="card__category">Category</p>
-            <h3 class="card__heading">Example Card Heading</h3>
-          </div>
-        </a>
-        <div>
-    </section>
+  <section class="dark">
+    <div class="container py-4">
+
+        <article class="postcard dark blue">
+            <a class="postcard__img_link" href="#">
+                <img class="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
+            </a>
+            <div class="postcard__text">
+                <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
+                <div class="postcard__subtitle small">
+                    <time datetime="2020-05-25 12:00:00">
+                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                    </time>
+                </div>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+            </div>
+        </article>
+        <article class="postcard dark red">
+            <a class="postcard__img_link" href="#">
+                <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />	
+            </a>
+            <div class="postcard__text">
+                <h1 class="postcard__title red"><a href="#">Podcast Title</a></h1>
+                <div class="postcard__subtitle small">
+                    <time datetime="2020-05-25 12:00:00">
+                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                    </time>
+                </div>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                 
+            </div>
+        </article>
+        <article class="postcard dark green">
+            <a class="postcard__img_link" href="#">
+                <img class="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
+            </a>
+            <div class="postcard__text">
+                <h1 class="postcard__title green"><a href="#">Podcast Title</a></h1>
+                <div class="postcard__subtitle small">
+                    <time datetime="2020-05-25 12:00:00">
+                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                    </time>
+                </div>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+            </div>
+        </article>
+        <article class="postcard dark yellow">
+            <a class="postcard__img_link" href="#">
+                <img class="postcard__img" src="https://picsum.photos/501/501" alt="Image Title" />
+            </a>
+            <div class="postcard__text">
+                <h1 class="postcard__title yellow"><a href="#">Podcast Title</a></h1>
+                <div class="postcard__subtitle small">
+                    <time datetime="2020-05-25 12:00:00">
+                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                    </time>
+                </div>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+            </div>
+        </article>
+    </div>
+</section>
   </section>
 
   <!-- cultural event -->
-
   <section id="cultural" class="hidden-section">
-    <section class="hero-section">
-      <div class="card-grid">
-        <a class="card" href="#">
-          <div class="card__background"
-            style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)">
-          </div>
-          <div class="card__content">
-            <p class="card__category">Category</p>
-            <h3 class="card__heading">Example Card Heading</h3>
-          </div>
-        </a>
-        <a class="card" href="#">
-          <div class="card__background"
-            style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
-          </div>
-          <div class="card__content">
-            <p class="card__category">Category</p>
-            <h3 class="card__heading">Example Card Heading</h3>
-          </div>
-        </a>
-        <a class="card" href="#">
-          <div class="card__background"
-            style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
-          </div>
-          <div class="card__content">
-            <p class="card__category">Category</p>
-            <h3 class="card__heading">Example Card Heading</h3>
-          </div>
-          </li>
-          <a class="card" href="#">
-            <div class="card__background"
-              style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
+  <section class="dark">
+    <div class="container py-4">
+        <article class="postcard dark red">
+            <a class="postcard__img_link" href="#">
+                <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />	
+            </a>
+            <div class="postcard__text">
+                <h1 class="postcard__title red"><a href="#">Podcast Title</a></h1>
+                <div class="postcard__subtitle small">
+                    <time datetime="2020-05-25 12:00:00">
+                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                    </time>
+                </div>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                 
             </div>
-            <div class="card__content">
-              <p class="card__category">Category</p>
-              <h3 class="card__heading">Example Card Heading</h3>
+        </article>
+        <article class="postcard dark green">
+            <a class="postcard__img_link" href="#">
+                <img class="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
+            </a>
+            <div class="postcard__text">
+                <h1 class="postcard__title green"><a href="#">Podcast Title</a></h1>
+                <div class="postcard__subtitle small">
+                    <time datetime="2020-05-25 12:00:00">
+                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                    </time>
+                </div>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
             </div>
-          </a>
-          <div>
-    </section>
-  </section>
+        </article>
+        <article class="postcard dark yellow">
+            <a class="postcard__img_link" href="#">
+                <img class="postcard__img" src="https://picsum.photos/501/501" alt="Image Title" />
+            </a>
+            <div class="postcard__text">
+                <h1 class="postcard__title yellow"><a href="#">Podcast Title</a></h1>
+                <div class="postcard__subtitle small">
+                    <time datetime="2020-05-25 12:00:00">
+                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                    </time>
+                </div>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+            </div>
+        </article>
+    </div>
+</section>
+</section>
 
   <!-- splash section -->
 
   <section id="splash" class="hidden-section">
-    <section class="hero-section">
-      <div class="card-grid">
-        <a class="card" href="#">
-          <div class="card__background"
-            style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
-          </div>
-          <div class="card__content">
-            <p class="card__category">Category</p>
-            <h3 class="card__heading">Example Card Heading</h3>
-          </div>
-        </a>
-        <a class="card" href="#">
-          <div class="card__background"
-            style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
-          </div>
-          <div class="card__content">
-            <p class="card__category">Category</p>
-            <h3 class="card__heading">Example Card Heading</h3>
-          </div>
-        </a>
-        <a class="card" href="#">
-          <div class="card__background"
-            style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
-          </div>
-          <div class="card__content">
-            <p class="card__category">Category</p>
-            <h3 class="card__heading">Example Card Heading</h3>
-          </div>
-        </a>
-        <a class="card" href="#">
-          <div class="card__background"
-            style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
-          </div>
-          <div class="card__content">
-            <p class="card__category">Category</p>
-            <h3 class="card__heading">Example Card Heading</h3>
-          </div>
-        </a>
+    <section class="dark">
+      <div class="container py-4">
+  
+          <article class="postcard dark blue">
+              <a class="postcard__img_link" href="#">
+                  <img class="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
+              </a>
+              <div class="postcard__text">
+                  <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
+                  <div class="postcard__subtitle small">
+                      <time datetime="2020-05-25 12:00:00">
+                          <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                      </time>
+                  </div>
+                  <div class="postcard__bar"></div>
+                  <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+              </div>
+          </article>
+          <article class="postcard dark red">
+              <a class="postcard__img_link" href="#">
+                  <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />	
+              </a>
+              <div class="postcard__text">
+                  <h1 class="postcard__title red"><a href="#">Podcast Title</a></h1>
+                  <div class="postcard__subtitle small">
+                      <time datetime="2020-05-25 12:00:00">
+                          <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                      </time>
+                  </div>
+                  <div class="postcard__bar"></div>
+                  <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                   
+              </div>
+          </article>
+          <article class="postcard dark green">
+              <a class="postcard__img_link" href="#">
+                  <img class="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
+              </a>
+              <div class="postcard__text">
+                  <h1 class="postcard__title green"><a href="#">Podcast Title</a></h1>
+                  <div class="postcard__subtitle small">
+                      <time datetime="2020-05-25 12:00:00">
+                          <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                      </time>
+                  </div>
+                  <div class="postcard__bar"></div>
+                  <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+              </div>
+          </article>
+          <article class="postcard dark yellow">
+              <a class="postcard__img_link" href="#">
+                  <img class="postcard__img" src="https://picsum.photos/501/501" alt="Image Title" />
+              </a>
+              <div class="postcard__text">
+                  <h1 class="postcard__title yellow"><a href="#">Podcast Title</a></h1>
+                  <div class="postcard__subtitle small">
+                      <time datetime="2020-05-25 12:00:00">
+                          <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                      </time>
+                  </div>
+                  <div class="postcard__bar"></div>
+                  <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+              </div>
+          </article>
       </div>
-    </section>
+  </section>
+  
   </section>
   <!--* =-=-=-=-==-=-=-=-==-= Footer starts here ==-==-=-=-=-=-=--=-=-=- -->
   <footer id="footer" class="footer mt-auto p-0">
