@@ -1,14 +1,11 @@
-body{
-    background:linear-gradient(135deg, #e3ffe7, rgb(151, 255, 255),cyan);
-    font-family: "Montserrat", sans-serif;
-  }
+
   .outline-thick{
     border: var(--primary) 8px solid;
     border-radius: 21px;
   }
   .outline-thick img{
     border-radius: 10px;
-  }
+  } 
   section{
     text-align: center;
   }
@@ -44,7 +41,7 @@ body{
   }
   .landing-section{
     height: 100vh;
-    background-image: url("../assets/posters/homepage.png");
+    background-image: url("../assets/images/homepage.webp");
     background-repeat: no-repeat;
     background-size: cover;
   }

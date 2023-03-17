@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/activities.css">
-  <link rel="stylesheet" href="css/button.css">
-  
+  <link rel="stylesheet" href="../css/activities.css">
+  <link rel="stylesheet" href="../css/button.css">
+
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <link rel="icon" type="image/png" href="logo.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="../css/main.css" />
   <title>Events Page</title>
 </head>
 
@@ -33,7 +33,7 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-5">
           <div class="nav-item mx-2">
             <div class="container-fluid d-flex">
-              <a class="nav-link active" href="index.html">
+              <a class="nav-link active" href="../index.html">
                 <div class="button draw">Home</div>
               </a>
             </div>
@@ -41,7 +41,14 @@
           <li class="nav-item mx-2">
             <div class="container-fluid d-flex">
               <a class="nav-link active" href="events.html">
-                <div class="button draw">Events & Itinerary</div>
+                <div class="button draw">Events</div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item mx-2">
+            <div class="container-fluid d-flex">
+              <a class="nav-link active" href="itienary.html">
+                <div class="button draw">Itinerary</div>
               </a>
             </div>
           </li>
@@ -78,6 +85,7 @@
     </div>
   </nav>
 
+  <!-- =-=-=-=-=-=-=-=-=-=-=-=-= Drawer Starts =-=-=-=-=-=-==-=-=-=-===-=-= -->
   <div class="drawer drawer-inactive navbar-collapse fixed-top" expanded="false" id="drawer">
     <div class="d-flex dog p-3 justify-content-between" style="background-color: rgba(9, 10, 16, 1)">
       <div>Menu</div>
@@ -86,7 +94,7 @@
     <ul class="navbar-nav me-auto mb-2 mb-lg-0 py-5">
       <li class="nav-item">
         <div class="container-fluid">
-          <a class="nav-link active d-flex px-2" href="index.html">
+          <a class="nav-link active d-flex px-2" href="../index.html">
             <h6 class="my-auto mouse">Home</h6>
           </a>
         </div>
@@ -94,7 +102,14 @@
       <li class="nav-item">
         <div class="container-fluid">
           <a class="nav-link active d-flex px-2" href="events.html">
-            <h6 class="my-auto mouse">Events & Itinerary</h6>
+            <h6 class="my-auto mouse">Events </h6>
+          </a>
+        </div>
+      </li>
+      <li class="nav-item mx-2">
+        <div class="container-fluid d-flex">
+          <a class="nav-link active" href="itienary.html">
+            <div class="button draw">Itinerary</div>
           </a>
         </div>
       </li>
@@ -130,116 +145,124 @@
   </div>
   <!-- navbar end -->
   <section id="background_img">
-  <div class="heading">
-    <img src="assets/images/events.webp" class="heading_img">
-  </div>
-  <div class="top-button">
-    <!-- <button class="btn btn-outline-primary" id="show-tech">technical</button>
+    <div class="heading">
+      <img src="../assets/images/events.webp" class="heading_img">
+    </div>
+    <div class="top-button">
+      <!-- <button class="btn btn-outline-primary" id="show-tech">technical</button>
     <button class="btn btn-outline-primary" id="show-cultural">cultural</button>
     <button class="btn btn-outline-primary" id="show-splash">Splash</button> -->
-    <button class="button-top cultural-btn"  onclick="addAnimation()" id="show-tech">
-      CULTURAL
+      <button class="button-top cultural-btn" onclick="addAnimation()" id="show-tech">
+        CULTURAL
       </button>
-      <button class="button-top tech-btn"  onclick="addAnimation2()" id="show-cultural">
-      TECHNICAL
+      <button class="button-top tech-btn" onclick="addAnimation2()" id="show-cultural">
+        TECHNICAL
       </button>
-      <button class="button-top splash-btn"  onclick="addAnimation2()" id="show-splash">
-       SPLASH
+      <button class="button-top splash-btn" onclick="addAnimation2()" id="show-splash">
+        SPLASH
       </button>
-  </div>
+    </div>
 
-  <!-- card section -->
+    <!-- card section -->
 
-  <!-- tech section -->
-  <section id="tech" class="visible-section">
-    <main class="page-content">
+    <!-- tech section -->
+    <section id="tech" class="visible-section">
+      <main class="page-content">
         <div class="card">
-            <div class="content">
-                <h2 class="title">Mountain View</h2>
-                <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p><button class="view-more">View Trips</button>
-            </div>
+          <div class="content">
+            <h2 class="title">Mountain View</h2>
+            <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the
+              mountains</p><button class="view-more">View Trips</button>
+          </div>
         </div>
         <div class="card">
-            <div class="content">
-                <h2 class="title">To The Beach</h2>
-                <p class="copy">Plan your next beach trip with these fabulous destinations</p><button class="view-more">View Trips</button>
-            </div>
+          <div class="content">
+            <h2 class="title">To The Beach</h2>
+            <p class="copy">Plan your next beach trip with these fabulous destinations</p><button class="view-more">View
+              Trips</button>
+          </div>
         </div>
         <div class="card">
-            <div class="content">
-                <h2 class="title">Desert Destinations</h2>
-                <p class="copy">It's the desert you've always dreamed of</p><button class="view-more">Book Now</button>
-            </div>
+          <div class="content">
+            <h2 class="title">Desert Destinations</h2>
+            <p class="copy">It's the desert you've always dreamed of</p><button class="view-more">Book Now</button>
+          </div>
         </div>
         <div class="card">
-            <div class="content">
-                <h2 class="title">Explore The Galaxy</h2>
-                <p class="copy">Seriously, straight up, just blast off into outer space today</p><button class="view-more">Book Now</button>
-            </div>
+          <div class="content">
+            <h2 class="title">Explore The Galaxy</h2>
+            <p class="copy">Seriously, straight up, just blast off into outer space today</p><button
+              class="view-more">Book Now</button>
+          </div>
         </div>
-    </main>
-  </section>
+      </main>
+    </section>
 
-  <!-- cultural event -->
-  <section id="cultural" class="hidden-section">
-    <main class="page-content">
-      <div class="card">
+    <!-- cultural event -->
+    <section id="cultural" class="hidden-section">
+      <main class="page-content">
+        <div class="card">
           <div class="content">
-              <h2 class="title">Mountain View</h2>
-              <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p><button class="view-more">View Trips</button>
+            <h2 class="title">Mountain View</h2>
+            <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the
+              mountains</p><button class="view-more">View Trips</button>
           </div>
-      </div>
-      <div class="card">
+        </div>
+        <div class="card">
           <div class="content">
-              <h2 class="title">To The Beach</h2>
-              <p class="copy">Plan your next beach trip with these fabulous destinations</p><button class="view-more">View Trips</button>
+            <h2 class="title">To The Beach</h2>
+            <p class="copy">Plan your next beach trip with these fabulous destinations</p><button class="view-more">View
+              Trips</button>
           </div>
-      </div>
-      <div class="card">
+        </div>
+        <div class="card">
           <div class="content">
-              <h2 class="title">Desert Destinations</h2>
-              <p class="copy">It's the desert you've always dreamed of</p><button class="view-more">Book Now</button>
+            <h2 class="title">Desert Destinations</h2>
+            <p class="copy">It's the desert you've always dreamed of</p><button class="view-more">Book Now</button>
           </div>
-      </div>
-      <!-- <div class="card">
+        </div>
+        <!-- <div class="card">
           <div class="content">
               <h2 class="title">Explore The Galaxy</h2>
               <p class="copy">Seriously, straight up, just blast off into outer space today</p><button class="view-more">Book Now</button>
           </div>
       </div> -->
-  </main>
-  </section>
+      </main>
+    </section>
 
-  <!-- splash section -->
+    <!-- splash section -->
 
-  <section id="splash" class="hidden-section">
-    <main class="page-content">
-      <div class="card">
+    <section id="splash" class="hidden-section">
+      <main class="page-content">
+        <div class="card">
           <div class="content">
-              <h2 class="title">Mountain View</h2>
-              <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p><button class="view-more">View Trips</button>
+            <h2 class="title">Mountain View</h2>
+            <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the
+              mountains</p><button class="view-more">View Trips</button>
           </div>
-      </div>
-      <div class="card">
+        </div>
+        <div class="card">
           <div class="content">
-              <h2 class="title">To The Beach</h2>
-              <p class="copy">Plan your next beach trip with these fabulous destinations</p><button class="view-more">View Trips</button>
+            <h2 class="title">To The Beach</h2>
+            <p class="copy">Plan your next beach trip with these fabulous destinations</p><button class="view-more">View
+              Trips</button>
           </div>
-      </div>
-      <div class="card">
+        </div>
+        <div class="card">
           <div class="content">
-              <h2 class="title">Desert Destinations</h2>
-              <p class="copy">It's the desert you've always dreamed of</p><button class="view-more">Book Now</button>
+            <h2 class="title">Desert Destinations</h2>
+            <p class="copy">It's the desert you've always dreamed of</p><button class="view-more">Book Now</button>
           </div>
-      </div>
-      <div class="card">
+        </div>
+        <div class="card">
           <div class="content">
-              <h2 class="title">Explore The Galaxy</h2>
-              <p class="copy">Seriously, straight up, just blast off into outer space today</p><button class="view-more">Book Now</button>
+            <h2 class="title">Explore The Galaxy</h2>
+            <p class="copy">Seriously, straight up, just blast off into outer space today</p><button
+              class="view-more">Book Now</button>
           </div>
-      </div>
-  </main>  
-  </section>
+        </div>
+      </main>
+    </section>
   </section>
   <script src="js/activities.js"></script>
 </body>
