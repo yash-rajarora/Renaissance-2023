@@ -11,6 +11,22 @@ body {
 	display: flex;
 	justify-content: center;
 }
+.heading_img{
+	height: 20%;
+	width: 20%;
+  }
+  @media (max-width: 1000px){
+	.heading{
+	  display: flex;
+	  justify-content: center;
+	  padding-top: 20%;
+	  padding-bottom: 7%;
+	}
+	.heading_img{
+	  height: 30%;
+	  width: 30%;
+	}
+  }
 
 a.btn {
 	background: #0096a0;
