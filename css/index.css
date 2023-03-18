@@ -34,5 +34,16 @@
     background-repeat: no-repeat;
     background-size: 100%;
   }
-  
+  .logo{
+    max-width: 20%;
+    max-height: 20%;
+    
+    text-align: center;
+  }
+  .logo-artist{
+    margin-bottom: 2%;
+  }
+  .logo-gallery{
+    margin-top: 3%;
+  }
   
