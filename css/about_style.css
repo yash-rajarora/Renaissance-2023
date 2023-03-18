@@ -4,6 +4,7 @@ body {
   background-image: url("../assets/images/background-01.webp");
   background-size: 100%;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .heading{
 display: flex;
