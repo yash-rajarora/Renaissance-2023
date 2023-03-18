@@ -192,3 +192,22 @@
     width: 30%;
   }
 }
+
+.top-button{
+  margin: auto;
+  text-align: center;
+  padding-bottom: 2%;
+}
+/* Define styles for hidden section */
+.hidden-section {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    
+  }
+  
+  /* Define styles for visible section */
+.visible-section {
+    margin-top: 20px;
+    padding: 10px;
+}
