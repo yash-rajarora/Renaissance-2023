@@ -71,7 +71,7 @@ h6{
   min-height:56px;
   border-radius: 35px;
   background-color: var(--secondary);
-  opacity: 0.8;
+  
 }
 
 .drawer-toggler:focus {
