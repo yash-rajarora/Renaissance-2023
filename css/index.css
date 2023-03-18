@@ -30,7 +30,9 @@
   .landing-section{
     height: 100vh;
     background-image: url("../assets/logo/logos-01.png"),url("../assets/images/homepage.webp");
+    
     background-repeat: no-repeat;
     background-size: 100%;
   }
+  
   

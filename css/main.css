@@ -8,7 +8,7 @@
 :root {
   /* --primary: #6c63ff; */
   --primary: #a81e28;
-  --secondary: rgba(9, 10, 16, 0.9);
+  --secondary: rgb(20, 18, 16);
   --secondary-opaque: rgba(9, 10, 16, 1);
   --border-gray: rgba(100, 100, 100, 0.3);
   --dark-workspace-bg: rgba(6, 12, 34, 0.8);
@@ -71,6 +71,7 @@ h6{
   min-height:56px;
   border-radius: 35px;
   background-color: var(--secondary);
+  opacity: 0.8;
 }
 
 .drawer-toggler:focus {
