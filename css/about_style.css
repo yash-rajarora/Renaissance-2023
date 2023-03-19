@@ -28,7 +28,7 @@ text-shadow: 2%;
 background-color: white;
 opacity: 0.6;
 display: inline-block;
-
+text-align: justify;
 border-radius: 3%;
 
 
@@ -47,12 +47,50 @@ border-radius: 3%;
 .about_ren,.about_jecrc{
   display: inline-block;
   text-align: center;
-  max-width: 60%;
+  max-width: 70%;
   margin: auto;
+  font-size: larger;
   
 }
 .background_img{
   text-align: center;
+  padding-top: auto;
+}
+
+@media only screen and (max-width: 991px){
+  .background_img{
+    text-align: center;
+    padding-top: 3%;
+    height: max-content;
+  }
+  .sub-img{
+    max-width: 30%;
+    max-height: 30%;
+  }
+  .about_ren,.about_jecrc{
+    display: inline-block;
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+    font-size: x-large;
+    margin-bottom: 2%;
+    
+}
+.img{
+  max-width: 40%;
+  max-height: 40%;
+}
+
+}
+@media only screen and (max-width: 1440px){
+  .about_ren,.about_jecrc{
+    display: inline-block;
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+    font-size: x-large;
+    margin-bottom: 2%;
+}
 }
 
 
