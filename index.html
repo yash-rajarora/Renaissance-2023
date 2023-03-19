@@ -21,32 +21,33 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-0">
-    <div class="container-fluid d-flex justify-content-between">
+    <div class="container-fluid d-flex justify-content-start">
       <!-- <a class="navbar-brand cat mobile-only" href="index.html">
         <img src="logo.png" height="45" alt="logo" />
       </a> -->
-      <button class="drawer-toggler mobile-only btn" id="drawer-toggler">
+      <button class="drawer-toggler mobile-only btn px-4" id="drawer-toggler">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <h4 class="text-light mx-4 my-auto mobile-only">Renaissance</h4>
       <div class="navbar-collapse collapse">
         <!-- <a class="navbar-brand cat mx-5" href="index.html">
           <img src="logo.png" height="45" alt="logo" />
         </a> -->
         <ul class="navbar-nav m-auto ">
-          <div class="nav-item mx-2">
+          <li class="nav-item mx-2">
             <div class="container-fluid d-flex">
               <a class="nav-link active" href="index.html">
                 <div class="button draw">Home</div>
               </a>
             </div>
-          </div>
-          <div class="nav-item mx-2">
+          </li>
+          <li class="nav-item mx-2">
             <div class="container-fluid d-flex">
               <a class="nav-link active" href="#celebrity-section">
                 <div class="button draw">Celebrity</div>
               </a>
             </div>
-          </div>
+          </li>
           <li class="nav-item mx-2">
             <div class="container-fluid d-flex">
               <a class="nav-link active" href="pages/events.html">
@@ -161,9 +162,11 @@
   </div>
   <div id="mobile-body-overly"></div>
   <section class="landing-section d-flex">
-    
+    <img class="mt-5 mobile-only" style="width:100vw;height:177vw" src="assets/images/mobile logos-01.webp" alt="">
+    <!-- <img class="mt-5 mobile-only" style="width:100vw;height:177vw;position:fixed;z-index: 1;" src="assets/images/balloons mobile view.gif" alt=""> -->
   </section>
-  <section id="celebrity-section">
+  <section>
+    <div id="celebrity-section">
     <div class="logo-artist"><img class="logo" src="assets/images/artist.webp" alt="Artists"></div>
     <div class="desktop-only">
       <div class="container">
@@ -214,6 +217,7 @@
         </button>
       </div>
     </div>
+  </div>
     <div class="logo-gallery"><img class="logo" src="assets/images/gallery.webp" alt="Gallery"></div>
     <div id="gallery">
       <div class="owl-carousel gallery-carousel">
