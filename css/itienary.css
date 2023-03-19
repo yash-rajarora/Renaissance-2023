@@ -7,6 +7,22 @@
   padding: 0;
 /*   outline: 1px solid #999; */
 }
+body{
+	background-image: url("../assets/images/web\ blue\ background\ [Recovered]-01.png");
+	  background-repeat: repeat-y;
+	  background-size: cover;
+	  background-attachment: fixed;
+	  background-position-y: bottom ;
+  }
+@media (max-width: 1000px){
+  body{
+    background-image: url("../assets/images/background\ blue\ mobile-01.png");
+	background-repeat: repeat-y;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position-y: bottom ;
+  }
+}
 .heading{
   display: flex;
   justify-content: center;

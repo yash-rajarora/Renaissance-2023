@@ -20,13 +20,7 @@
 html{
   font-size: 16px;
 }
-body{
-  background-image: url("../assets/images/background-01.webp");
-    background-repeat: repeat-y;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position-y: bottom ;
-}
+
 h1{
   font-size: 4rem;
 }

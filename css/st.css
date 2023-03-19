@@ -1,4 +1,9 @@
-h1, h2, h3, h4, h5, h6 {
+body{
+  background-image: url("../assets/images/background-01.webp");
+	  background-repeat: repeat-y;
+	  background-size: cover;
+	  background-attachment: fixed;
+	  background-position-y: bottom ;
 }
 #top-spacing{
     padding: 20px;
