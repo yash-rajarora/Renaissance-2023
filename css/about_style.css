@@ -60,7 +60,7 @@ border-radius: 3%;
 @media only screen and (max-width: 991px){
   .background_img{
     text-align: center;
-    padding-top: 3%;
+    padding-top: 5%;
     height: max-content;
   }
   .sub-img{
@@ -80,7 +80,6 @@ border-radius: 3%;
   max-width: 40%;
   max-height: 40%;
 }
-
 }
 @media only screen and (max-width: 1440px){
   .about_ren,.about_jecrc{
@@ -91,6 +90,20 @@ border-radius: 3%;
     font-size: x-large;
     margin-bottom: 2%;
 }
+.background_img{
+  text-align: center;
+  padding-top: 5%;
+  height: max-content;
 }
+}
+@media only screen and (max-width: 1440px){
+  .background_img{
+    text-align: center;
+    padding-top: 10%;
+    height: max-content;
+  }
+}
+
+
 
 
