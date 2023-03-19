@@ -46,4 +46,15 @@
   .logo-gallery{
     margin-top: 3%;
   }
+  #celebrity-section{
+    height: 100vh;
+  }
   
+  @media only screen and (max-width: 440px) {
+  .landing-section {
+    height: 100vh;
+    background-image:url("../assets/images/home page mobile-01.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
