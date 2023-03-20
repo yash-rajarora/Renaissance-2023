@@ -1,6 +1,6 @@
 
   .outline-thick{
-    border: var(--primary) 8px solid;
+    border: rgba(255,255,255,1) 8px solid;
     border-radius: 21px;
   }
   .outline-thick img{
@@ -50,7 +50,7 @@
     height: 100vh;
   }
   
-  @media only screen and (max-width: 440px) {
+  @media only screen and (max-width: 500px) {
   .landing-section {
     height: 100vh;
     background-image:url("../assets/images/home page mobile-01.webp");
