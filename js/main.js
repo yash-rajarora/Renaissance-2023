@@ -31,3 +31,12 @@ document
             drawer.attributes.expanded.value = "false";
         }
     });
+$("#drawer .nav-link").click(function () {
+        if (drawer.attributes.expanded.value == "true") {
+            drawer.classList.add("drawer-inactive");
+            overlay.style = "display:none";
+            drawer.classList.remove("drawer-active");
+            drawer.attributes.expanded.value = "false";
+        }
+});
+    
