@@ -61,7 +61,9 @@ body{
     height: 100vh;
     background-image:url("../assets/images/home page mobile-01.webp");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y:bottom ;
   }
 }
 @media (max-width: 1000px){
