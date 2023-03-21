@@ -64,8 +64,9 @@ body{
 /* row text */
 .timeline > .column > .row > .text {
   flex: 1 1 calc(50% - 50px);
+  background: rgb(166,166,166,0.7);
   position: relative;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.875);
   font-weight: 700;
 }
 .timeline > .column > .row h3 {
@@ -81,6 +82,7 @@ body{
   /* color: rgba(51, 51, 51, 0.5); */
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  font-size: 25px;
 }
 
 /* row icon */
