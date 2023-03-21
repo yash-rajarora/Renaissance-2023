@@ -4,6 +4,7 @@ body{
     background-size: cover;
     background-attachment: fixed;
     background-position-y: bottom ;
+    overflow-x: hidden;
 }
   .outline-thick{
     border: var(--primary) 8px solid;
@@ -52,14 +53,11 @@ body{
   .logo-gallery{
     margin-top: 3%;
   }
-  #celebrity-section{
-    height: 100vh;
-  }
   
   @media only screen and (max-width: 440px) {
   .landing-section {
     height: 100vh;
-    background-image:url("../assets/images/home page mobile-01.webp");
+    background-image: url("../assets/images/mobile logos-01.webp"),url("../assets/images/home page mobile-01.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
@@ -78,5 +76,36 @@ body{
   .logo{
     max-width: 65%;
     padding-top: 5%;
+  }
+}
+
+.monument-one{
+  animation: monument-one 10s linear;
+  animation-iteration-count: infinite;
+  width: 100vw;
+  position: relative;
+  left: 0;
+}
+.monument-two{
+  animation: monument-two 10s linear;
+  animation-iteration-count: infinite;
+  width: 100vw;
+  position: relative;
+  left: -200vw;
+}
+@keyframes monument-one {
+  from{
+    left:0;
+  }
+  to{
+    left: 100vw;
+  }
+}
+@keyframes monument-two {
+  from{
+    left:-200vw;
+  }
+  to{
+    left: -100vw;
   }
 }
