@@ -1,5 +1,5 @@
 body{
-  background-image: url("../assets/images/background-01.webp");
+  background-image: url("../assets/images/background-plain.webp");
 	  background-repeat: repeat-y;
 	  background-size: cover;
 	  background-attachment: fixed;
@@ -242,11 +242,10 @@ ul {
   .heading{
     display: flex;
     justify-content: center;
-    padding-top: 20%;
-    padding-bottom: 7%;
   }
   .heading_img{
-    height: 30%;
-    width: 30%;
+    width: 65%;
+    padding-bottom: 0px;
+    padding-top: 5%;
   }
 }
