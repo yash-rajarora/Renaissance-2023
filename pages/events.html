@@ -1,285 +1,983 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/activities.css" />
+    <link rel="stylesheet" href="../css/button.css" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/activities.css">
-  <link rel="stylesheet" href="../css/button.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="../assets/logo/REN 23 logo.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <title>Events & Activities | Renaissance 2023</title>
+    <style>
+      .modal-overlay {
+        display: none;
+        background-color: rgba(6, 12, 34, 0.8);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 1050;
+      }
+      .modal-body {
+        border-radius: 25px;
+        padding: 2rem;
+        min-height: 50vh;
+        display: block;
+        color: black;
+        background-color: white;
+        margin: 5rem auto;
+        max-width: 700px;
+        max-height: 80vh;
+        width: 90vw;
+        overflow-y: auto;
+        overflow-wrap: anywhere;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
 
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-  <link rel="icon" type="image/png" href="../assets/logo/REN 23 logo.png" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../css/main.css" />
-  <title>Events & Activities | Renaissance 2023</title>
-  <style>
-    .modal-overlay{
-      display: none;
-      background-color: rgba(6, 12, 34, 0.8);
-      position:fixed;
-      top:0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      z-index:1050;
-    }
-    .modal-body{
-      border-radius: 25px;
-      padding: 2rem;
-      min-height: 50vh;
-      display: block;
-      color: black;
-      background-color: white;
-      margin: 5rem auto;
-      max-width: 700px;
-      max-height: 80vh;
-      width:90vw;
-      overflow-y: auto;
-      overflow-wrap: anywhere;
-      scrollbar-width: none;
-    }
-  </style>
-</head>
-
-<body>
-  <!-- navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-0">
-    <div class="container-fluid d-flex justify-content-between">
-      <!-- <a class="navbar-brand cat mobile-only" href="index.html">
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-0">
+      <div class="container-fluid d-flex justify-content-between">
+        <!-- <a class="navbar-brand cat mobile-only" href="index.html">
         <img src="logo.png" height="45" alt="logo" />
       </a> -->
-      <button class="drawer-toggler mobile-only btn" id="drawer-toggler">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-collapse collapse">
-        <!-- <a class="navbar-brand cat mx-5" href="index.html">
+        <button class="drawer-toggler mobile-only btn" id="drawer-toggler">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse">
+          <!-- <a class="navbar-brand cat mx-5" href="index.html">
           <img src="logo.png" height="45" alt="logo" />
         </a> -->
-        <ul class="navbar-nav m-auto">
-          <div class="nav-item mx-2">
-            <div class="container-fluid d-flex">
-              <a class="nav-link active" href="../index.html">
-                <div class="button draw">Home</div>
-              </a>
+          <ul class="navbar-nav m-auto">
+            <div class="nav-item mx-2">
+              <div class="container-fluid d-flex">
+                <a class="nav-link active" href="../index.html">
+                  <div class="button draw">Home</div>
+                </a>
+              </div>
             </div>
+            <li class="nav-item mx-2">
+              <div class="container-fluid d-flex">
+                <a class="nav-link active" href="../index.html#celebrity-section">
+                  <div class="button draw">Celebrity</div>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item mx-2">
+              <div class="container-fluid d-flex">
+                <a class="nav-link active" href="events.html">
+                  <div class="button draw">Events</div>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item mx-2">
+              <div class="container-fluid d-flex">
+                <a class="nav-link active" href="itienary.html">
+                  <div class="button draw">Itinerary</div>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item mx-2">
+              <div class="container-fluid d-flex">
+                <a class="nav-link active" href="sponsor.html">
+                  <div class="button draw">Sponsors</div>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item mx-2">
+              <div class="container-fluid d-flex">
+                <a class="nav-link active" href="about.html">
+                  <div class="button draw">About</div>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item mx-2">
+              <div class="container-fluid d-flex">
+                <a class="nav-link active" href="teamcard.html">
+                  <div class="button draw">Team</div>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item mx-2">
+              <div class="container-fluid d-flex">
+                <a class="nav-link active" href="#footer">
+                  <div class="button draw">Contact Us</div>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- =-=-=-=-=-=-=-=-=-=-=-=-= Drawer Starts =-=-=-=-=-=-==-=-=-=-===-=-= -->
+    <div class="drawer drawer-inactive navbar-collapse fixed-top" expanded="false" id="drawer">
+      <div class="d-flex dog p-3 justify-content-between" style="background-color: rgba(9, 10, 16, 1)">
+        <h3>Menu</h3>
+        <button class="btn btn-outline-danger my-auto" id="drawer-close-btn">&#10006;</button>
+      </div>
+      <ul class="navbar-nav p-5">
+        <li class="nav-item">
+          <div class="container-fluid">
+            <a class="nav-link active d-flex px-2" href="../index.html">
+              <h4 class="my-auto mouse">Home</h4>
+            </a>
           </div>
-          <li class="nav-item mx-2">
-            <div class="container-fluid d-flex">
-              <a class="nav-link active" href="../index.html#celebrity-section">
-                <div class="button draw">Celebrity</div>
-              </a>
-            </div>
         </li>
-          <li class="nav-item mx-2">
-            <div class="container-fluid d-flex">
-              <a class="nav-link active" href="events.html">
-                <div class="button draw">Events</div>
-              </a>
-            </div>
-          </li>
-          <li class="nav-item mx-2">
-            <div class="container-fluid d-flex">
-              <a class="nav-link active" href="itienary.html">
-                <div class="button draw">Itinerary</div>
-              </a>
-            </div>
-          </li>
-          <li class="nav-item mx-2">
-            <div class="container-fluid d-flex">
-              <a class="nav-link active" href="sponsor.html">
-                <div class="button draw">Sponsors</div>
-              </a>
-            </div>
-          </li>
-          <li class="nav-item mx-2">
-            <div class="container-fluid d-flex">
-              <a class="nav-link active" href="about.html">
-                <div class="button draw">About</div>
-              </a>
-            </div>
-          </li>
-          <li class="nav-item mx-2">
-            <div class="container-fluid d-flex">
-              <a class="nav-link active" href="teamcard.html">
-                <div class="button draw">Team</div>
-              </a>
-            </div>
-          </li>
-          <li class="nav-item mx-2">
-            <div class="container-fluid d-flex">
-              <a class="nav-link active" href="#footer">
-                <div class="button draw">Contact Us</div>
-              </a>
-            </div>
-          </li>
-        </ul>
+        <li class="nav-item">
+          <div class="container-fluid">
+            <a class="nav-link active d-flex px-2" href="../index.html#celebrity-section">
+              <h4 class="my-auto mouse">Celebrity</h4>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="container-fluid">
+            <a class="nav-link active d-flex px-2" href="events.html">
+              <h4 class="my-auto mouse">Events</h4>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="container-fluid">
+            <a class="nav-link active d-flex px-2" href="itienary.html">
+              <h4 class="my-auto mouse">Itinerary</h4>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="container-fluid">
+            <a class="nav-link active d-flex px-2" href="sponsor.html">
+              <h4 class="my-auto mouse">Sponsors</h4>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="container-fluid">
+            <a class="nav-link active d-flex px-2" href="about.html">
+              <h4 class="my-auto mouse">About</h4>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="container-fluid">
+            <a class="nav-link active d-flex px-2" href="teamcard.html">
+              <h4 class="my-auto mouse">Teams</h4>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="container-fluid">
+            <a class="nav-link active d-flex px-2" href="#footer">
+              <h4 class="my-auto mouse">Contact Us</h4>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div id="mobile-body-overly"></div>
+    <!-- navbar end -->
+    <section id="background_img">
+      <div class="heading">
+        <img src="../assets/images/events.webp" class="heading_img" />
       </div>
-    </div>
-  </nav>
-
-  <!-- =-=-=-=-=-=-=-=-=-=-=-=-= Drawer Starts =-=-=-=-=-=-==-=-=-=-===-=-= -->
-  <div class="drawer drawer-inactive navbar-collapse fixed-top" expanded="false" id="drawer">
-    <div class="d-flex dog p-3 justify-content-between" style="background-color: rgba(9, 10, 16, 1)">
-      <h3>Menu</h3>
-      <button class="btn btn-outline-danger" id="drawer-close-btn">&#10006;</button>
-    </div>
-    <ul class="navbar-nav p-5">
-      <li class="nav-item">
-        <div class="container-fluid">
-          <a class="nav-link active d-flex px-2" href="../index.html">
-            <h4 class="my-auto mouse">Home</h4>
-          </a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <div class="container-fluid">
-          <a class="nav-link active d-flex px-2" href="../index.html#celebrity-section">
-            <h4 class="my-auto mouse">Celebrity</h4>
-          </a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <div class="container-fluid">
-          <a class="nav-link active d-flex px-2" href="events.html">
-            <h4 class="my-auto mouse">Events </h4>
-          </a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <div class="container-fluid">
-          <a class="nav-link active d-flex px-2" href="itienary.html">
-            <h4 class="my-auto mouse">Itinerary</h4>
-          </a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <div class="container-fluid">
-          <a class="nav-link active d-flex px-2" href="sponsor.html">
-            <h4 class="my-auto mouse">Sponsors</h4>
-          </a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <div class="container-fluid">
-          <a class="nav-link active d-flex px-2" href="about.html">
-            <h4 class="my-auto mouse">About</h4>
-          </a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <div class="container-fluid">
-          <a class="nav-link active d-flex px-2" href="teamcard.html">
-            <h4 class="my-auto mouse">Teams</h4>
-          </a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <div class="container-fluid">
-          <a class="nav-link active d-flex px-2" href="#footer">
-            <h4 class="my-auto mouse">Contact Us</h4>
-          </a>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <div id="mobile-body-overly"></div>
-  <!-- navbar end -->
-  <section id="background_img">
-    <div class="heading">
-      <img src="../assets/images/events.webp" class="heading_img">
-    </div>
-    <div class="top-button">
-      <button class="button-top cultural-btn" onclick="addAnimation()" id="show-tech">
-        CULTURAL
-      </button>
-      <button class="button-top tech-btn" onclick="addAnimation2()" id="show-cultural">
-        TECHNICAL
-      </button>
-      <button class="button-top splash-btn" onclick="addAnimation2()" id="show-splash">
-        SPLASH
-      </button>
-    </div>
-
-    <!-- card section -->
-
-    <!-- tech section -->
-    <div id="tech-modal-0" class="modal-overlay">
-      <div class="modal-body">
-        <div class="d-flex justify-content-between">
-        <h2>Title</h2>
-        <button class="btn btn-outline-danger" onclick="closeModal(this)">&times;</button>
+      <div class="top-button">
+        <button class="button-top cultural-btn" onclick="addAnimation()" id="show-tech">TECHNICAL</button>
+        <button class="button-top tech-btn" onclick="addAnimation2()" id="show-cultural">CULTURAL</button>
+        <button class="button-top splash-btn" onclick="addAnimation2()" id="show-splash">SPLASH</button>
       </div>
-        <h3> Description</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti qui eum quibusdam fugiat perferendis,
-           minima officiis laboriosam minus quae quisquam impedit dolor unde soluta nulla sequi cum. Porro, odio numquam!</p>
-        <h3> Rules & Regulations</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti qui eum quibusdam fugiat perferendis,
-           minima officiis laboriosam minus quae quisquam impedit dolor unde soluta nulla sequi cum. Porro, odio numquam!</p>
+
+      <!-- =-=-=-=-=-=- Modal start here =-=-=-=-=-=-=- -->
+      <div id="splash-modal-0" class="modal-overlay">
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <h2>Treasure Hunt</h2>
+            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+          </div>
+          <h3 class="my-4">About:-</h3>
+          <p>
+            “Rise n shine. It’s huntin’ time!” “Our treasure hunts are information-based scavenger hunts, or puzzle
+            hunts. Each team is presented with a group of puzzles, or clues, which teams must solve. After solving all
+            the clues teams will return their answer sheets to the designated endpoint. The earliest entry with the most
+            correct answers wins.”
+          </p>
+          <h4 class="my-2">Rules</h4>
+          <p>• Rules will be declared on the event day</p>
+          <h4>Registration</h4>
+          • Registration fee: 500 per team <br />
+          • Winner prize: Yet to be decided… <br />
+          • Runner up prize: Yet to be decided… <br />
+          • Participation E-certificate to all other eligible candidates. <br />
+          • For queries contact:- <br />
+          Yogesh Kumar Dadhich:- 6367374282 Himanshu Dhaka:- 99829 03848
+        </div>
       </div>
-    </div>
-    <section id="tech" class="visible-section">
-      <ul class="cards-list">
-	
-        <li class="cards">
-            <a class="cards-image" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-100.jpg);" >
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-100.jpg" alt="Psychopomp" />
+      <div id="splash-modal-1" class="modal-overlay">
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <h2>Beg Borrow Steal</h2>
+            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+          </div>
+          <h3 class="my-4">About:-</h3>
+          <p>
+            ”To do whatever is necessary to get something that is wanted or needed” Get ready to put all your resources
+            and contacts to a test to fetch the most radical and extraordinary things in this epic race. In this game
+            show you can win money by begging, borrowing or stealing things. Participants will be given a list of things
+            that they have to fetch within a time span.
+          </p>
+          <h4 class="my-2">Rules</h4>
+          ● A Team will comprise of 4-5players <br />
+          ● All the teams will be provided with a list of items. <br />
+          ● Team members will have to complete the task within a time limit of 60 minutes.<br />
+          ● Team can either beg, borrow or steal the items that are enlisted and provided to them <br />
+          ● Items will be categorised into three types i.e., 5 pointers , 4 pointers and 2pointers. <br />
+          ● Teams will have to get themselves registered before the commencement of the event. <br />
+          ● Stealing expensive items is not allowed.Your team will be disqualified if you do so. <br />
+          ● After the completion of the task the teams will are required to report to the coordinators for evaluation.
+          <br />
+          ● Teams will be judged on first come, first serve basis and also the items they were able to collect. <br />
+
+          <h4>Registration</h4>
+          ● Registration fee -₹ 600 per team <br />
+          ● Early bird offer - ₹500 per team (valid till 10th may) <br />
+          ● Winner prize - ₹2500 <br />
+          ● Runner up prize - ₹1500 <br />
+          ● Participation E-certification to all other eligible candidates <br />
+
+          <p>FOR QUERIES CONTACT</p>
+          ● Anubhav Choudhary - 7412885533 <br />
+        </div>
+      </div>
+      <div id="splash-modal-2" class="modal-overlay">
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <h2>Roadies</h2>
+            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+          </div>
+          <h3 class="my-4">About:-</h3>
+          <p>“ Pack your bags - Get ready for the ultimate challenge!”</p>
+          <p>
+            Roadies is an best fun game in which the contestants will be assigned different task to test their strength
+            and intelligence level. The task range from endurance-based physical challenges to puzzle-solving and
+            decision-making challenges that require intelligence and quick thinking.
+          </p>
+          <h4 class="my-2">Winning prize</h4>
+          1st - Yet to be decided <br />
+          2nd - yet to be decided <br />
+
+          <h4>Rules</h4>
+          • Rules will be declared on the event day <br />
+
+          <h4>Registration</h4>
+          • Registration fee : 300 per person <br />
+          • Participation E-certificate to all eligible candidates <br />
+          • For queries <br />
+          Aman Dhakad:-6367610145 <br />
+          Himanshu Dhaka:- 9982903848 <br />
+        </div>
+      </div>
+      <div id="splash-modal-3" class="modal-overlay">
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <h2>Beg Borrow Steal</h2>
+            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+          </div>
+          <h3 class="my-4">About:-</h3>
+          <p>
+            ”To do whatever is necessary to get something that is wanted or needed” Get ready to put all your resources
+            and contacts to a test to fetch the most radical and extraordinary things in this epic race. In this game
+            show you can win money by begging, borrowing or stealing things. Participants will be given a list of things
+            that they have to fetch within a time span.
+          </p>
+          <h4 class="my-2">Rules</h4>
+          ● A Team will comprise of 4-5players <br />
+          ● All the teams will be provided with a list of items. <br />
+          ● Team members will have to complete the task within a time limit of 60 minutes.<br />
+          ● Team can either beg, borrow or steal the items that are enlisted and provided to them <br />
+          ● Items will be categorised into three types i.e., 5 pointers , 4 pointers and 2pointers. <br />
+          ● Teams will have to get themselves registered before the commencement of the event. <br />
+          ● Stealing expensive items is not allowed.Your team will be disqualified if you do so. <br />
+          ● After the completion of the task the teams will are required to report to the coordinators for evaluation.
+          <br />
+          ● Teams will be judged on first come, first serve basis and also the items they were able to collect. <br />
+
+          <h4>Registration</h4>
+          ● Registration fee -₹ 600 per team <br />
+          ● Early bird offer - ₹500 per team (valid till 10th may) <br />
+          ● Winner prize - ₹2500 <br />
+          ● Runner up prize - ₹1500 <br />
+          ● Participation E-certification to all other eligible candidates <br />
+
+          <p>FOR QUERIES CONTACT</p>
+          ● Anubhav Choudhary - 7412885533 <br />
+        </div>
+      </div>
+      <div id="splash-modal-4" class="modal-overlay">
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <h2>Gully Cricket</h2>
+            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+          </div>
+          <h3 class="my-4">About:-</h3>
+          <p>
+            Gully Cricket is a term used to describe backyard cricket. It's a game that can be played anywhere and
+            everywhere: in a parking lot, on a beach or an empty street. You can even play it in the corridor of your
+            house.
+          </p>
+
+          <h3>Rules</h3>
+          Type: Team <br />
+          EVENT RULES: <br />
+          -BASIC FORMAT <br />
+          *This is a knockout gully tournament. <br />
+          *6 players per team. <br />
+          *Game will be of 5 overs a side. <br />
+          *Registration fees paid is non refundable. <br />
+          *A player or a team can be disqualified under indisciplinary acts on the ground. <br />
+
+          BATTING RULES <br />
+          <p>
+            *HIT OVER THE BOUNDARY - Its not six:If the batsman hits direct over the boundary,he is out, though if the
+            ball crosses the boundary line grounded, its a four.
+          </p>
+          <p>
+            *TRY BALL - A player cannot be given out on the first ball of the innings i.e. the very first ball of
+            innings played by the batsman is a free hit.
+          </p>
+
+          FIELDING RULES <br />
+          <p>
+            *ONE TIP ONE HAND OUT-No juggling is permitted- the 'tip catch' with one hand must be clean; its is not out
+            if you used your other hand to support the hand taking the tip catch; if you nicked it onto your body,that
+            will be countes as a tip/bounce and you would have to be caught with one hand to be out.
+          </p>
+          -IMPORTANT <br />
+          <p>*In fielding, unlike boys, the girls can catch the ball with 2 hands on 1 tip and its out.</p>
+
+          <h3>Registration</h3>
+          REGISTRATION FEE – 600RS/- (100 PER HEAD) <br />
+          Winning Prizes 🏆<br />
+          First - 3000 Rs/- <br />
+          Second - 1000 Rs/- <br />
+        </div>
+      </div>
+      <div id="splash-modal-5" class="modal-overlay">
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <h2>Street Football</h2>
+            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+          </div>
+          <h3 class="my-4">About:-</h3>
+          <p>
+            What is Street Football? Street Football is a style of soccer that develops players' creativity,
+            decision-making and agility in a fast-moving game. It challenges players to use their strengths and turn
+            them into strategies on a smaller field.
+          </p>
+
+          <h3>Rules</h3>
+          Team Size: 7 members(2 substitute) <br />
+          Rules will be declared on the event day. <br />
+
+          <h3>Registration</h3>
+          Registration fee: Rs 700(per team) <br />
+          Winner prize: Yet to be decided <br />
+          Runner up prize: Yet to be decided <br />
+
+          Participation E-certificate to all other eligible candidates. <br />
+          For queries contact-: <br />
+          Abhinav Singh Shekhawat - 6377080671 <br />
+          Himanshu Dhaka - 9982903848 <br />
+        </div>
+      </div>
+      <div id="splash-modal-6" class="modal-overlay">
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <h2>Game of Series</h2>
+            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+          </div>
+          <h3 class="my-4">About:-</h3>
+          <p>“GAME OF SERIES“</p>
+          <p>
+            Who isn’t a fan of web series? Game of series is all about guessing the names of Web series through hints
+            provided. But is your memory sharp enough to recall the names , lets see!!!
+          </p>
+
+          <h3>Rules</h3>
+          • There will ne be 3-4 Rounds. Teams will be shortlist accordingly. <br />
+          • Rounds will be related to audio, video,quizzes etc. <br />
+
+          <h3>Registration</h3>
+          • Registration fee: Rs 500 <br />
+          • Winner prize : Rs 2000 <br />
+          • Runner up prize : Rs 1000 <br />
+          • Participation E-certificate to all other eligible candidates. <br />
+          For queries contact:- <br />
+          Janvi Motwani : 6350306286 <br />
+          Apoorva Agarwal : 89557 32958 <br />
+        </div>
+      </div>
+      <div id="splash-modal-7" class="modal-overlay">
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <h2>IPL Auction</h2>
+            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+          </div>
+          <h3 class="my-4">About:-</h3>
+          “Let the bidding war begin at IPL auction!!” <br />
+
+          “Experience the excitement of IPL auction; pick your champions!” <br />
+
+          <p>
+            “Our IPL auction: where champions are bought; is a highly anticipated mind game and intense bidding war
+            where players are bought and sold by sqaud team(4 heads per team). A dedicated auctioneer controls the
+            cricket fever which is about to get intense with IPL auction. After a fierce battle, the auction ends with a
+            winning squad with highest bid for every IPL team.
+          </p>
+
+          Your winning team is just a bid away. ” <br />
+
+          <h3>Rules</h3>
+          • Rules will be declared on the event day. <br />
+
+          <h3>Registration</h3>
+          • Registration fee: 400 per team(4 heads per team) <br />
+          • Total prize pool: Rs 3500/- <br />
+          * Prize money will distribute in between winners and runner-up. <br />
+          • For queries contact:- <br />
+          Aryan Jangid: 8741838864 <br />
+        </div>
+      </div>
+
+      <div id="cultural-modal-0" class="modal-overlay">
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <h2>FOOTLOOSE (SOLO DANCE)</h2>
+            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+          </div>
+          <h3 class="my-4">About the event:</h3>
+          <p>
+            Dance is the expression of one’s soul. Bear witness to the performance of exceptional dancers in this solo
+            dance event. The participants face challenging rounds which bring out the creativity and dancing skills of
+            the dancers.
+          </p>
+
+          <h4>Rules and Regulations:</h4>
+          • Each participating college can send any number of entries. <br />
+          • Open entries are also allowed. <br />
+          • Participants should bring their College ID/Aadhar Card for identification. <br />
+          • All dance forms are allowed.<br />
+          • Participants should perform dangerous moves at their own risk.<br />
+          • Vulgarity and obscenity will lead to disqualification.<br />
+          • Participants need to bring their costumes and music in a pen drive. <br />
+          • The decision of the judge will be final in case of any dispute and adhered to by all. <br />
+
+          The event is divided into 3 rounds: <br />
+
+          <h4>Round 1: Happy feet- The Showcase</h4>
+          • Participants will showcase their prepared performance on the track of their own choice. <br />
+          • The time limit of each participant must be 1 minute. <br />
+          • No extra marks will be provided for theme-based performances. <br />
+          • The performance will be judged based on the originality of the dance and interaction with the audience.
+          <br />
+
+          <h4>Round 2: War of Dance- Dance Battle</h4>
+          • Participants will face off in a dance battle. <br />
+          • The order of participants will be decided by the number they pick from a bowl of folded paper Slips. <br />
+          • The time limit will be 1 minute for each participant. <br />
+          • The song will be provided. <br />
+          • Marking will be done based on the quality of moves and synchronization with music. <br />
+
+          <h4>Round 3: Bop 'Til You Drop- Prop Mania</h4>
+          • Participants will be provided a prop and song 5 minutes before their performance. <br />
+          • The time limit of each participant will be 1 minute. <br />
+          • Judging criteria will be based on the quality of moves, use of prop, creativity & synchronization with
+          music. <br />
+
+          <h4>Registration:</h4>
+          Registration fee: Rs 250 per participant <br />
+          Prize- <br />
+          • 1st position- Rs 11500/- <br />
+          • 2nd position- Rs 8500/- <br />
+
+          Participation certificate will be given to all participants. <br />
+          <li class="cards">
+            <img src="../assets/posters/splash/website poster (9)-01.png" alt="">
+          </li>
+          <h4>For further queries, contact:</h4>
+          Shivam- 8107061914 <br />
+          Vinay- 9887999486 <br />
+        </div>
+      </div>
+      <div id="cultural-modal-1" class="modal-overlay">
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <h2>RAPZAP (SOLO RAP)</h2>
+            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+          </div>
+          <h3 class="my-4">About the event:</h3>
+          <p>
+            Expressing your thoughts in the form music is much easier than saying it. RAP ZAP is a one day event
+            consisting of battles between the rappers to determine who is the best of em all. The event will consist of
+            two rounds and a tie breaker if needed.
+          </p>
+
+          <h4>Rules and Regulations:</h4>
+          • Participants must bring their College ID/Aadhar Card for identification. <br />
+          • Participants must perform only self-written content. Plagiarism will lead to disqualification.<br />
+          • The participants in this round can perform solo or duets.<br />
+          • The participants must sing songs of the rap genre only. <br />
+          • Karaoke is allowed. <br />
+          • The language of rap can be English, Hindi, or Regional.<br />
+          • Any use of offensive language will lead to disqualification.<br />
+          • Participants should report to the event 1 hour before.<br />
+
+          <p>The event is categorized into two rounds:</p>
+
+          <h4>Prelims:</h4>
+          • The prelims round will be online. <br />
+          • The participant must send a video of the performance via mail or WhatsApp. <br />
+          • The minimum time limit for the video would be 1 minute. <br />
+          • According to the result of the prelims round, the contestants will be notify one week earlier. <br />
+
+          <h4>Final round:</h4>
+          • The time limit in finals would be 2:30 to 3 min. <br />
+          • There will be negative marking for exceeding the time limit. <br />
+          • The content should not hurt someone emotionally and should not contain any religious content.The final
+          decision made by the judge will be based on the participant’s stage presence, the accent or language,
+          interaction with the crowd, etc. <br />
+          • In case of any dispute, the decision will be final and adhered to by all.The contestants should bring their
+          own tracks in a pen drive. <br />
+          • The tracks should be strictly instrumental, any other backing tracks will be disqualified. <br />
+
+          <h4>Registration:</h4>
+          Registration fee: Rs 200/- per participant <br />
+          Prize: • 1st position- Rs 6000/- <br />
+          • 2nd position- Rs 4000/- <br />
+          • 3rd position- Rs 2500/- <br />
+
+          <p>Participation certificate will be given to all participants.</p>
+          <h4>For further queries, contact:</h4>
+          Radhika- 8905866105 <br />
+          Vinay- 9887999486 <br />
+        </div>
+      </div>
+      <div id="cultural-modal-2" class="modal-overlay">
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <h2>ADAA (FASHION SHOW)</h2>
+            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+          </div>
+          <h3 class="my-4">About the event:</h3>
+          <p>
+            ADAA is a platform provided by JECRC to showcase your fashion talent. Bring out your fiery look, fierce
+            walk, and down the ramp. "ADAA The fashion show" where models from various genres will be competing against
+            each other. It is a perfect blend of different styles and trends.
+          </p>
+
+          <h4>Rules and Regulations:</h4>
+          • Team members - Max 20, Min 12 (Including Backstage Members). <br />
+          • Duration of performance - Min 8 Minutes to Max 12 Minutes. <br />
+          • At the time of registration, the participants must bring their own college identity cards. <br />
+          •
+          <p>
+            Teams are required to bring their own music on pen drives or external storage in MP3 or appropriate sound
+            format. Teams are required to give 2 copies and handed over to the organizers at least 3 hours before the
+            event commences.
+          </p>
+          • Props should be arranged by the team on their own. Use of fire, water animals, or hazardous material is
+          prohibited. <br />
+          • Teams exceeding the time limit will be negatively marked. <br />
+          • Green rooms will be allotted after reporting with the team <br />
+          • Usage of fire on the stage is prohibited and teams doing so will be disqualified. <br />
+          • Backstage helpers should not exceed 3 (Three) in number. <br />
+          • No extra time will be given for the introduction. <br />
+          • Exceeding the time limit will result in negative marking.<br />
+          • The vulgarity of any kind will lead to disqualification.<br />
+          • Decision of the judges in all matters will be final and binding.<br />
+
+          <p>The event is categorized into two rounds:</p>
+
+          <h4>Criteria for marking:</h4>
+          • Music. <br />
+          • Sequencing. <br />
+          • Choreography. <br />
+          • Models. <br />
+          • Expression. <br />
+          • Creativity in theme <br />
+
+          <h4>Registration:</h4>
+          Registration fee: - Rs. 300 (Per member) <br />
+          Prize- <br />
+          • 1st position- Rs 30000/- <br />
+          • 2nd position- Rs 20000/- <br />
+          Participation certificate to all other eligible teams. <br />
+
+          <h4>For queries contact:</h4>
+          Radhika- 8905866105 <br />
+          Shubhankar- 8209017116 <br />
+        </div>
+      </div>
+      <div id="cultural-modal-3" class="modal-overlay">
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <h2>ROCKATHON (MUSIC BAND)</h2>
+            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+          </div>
+          <h3 class="my-4">About the event:</h3>
+          <p>
+            The loudmouth, the screaming, the headbanging, and the mass venting are back. The supreme battle forthe ROCK
+            WARRIORS, where music has a whole new definition is here. Let us celebrate music with the ultimate Rock
+            Band.
+          </p>
+
+          <p>
+            ROCKATHON is going to set fire and make the crowd go wild with Rock Music allowing young bands from across
+            the country to battle with each other. Rockathon is all set to become the best platformsfor rock bands to
+            showcase their musical talents.
+          </p>
+
+          JECRC RENAISSANCE'23 invites entries for the ROCK BAND <br />
+          COMPETITION,ROCKATHON- THE BATTLE OF BANDS <br />
+
+          <h4>Rules and Regulations:</h4>
+          • Each band will be given a max time of 15+3 mins including the soundcheck. <br />
+          • Marks will be deducted if the band exceeds the allotted time limit. <br />
+          • Open entries are allowed. <br />
+          • Band can have a maximum of 10 members. <br />
+          • Each band will be provided with a standard drum kit including one ride & one hi-hat. The drummers must carry
+          their extra drum cymbals. The guitarists are advised to carry their own processors & adapters. <br />
+          • The use of slang words is strictly prohibited. All song content must be family-friendly as this isan
+          all-ages event! <br />
+          • A panel of judges will score the bands on several criteria including Composition & arrangement, and
+          Creativity. Technical Ability & Musicianship, and Stage presence. <br />
+          • The judge’s decision will be final and binding. <br />
+          • All genres of music are accepted. <br />
+          • Participants should carry their original id with them. <br />
+          • In case of equipment failure, If not caused by the contestant’s fault, they will be given chance to restart
+          the performance, else no extra time will be provided. <br />
+          • Failure to comply with the rules and regulations may result in disqualification. <br />
+          <h4>Registration:</h4>
+          Registration fee- Rs 300 per member <br />
+          Prize- <br />
+          • 1st position- Rs 18000/- <br />
+          • 2nd position- Rs 12000/- <br />
+          <p>Participation certificate will be given to all participants.</p>
+
+          <h4>For queries contact:</h4>
+          Shivam- 8107061914 Radhika- 8905866105
+        </div>
+      </div>
+      <div id="cultural-modal-4" class="modal-overlay">
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <h2>SAARE-GA (SOLO SINGING)</h2>
+            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+          </div>
+          <h3 class="my-4">About the event:</h3>
+          <p>
+            What makes your day complete? What gives soul to the universe, wings to your mind, flight to your
+            imagination? What is the one thing which is loved by all of us? “MUSIC”, grab the opportunity and
+            showcaseyoursinging talent with “SAARE-GA”.
+          </p>
+
+          <h4>Rules and Regulations:</h4>
+          • Only one entry is allowed per participant. <br />
+          • Open entries are allowed. <br />
+          • Rap portions or refrains are not permissible. <br />
+          • Participants will not be allowed to refer to the lyrics while singing. <br />
+          • Choice of song is open to the participants. <br />
+          • The song should not have any slangs or derogatory language. <br />
+          • Participants can perform in Hindi, Punjabi, or English. <br />
+          • Participants should possess a valid original photo ID card. <br />
+          • Participants must perform with Karaoke track. <br />
+          • Karaoke track will not be provided, you must bring it yourself (MP3 format in Pen Drive).<br />
+          • Karaoke should not have backing vocals Participant can play instrument but cannot bring a companion.
+          Instrument should be bought by the participant itself. <br />
+          • Decision of judges will be final and binding. <br />
+
+          <h4>Preliminary Round:</h4>
+          • Time Limit:1-1.5 minute <br />
+          • Participants selected in this round will perform on stage round. <br />
+          • The participants will be judged on the song selection, voice stability, coordination with music and
+          expressions. <br />
+
+          <h4>Stage Round:</h4>
+          • It will be a final round. Time limit: 3-3.5 minutes(performance). <br />
+          • Negative marking for exceeding time limit. <br />
+          • Marking criteria includes song selection, voice stability, coordination with music and expressions. <br />
+
+          <h4>Registration:</h4>
+          Registration fee: - Rs. 200 (Per member) <br />
+          Prize- <br />
+          • 1st position- Rs 6000/- <br />
+          • 2nd position- Rs 4000/- <br />
+          • 3rd position- Rs 2500/- <br />
+          Participation certificate to all other eligible teams. <br />
+
+          <h4>For queries contact:</h4>
+          Garvita – 7425840800 <br />
+          Naveen- 9950236502 <br />
+        </div>
+      </div>
+      <div id="cultural-modal-5" class="modal-overlay">
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <h2>BEAT THE BEATS</h2>
+            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+          </div>
+          <h3 class="my-4">About the event:</h3>
+          <p>
+            Beat the beats is a solo event which celebrates the diversity of music. The musician performs a piece by
+            playing the music on instruments, showcasing their talent and creativity. The competition gives a platform
+            to the musicians to sway the hearts of the audience with their enthralling performances. Redefine the music
+            as we know by adding your beats to it.
+          </p>
+
+          <h4>Rules and Regulations:</h4>
+          • The competition has only one round. <br />
+          • Time limit for the performance is 1 minute 30 seconds to 2 minutes. <br />
+          • Marks will be deducted for exceeding the time limit. <br />
+          • Participants must carry their own instruments and are responsible for their safety. •
+          <p>
+            In case of technical/equipment failure, if not caused by the contestant’s fault, they will be given a chance
+            to restart the performance else no extra time will be provided.
+          </p>
+          • Mics and cords will be provided and must be informed prior to the day of the event. <br />
+          • Drummers must carry their drumsticks and drums will be provided. <br />
+          • Backing track is allowed and should be sent three days prior to the event on the mail-
+          beatthebeats.renaissance.jecrc@gmail.com along with the contestant’s name. <br />
+          • Open entries are allowed. <br />
+          • Participants must carry their original id with them. <br />
+          • Decision of judges will be final and non-disputable. <br />
+
+          <h4>Criteria for Marking:</h4>
+          • Technicality (Tone, intonation, and dynamics)<br />
+          • Sense of Rhythm<br />
+          • Virtuoso/Technique<br />
+          • Instrumental Proficiency<br />
+
+          <h4>Registration:</h4>
+          Registration fee: - Rs. 200 (Per member) <br />
+          Prize- <br />
+          • 1st position- Rs 6000/- <br />
+          • 2nd position- Rs 4000/- <br />
+          • 3rd position- Rs 2500/- <br />
+          Participation certificate to all other eligible teams. <br />
+
+          <h4>For queries contact:</h4>
+          Shubhankar- 8209017116 <br />
+          Garvita- 7425840800 <br />
+        </div>
+      </div>
+      <div id="cultural-modal-6" class="modal-overlay">
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <h2>NAVRAS (MONO ACT)</h2>
+            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+          </div>
+          <h3 class="my-4">About the event:</h3>
+          <p>
+            Mono act is a theater stage activity where one person performs and presents his/her artistic and acting
+            skills. The mono act competition gives the platform for the actors to portray the unsaid and give a
+            mesmerizing act with their outstanding performances. With the beautiful expressions, thoughts, props, and a
+            lot of zeal and enthusiasm the actor can not only improve their personality but also bring the best out of
+            them. Keeping the fire of artistic creativity alive, this competition is the place for your expressions. The
+            stageis all set to bound the audience with a great act!
+          </p>
+
+          <h4>Rules and Regulations:</h4>
+          • The presentation will be in solo and the performance must consist of a single act with no blackouts. <br />
+          • Miming is STRICTLY not allowed. <br />
+          • Clothing or actions that could be perceived as obscene, lewd, vulgar, or plainly offensive is strictly
+          prohibited. <br />
+          • Duration limits: 3-5 minutes, Negative marks for exceeding the time limit. <br />
+          • Only two Hand Props are allowed (need to be discussed with Core JECRC College). <br />
+          • Language can be Bilingual, regional touch can be given. <br />
+          • Electronic sound can be used as the background music to set out the tune and the theme of the play. <br />
+          • Individuals should carry their background music in their respective Pen drives. <br />
+          • Decision of judges will be final and non-disputable. <br />
+          • Any adaptation from some original piece of work should be mentioned with the script. <br />
+          • Participant will be judged based on voice modulation, flow of expression, acting skills and content and
+          overall expression. <br />
+          • Identity cards are mandatory for entry. <br />
+          • Participants should report the venue 1 hour before event timings. <br />
+
+          <h4>Registration:</h4>
+          Registration fee: - Rs. 200 Per person <br />
+          Prize- <br />
+          • 1st position- Rs 6000/- <br />
+          • 2nd position- Rs 4000/- <br />
+          • 3rd position- Rs 2500/- <br />
+          Participation certificate to all other eligible teams. <br />
+
+          <h4>For queries contact:</h4>
+          Vipin- 9983672198 <br />
+          Garvita- 7425840800 <br />
+        </div>
+      </div>
+      <div id="cultural-modal-7" class="modal-overlay">
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <h2>OPEN MIC</h2>
+            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+          </div>
+          <h3 class="my-4">About the event:</h3>
+          <p></p>
+
+          <h4>Rules and Regulations:</h4>
+          • The presentation will be in solo and the performance must consist of a single act with no blackouts. <br />
+          • Miming is STRICTLY not allowed. <br />
+          • Clothing or actions that could be perceived as obscene, lewd, vulgar, or plainly offensive is strictly
+          prohibited. <br />
+          • Duration limits: 3-5 minutes, Negative marks for exceeding the time limit. <br />
+          • Only two Hand Props are allowed (need to be discussed with Core JECRC College). <br />
+          • Language can be Bilingual, regional touch can be given. <br />
+          • Electronic sound can be used as the background music to set out the tune and the theme of the play. <br />
+          • Individuals should carry their background music in their respective Pen drives. <br />
+          • Decision of judges will be final and non-disputable. <br />
+          • Any adaptation from some original piece of work should be mentioned with the script. <br />
+          • Participant will be judged based on voice modulation, flow of expression, acting skills and content and
+          overall expression. <br />
+          • Identity cards are mandatory for entry. <br />
+          • Participants should report the venue 1 hour before event timings. <br />
+
+          <h4>Registration:</h4>
+          Registration fee: - Rs. 200 Per person <br />
+          Prize- <br />
+          • 1st position- Rs 6000/- <br />
+          • 2nd position- Rs 4000/- <br />
+          • 3rd position- Rs 2500/- <br />
+          Participation certificate to all other eligible teams. <br />
+
+          <h4>For queries contact:</h4>
+          Vipin- 9983672198 <br />
+          Garvita- 7425840800 <br />
+        </div>
+      </div>
+      <!-- =-=-=-=-=-=-=-=-=-=-=- Modal end here =-=--=-=--=-=-=-=- -->
+
+      <!-- card section -->
+
+      <!-- tech section -->
+      <section id="tech" class="visible-section">
+        <ul class="cards-list">
+          <li class="cards">
+            <a
+              class="cards-image"
+              style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-100.jpg)">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-100.jpg" alt="Psychopomp" />
             </a>
             <a class="cards-description" href="https://michellezauner.bandcamp.com/album/psychopomp-2" target="_blank">
-                <h2>Psychopomp</h2>
-                <p>Japanese Breakfast</p>
+              <h2>Psychopomp</h2>
+              <p>Japanese Breakfast</p>
             </a>
-        </li>
-        
-        <li class="cards">
-            <a class="cards-image" href="#" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg);" >
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg" alt="let's go" />
+          </li>
+
+          <li class="cards">
+            <a
+              class="cards-image"
+              href="#"
+              target="_blank"
+              style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg)">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg" alt="let's go" />
             </a>
             <a class="cards-description" href="https://inlovewithaghost.bandcamp.com/album/lets-go" target="_blank">
-                <h2>let's go</h2>
-                <p>In Love With A Ghost</p>
+              <h2>let's go</h2>
+              <p>In Love With A Ghost</p>
             </a>
-        </li>
-        
-        <li class="cards">
-            <a class="cards-image" href="#" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-100.jpg);">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-100.jpg" alt="The Beautiful Game" />
+          </li>
+
+          <li class="cards">
+            <a
+              class="cards-image"
+              href="#"
+              target="_blank"
+              style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-100.jpg)">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-100.jpg"
+                alt="The Beautiful Game" />
             </a>
             <a class="cards-description" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank">
-                <h2>The Beautiful Game</h2>
-                <p>Vulfpeck</p>
+              <h2>The Beautiful Game</h2>
+              <p>Vulfpeck</p>
             </a>
-        </li>
-        
-        <li class="cards">
-            <a class="cards-image" href="#" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg);" >
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg" alt="Jane Doe" />
+          </li>
+
+          <li class="cards">
+            <a
+              class="cards-image"
+              href="#"
+              target="_blank"
+              style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg)">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg" alt="Jane Doe" />
             </a>
             <a class="cards-description" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank">
-                <h2>Jane Doe</h2>
-                <p>Converge</p>
+              <h2>Jane Doe</h2>
+              <p>Converge</p>
             </a>
-        </li>
-        
-    </ul>
-    </section>
+          </li>
+        </ul>
+      </section>
 
-    <!-- cultural event -->
-    <section id="cultural" class="hidden-section">
-      <ul class="cards-list">
-	
-        <li class="cards">
-            <a class="cards-image" href="https://michellezauner.bandcamp.com/album/psychopomp-2" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-100.jpg);" >
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-100.jpg" alt="Psychopomp" />
-            </a>
-            <a class="cards-description" href="https://michellezauner.bandcamp.com/album/psychopomp-2" target="_blank">
-                <h2>Psychopomp</h2>
-                <p>Japanese Breakfast</p>
-            </a>
-        </li>
-        
-        <li class="cards">
+      <!-- cultural event -->
+      <section id="cultural" class="hidden-section">
+        <ul class="cards-list">
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-01.png" alt="" />
+          </li>
+
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-02.png" alt="" />
+          </li>
+
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-03.png" alt="" />
+          </li>
+
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-04.png" alt="" />
+          </li>
+
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-05.png" alt="" />
+          </li>
+
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-06.png" alt="" />
+          </li>
+
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-07.png" alt="" />
+          </li>
+
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-08.png" alt="" />
+          </li>
+
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-09.png" alt="" />
+          </li>
+
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-10.png" alt="" />
+          </li>
+
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-11.png" alt="" />
+          </li>
+
+          <!-- <li class="cards">
             <a class="cards-image" href="https://inlovewithaghost.bandcamp.com/album/lets-go" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg);" >
                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg" alt="let's go" />
             </a>
@@ -297,9 +995,9 @@
                 <h2>The Beautiful Game</h2>
                 <p>Vulfpeck</p>
             </a>
-        </li>
-        
-        <!-- <li class="cards">
+        </li> -->
+
+          <!-- <li class="cards">
             <a class="cards-image" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-500.jpg">
                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg" alt="Jane Doe" />
             </a>
@@ -308,205 +1006,173 @@
                 <p>Converge</p>
             </a>
         </li> -->
-        
-    </ul>
-    </section>
+        </ul>
+      </section>
 
-    <!-- splash section -->
+      <!-- splash section -->
 
-    <section id="splash" class="hidden-section">
-      <ul class="cards-list">
-	
-        <li class="cards">
-            <a class="cards-image" href="https://michellezauner.bandcamp.com/album/psychopomp-2" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-100.jpg);" >
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-100.jpg" alt="Psychopomp" />
-            </a>
-            <a class="cards-description" href="https://michellezauner.bandcamp.com/album/psychopomp-2" target="_blank">
-                <h2>Psychopomp</h2>
-                <p>Japanese Breakfast</p>
-            </a>
-        </li>
-        
-        <li class="cards">
-            <a class="cards-image" href="https://inlovewithaghost.bandcamp.com/album/lets-go" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg);" >
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg" alt="let's go" />
-            </a>
-            <a class="cards-description" href="https://inlovewithaghost.bandcamp.com/album/lets-go" target="_blank">
-                <h2>let's go</h2>
-                <p>In Love With A Ghost</p>
-            </a>
-        </li>
-        
-        <li class="cards">
-            <a class="cards-image" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-100.jpg);">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-100.jpg" alt="The Beautiful Game" />
-            </a>
-            <a class="cards-description" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank">
-                <h2>The Beautiful Game</h2>
-                <p>Vulfpeck</p>
-            </a>
-        </li>
-        
-        <li class="cards">
-            <a class="cards-image" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg);" >
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg" alt="Jane Doe" />
-            </a>
-            <a class="cards-description" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank">
-                <h2>Jane Doe</h2>
-                <p>Converge</p>
-            </a>
-        </li>
-        
-    </ul>
+      <section id="splash" class="hidden-section">
+        <ul class="cards-list">
+          <li class="cards">
+            <img src="../assets/posters/splash/website poster (9)-01.png" alt="">
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/splash/website poster (9)-02.png" alt="">
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/splash/website poster (9)-03.png" alt="">
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/splash/website poster (9)-04.png" alt="">
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/splash/website poster (9)-05.png" alt="">
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/splash/website poster (9)-06.png" alt="">
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/splash/website poster (9)-07.png" alt="">
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/splash/website poster (9)-08.png" alt="">
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/splash/website poster (9)-09.png" alt="">
+          </li>
+        </ul>
+      </section>
     </section>
-  </section>
-  <footer id="footer" class="footer text-light mt-auto p-0">
-    <div class="container-fluid px-5 py-4">
-      <div class="row justify-content-evenly">
-        <div class="col-xs-6 col-sm-3 column text-center d-flex flex-column">
-          <div class="my-4"><img src="../assets/logo/REN 23 logo.png" class="footer-logo" /></div>
-        </div>
-        <!-- <div class="col-xs-6 col-sm-3 column text-center d-flex flex-column">
-          <h4>
-            <font color="white">Useful links</font>
-          </h4>
-          <hr class="underline" />
-          <ul class="list-unstyled py-4">
-            <li>
-              <a class="nav-link active" style="color: azure" href="{%url 'contact'%}">Events & Itinerary</a>
-            </li>
-            <li>
-              <a class="nav-link active" style="color: azure" href="{%url 'about'%}">About</a>
-            </li>
-            <li>
-              <a class="nav-link active" style="color: azure" href="#">Sponsors</a>
-            </li>
-            <li>
-              <a class="nav-link active" style="color: azure" href="{%url 'policy'%}">Team</a>
-            </li>
-            <li>
-              <a class="nav-link active" style="color: azure" href="#">Home</a>
-            </li>
-          </ul>
-        </div> -->
-        <div class="col-xs-12 col-sm-3 column text-center d-flex flex-column">
-          <h4>Contact Us
-          </h4>
-          <hr class="mb-4 underline" />
-          <ul class="list-unstyled py-4">
-            <li>
-              <a class="nav-link">Technical</a>
-            </li>
-            <li>
-              <a class="nav-link">Cultural</a>
-            </li>
-            <li>
-              <a class="nav-link">Splash</a>
-            </li>
-            <li>
-              <a class="nav-link">Team</a>
-            </li>
-            <li>
-              <a class="nav-link">Home</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-xs-12 col-sm-3 text-center d-flex flex-column">
-          <h4>Follow Us</h4>
-          <hr class="underline" />
-          <div class="row justify-content-center">
-            <h6 class="my-3">JECRC Renaissance</h6>
-            <div class="d-flex justify-content-center">
-              <div class="m-2">
-                <a rel="nofollow" class="navbar-brand" href="" title="Twitter">
-                  <img loading="lazy" src="../assets/icons/youtube.png" height="40px" />
-                </a>
-              </div>
-              <div class="m-2">
-                <a rel="nofollow" class="navbar-brand" href="" title="Facebook">
-                  <img loading="lazy" src="../assets/icons/facebook.png" height="40px" />
-                </a>
-              </div>
-              <div class="m-2">
-                <a rel="nofollow" class="navbar-brand" href="https://www.instagram.com/khushaljangid.04/"
-                  title="instagram">
-                  <img loading="lazy" src="../assets/icons/instagram.png" height="40px" />
-                </a>
+    <footer id="footer" class="footer text-light mt-auto p-0">
+      <div class="container-fluid px-5 py-4">
+        <div class="row justify-content-evenly">
+          <div class="col-xs-6 col-sm-3 column text-center d-flex flex-column">
+            <div class="my-4"><img src="../assets/logo/REN 23 logo.png" class="footer-logo" /></div>
+          </div>
+          <div class="col-xs-12 col-sm-3 column text-center d-flex flex-column">
+            <h4>Contact Us</h4>
+            <hr class="mb-4 underline" />
+            <ul class="list-unstyled py-4">
+              <li>
+                <a class="nav-link">Technical</a>
+              </li>
+              <li>
+                <a class="nav-link">Cultural</a>
+              </li>
+              <li>
+                <a class="nav-link">Splash</a>
+              </li>
+              <li>
+                <a class="nav-link">Team</a>
+              </li>
+              <li>
+                <a class="nav-link">Home</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-3 text-center d-flex flex-column">
+            <h4>Follow Us</h4>
+            <hr class="underline" />
+            <div class="row justify-content-center">
+              <h6 class="my-3">JECRC Renaissance</h6>
+              <div class="d-flex justify-content-center">
+                <div class="m-2">
+                  <a rel="nofollow" class="navbar-brand" href="" title="Twitter">
+                    <img loading="lazy" src="../assets/icons/youtube.png" height="40px" />
+                  </a>
+                </div>
+                <div class="m-2">
+                  <a rel="nofollow" class="navbar-brand" href="" title="Facebook">
+                    <img loading="lazy" src="../assets/icons/facebook.png" height="40px" />
+                  </a>
+                </div>
+                <div class="m-2">
+                  <a
+                    rel="nofollow"
+                    class="navbar-brand"
+                    href="https://www.instagram.com/khushaljangid.04/"
+                    title="instagram">
+                    <img loading="lazy" src="../assets/icons/instagram.png" height="40px" />
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="row justify-content-center">
-            <h6 class="my-3">JECRC Foundation</h6>
-            <div class="d-flex justify-content-center">
-              <div class="m-2">
-                <a rel="nofollow" class="navbar-brand" href="" title="Twitter">
-                  <img loading="lazy" src="../assets/icons/youtube.png" height="40px" />
-                </a>
-              </div>
-              <div class="m-2">
-                <a rel="nofollow" class="navbar-brand" href="" title="Facebook">
-                  <img loading="lazy" src="../assets/icons/facebook.png" height="40px" />
-                </a>
-              </div>
-              <div class="m-2">
-                <a rel="nofollow" class="navbar-brand" href="https://www.instagram.com/khushaljangid.04/"
-                  title="instagram">
-                  <img loading="lazy" src="../assets/icons/instagram.png" height="40px" />
-                </a>
+            <div class="row justify-content-center">
+              <h6 class="my-3">JECRC Foundation</h6>
+              <div class="d-flex justify-content-center">
+                <div class="m-2">
+                  <a rel="nofollow" class="navbar-brand" href="" title="Twitter">
+                    <img loading="lazy" src="../assets/icons/youtube.png" height="40px" />
+                  </a>
+                </div>
+                <div class="m-2">
+                  <a rel="nofollow" class="navbar-brand" href="" title="Facebook">
+                    <img loading="lazy" src="../assets/icons/facebook.png" height="40px" />
+                  </a>
+                </div>
+                <div class="m-2">
+                  <a
+                    rel="nofollow"
+                    class="navbar-brand"
+                    href="https://www.instagram.com/khushaljangid.04/"
+                    title="instagram">
+                    <img loading="lazy" src="../assets/icons/instagram.png" height="40px" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="d-flex flex-column text-center py-4 m-0" style="background-color: rgba(20, 22, 30, 1)">
-      <div class="copyright m-auto">
-        <p class="my-2">&copy; Copyright <strong>Jecrc Foundation</strong>. All Rights Reserved</p>
+      <div class="d-flex flex-column text-center py-4 m-0" style="background-color: rgba(20, 22, 30, 1)">
+        <div class="copyright m-auto">
+          <p class="my-2">&copy; Copyright <strong>Jecrc Foundation</strong>. All Rights Reserved</p>
+        </div>
+        <div class="credits m-auto">
+          <p class="my-2">Developed by</p>
+          <p class="my-2">Graphics Designed by</p>
+        </div>
       </div>
-      <div class="credits m-auto">
-        <p class="my-2">Developed by</p>
-        <p class="my-2">Graphics Designed by</p>
-      </div>
-    </div>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-  <script src="../js/activities.js"></script>
-  <script src="../js/main.js"></script>
-  <script>
-    function showModal(element){
-      element.style.display ="block";
-    }
-    function closeModal(element){
-      element.style.display ="none";
-    }
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"></script>
+    <script src="../js/activities.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+      function showModal(element) {
+        element.style.display = "block";
+      }
+      function closeModal(element) {
+        element.parentElement.parentElement.parentElement.style.display = "none";
+      }
 
-var obj = document.getElementById("tech").children[0].children;
-for(const key in obj){
-  let el = obj[key];
-   el.addEventListener("click",function(){
-     document.getElementById(`tech-modal-${key}`).style.display = "block";
-    })
-  }
-//     $("#tech .cards").each(function(index, value) {
-//   console.log(`${value}:${index}`);
-//   value.click(function(){
-//     $("#tech-modal-${index}").style.display = "block";
-//   })
-// });
-//     $("#cultural .cards").each(function(index, value) {
-// //   console.log(`${value}:${index}`);
-//   value.click(function(){
-//     $("#cultural-modal-${index}").style.display = "block";
-//   })
-// });
-//     $("#splash .cards").each(function(index, value) {
-// //   console.log(`${value}:${index}`);
-//   value.click(function(){
-//     $("#splash-modal-${index}").style.display = "block";
-//   })
-// });
-  </script>
-</body>
-
+      var obj = document.getElementById("tech").children[0].children;
+      for (const key in obj) {
+        let el = obj[key];
+        el.addEventListener("click", function () {
+          document.getElementById(`tech-modal-${key}`).style.display = "block";
+        });
+      }
+      //     $("#tech .cards").each(function(index, value) {
+      //   console.log(`${value}:${index}`);
+      //   value.click(function(){
+      //     $("#tech-modal-${index}").style.display = "block";
+      //   })
+      // });
+      //     $("#cultural .cards").each(function(index, value) {
+      // //   console.log(`${value}:${index}`);
+      //   value.click(function(){
+      //     $("#cultural-modal-${index}").style.display = "block";
+      //   })
+      // });
+      //     $("#splash .cards").each(function(index, value) {
+      // //   console.log(`${value}:${index}`);
+      //   value.click(function(){
+      //     $("#splash-modal-${index}").style.display = "block";
+      //   })
+      // });
+    </script>
+  </body>
 </html>
