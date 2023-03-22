@@ -44,6 +44,9 @@ body{
 	background-attachment: fixed;
 	background-position-y: bottom ;
   }
+  .cards{
+	max-width: 23rem !important;
+  }
 }
 
 .cards-list {
@@ -62,7 +65,7 @@ body{
 	margin: 1rem;
 	font-size: 1rem;
 	text-decoration: none;
-	overflow: hidden;
+	/* overflow: hidden; */
 	box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
 	transition: transform 0.1s ease-in-out, box-shadow 0.1s;
 	cursor: pointer;
