@@ -36,10 +36,10 @@ body{
   }
   .landing-section{
     height: 100vh;
-    background-image: url("../assets/logo/logos-01.png"),url("../assets/images/homepage.webp");
-    
+    background-image: url("../assets/bg/web-homepage.webp");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    overflow: hidden;
   }
   .logo{
     max-width: 20%;
@@ -57,11 +57,12 @@ body{
   @media only screen and (max-width: 440px) {
   .landing-section {
     height: 100vh;
-    background-image: url("../assets/images/mobile logos-01.webp"),url("../assets/images/home page mobile-01.webp");
+    /* background-image: url("../assets/images/mobile logos-01.webp"),url("../assets/images/home page mobile-01.webp"); */
+    background-image: url("../assets/bg/mobile-homepage.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
-    background-position-y:bottom ;
+    background-position-y:top;
   }
 }
 
@@ -79,20 +80,37 @@ body{
   }
 }
 
+.layer-1{
+  z-index: 1;
+  position: absolute;
+  left:0vw;
+  width: 100vw;
+}
+.layer-2{
+  z-index: 2;
+  position: absolute;
+  left:0vw;
+  width: 100vw;
+}
+
+
 .monument-one{
   animation: monument-one 10s linear;
   animation-iteration-count: infinite;
   width: 100vw;
-  position: relative;
+  position: absolute;
   left: 0;
+  bottom:0;
 }
 .monument-two{
   animation: monument-two 10s linear;
   animation-iteration-count: infinite;
   width: 100vw;
-  position: relative;
-  left: -200vw;
+  position: absolute;
+  left: -100vw;
+  bottom:0;
 }
+
 @keyframes monument-one {
   from{
     left:0;
@@ -103,9 +121,43 @@ body{
 }
 @keyframes monument-two {
   from{
-    left:-200vw;
+    left:-100vw;
   }
   to{
-    left: -100vw;
+    left: 0vw;
+  }
+}
+
+.balloons{
+  animation: fly-up 20s linear;
+  animation-iteration-count: infinite;
+  position: relative;
+  bottom: -50vh;
+}
+
+@keyframes fly-up {
+  0%{
+    bottom: -70vh;
+  }
+  20%{
+    bottom: 0vh;
+  }
+  32%{
+    bottom: -10vh;
+  }
+  44%{
+    bottom: 0vh;
+  }
+  56%{
+    bottom: -10vh;
+  }
+  68%{
+    bottom: 0vh;
+  }
+  80%{
+    bottom: -10vh;
+  }
+  100%{
+    bottom: 100vh;
   }
 }

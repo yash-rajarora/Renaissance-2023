@@ -7,7 +7,8 @@
 }
 :root {
   /* --primary: #6c63ff; */
-  --primary: #a81e28;
+  /* --primary: #a81e28; */
+  --primary : rgb(234, 178, 118);
   --secondary: rgb(20, 18, 16,0.9);
   --secondary-opaque: rgba(9, 10, 16, 1);
   --border-gray: rgba(100, 100, 100, 0.3);
@@ -16,6 +17,7 @@
   --accent-green: rgb(34, 193, 74);
   --accent-green-translucent: rgba(34, 193, 74, 0.2);
   --roboto: Arial, Helvetica, sans-serif;
+  --bs-nav-link-color: rgb(234, 178, 118);
 }
 html{
   font-size: 16px;
@@ -77,6 +79,12 @@ h6{
   
 }
 
+
+.drawer .nav-item{
+  padding: 1rem 0;
+}
+
+
 .drawer-toggler:focus {
   box-shadow: none;
   border: none;
@@ -108,6 +116,12 @@ h6{
 footer {
   background-color: var(--secondary-opaque);
 }
+
+/* footer a{
+  color: var(--primary);
+  
+} */
+
 #mobile-body-overly {
   width: 100%;
   height: 100%;
