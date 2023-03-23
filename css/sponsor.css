@@ -91,7 +91,7 @@ div.card img {
 
 div.card .card__image-holder {
 	background: rgba(0, 0, 0, 0.1);
-	height: 0;
-	padding-bottom: 75%;
+	height: 200px;
+	width: 300px;
 }
 

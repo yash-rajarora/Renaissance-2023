@@ -20,10 +20,10 @@ body{
 section {
     padding: 60px 0;
 }
-a, a:hover, a:focus, a:active {
+/* a, a:hover, a:focus, a:active {
     text-decoration: none;
     outline: none;
-}
+} */
 ul {
     margin: 0;
     padding: 0;
@@ -96,9 +96,9 @@ ul {
   width: 100%;
 }
 
-.team-area .team-items .item:hover .thumb::after {
+/* .team-area .team-items .item:hover .thumb::after {
   opacity: 0.7;
-}
+} */
 
 .team-area .item .thumb .overlay {
   top: -100%;
@@ -115,11 +115,11 @@ ul {
   z-index: 1;
 }
 
-.team-area .item:hover .thumb .overlay {
+/* .team-area .item:hover .thumb .overlay {
   top: 50%;
   transform: translate(-50%, -50%);
   left: 50%;
-}
+} */
 
 .team-area .item .thumb .overlay p {
   color: #ffffff;
@@ -140,9 +140,9 @@ ul {
   transition: all 0.35s ease-in-out;
 }
 
-.team-area .item:hover .thumb img {
+/* .team-area .item:hover .thumb img {
   opacity: .6;
-}
+} */
 
 .team-area .item .thumb .social li {
   display: inline-block;
@@ -194,7 +194,7 @@ ul {
   -o-box-shadow: 0 0 10px #cccccc;
   box-shadow: 0 0 10px #cccccc;
   box-sizing: border-box;
-  color: #ff5a6e;
+  color: #0072b1;
   display: inline-block;
   font-size: 20px;
   height: 50px;
@@ -239,8 +239,8 @@ ul {
   background-color: #1ab7ea;
 }
 
-.team-area .social li.instagram a {
-  background-color: #cd486b;
+.team-area .social li.linkedin a {
+  background-color: #0072b1;
 }
 .heading_img{
   height: 20%;
