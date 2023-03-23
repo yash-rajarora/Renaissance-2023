@@ -48,13 +48,14 @@
   <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-0">
-      <div class="container-fluid d-flex justify-content-between">
+      <div class="container-fluid d-flex justify-content-start">
         <!-- <a class="navbar-brand cat mobile-only" href="index.html">
         <img src="logo.png" height="45" alt="logo" />
       </a> -->
-        <button class="drawer-toggler mobile-only btn" id="drawer-toggler">
+        <button class="drawer-toggler mobile-only btn px-4" id="drawer-toggler">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <h4 class="text-light my-auto mobile-only">Renaissance</h4>
         <div class="navbar-collapse collapse">
           <!-- <a class="navbar-brand cat mx-5" href="index.html">
           <img src="logo.png" height="45" alt="logo" />
@@ -190,7 +191,7 @@
     <!-- navbar end -->
     <section id="background_img">
       <div class="heading">
-        <img src="../assets/images/events.webp" class="heading_img" />
+        <img src="../assets/banners/events.webp" class="heading_img" />
       </div>
       <div class="top-button">
         <button class="button-top cultural-btn" onclick="addAnimation()" id="show-tech">TECHNICAL</button>
@@ -1236,19 +1237,16 @@ utmost pleasure, we inviteyour participation to make Renaissance'23 more valuabl
             <hr class="mb-4 underline" />
             <ul class="list-unstyled py-4">
               <li>
-                <a class="nav-link">Technical</a>
+                <a href="tel:9782971327" class="nav-link">Technical Head: +919782971327</a><h6>(Roonak Khandelwal)</h6>
               </li>
               <li>
-                <a class="nav-link">Cultural</a>
+                <a href="tel:8209017116" class="nav-link">Cultural Head: +918209017116</a><h6>(Shubhanker Pandey)</h6>
               </li>
               <li>
-                <a class="nav-link">Splash</a>
+                <a href="tel:7240578521" class="nav-link">Splash Head: +917240578521</a><h6>(Rajeev Sharma)</h6>
               </li>
               <li>
-                <a class="nav-link">Team</a>
-              </li>
-              <li>
-                <a class="nav-link">Home</a>
+                <a href="mailto:renaissance@jecrc.ac.in" class="nav-link">renaissance@jecrc.ac.in</a>
               </li>
             </ul>
           </div>
@@ -1259,20 +1257,20 @@ utmost pleasure, we inviteyour participation to make Renaissance'23 more valuabl
               <h6 class="my-3">JECRC Renaissance</h6>
               <div class="d-flex justify-content-center">
                 <div class="m-2">
-                  <a rel="nofollow" class="navbar-brand" href="" title="Twitter">
+                  <a rel="nofollow" target="_blank" class="navbar-brand" href="https://youtube.com/@TheJECRCRenaissance" title="Twitter">
                     <img loading="lazy" src="../assets/icons/youtube.png" height="40px" />
                   </a>
                 </div>
                 <div class="m-2">
-                  <a rel="nofollow" class="navbar-brand" href="" title="Facebook">
+                  <a rel="nofollow" target="_blank" class="navbar-brand" href="https://www.facebook.com/jecrcrenaissance/" title="Facebook">
                     <img loading="lazy" src="../assets/icons/facebook.png" height="40px" />
                   </a>
                 </div>
                 <div class="m-2">
-                  <a
+                  <a target="_blank"
                     rel="nofollow"
                     class="navbar-brand"
-                    href="https://www.instagram.com/khushaljangid.04/"
+                    href="https://www.instagram.com/jecrcrenaissance/"
                     title="instagram">
                     <img loading="lazy" src="../assets/icons/instagram.png" height="40px" />
                   </a>
@@ -1283,20 +1281,20 @@ utmost pleasure, we inviteyour participation to make Renaissance'23 more valuabl
               <h6 class="my-3">JECRC Foundation</h6>
               <div class="d-flex justify-content-center">
                 <div class="m-2">
-                  <a rel="nofollow" class="navbar-brand" href="" title="Twitter">
+                  <a rel="nofollow" target="_blank" class="navbar-brand" href="https://www.youtube.com/@jecrcfoundation2150" title="Twitter">
                     <img loading="lazy" src="../assets/icons/youtube.png" height="40px" />
                   </a>
                 </div>
                 <div class="m-2">
-                  <a rel="nofollow" class="navbar-brand" href="" title="Facebook">
+                  <a rel="nofollow" target="_blank" class="navbar-brand" href="https://www.facebook.com/JECRCfoundation/" title="Facebook">
                     <img loading="lazy" src="../assets/icons/facebook.png" height="40px" />
                   </a>
                 </div>
                 <div class="m-2">
-                  <a
+                  <a target="_blank"
                     rel="nofollow"
                     class="navbar-brand"
-                    href="https://www.instagram.com/khushaljangid.04/"
+                    href="https://www.instagram.com/jecrcfoundationofficial/"
                     title="instagram">
                     <img loading="lazy" src="../assets/icons/instagram.png" height="40px" />
                   </a>
@@ -1323,38 +1321,9 @@ utmost pleasure, we inviteyour participation to make Renaissance'23 more valuabl
     <script src="../js/activities.js"></script>
     <script src="../js/main.js"></script>
     <script>
-      function showModal(element) {
-        element.style.display = "block";
-      }
       function closeModal(element) {
         element.parentElement.parentElement.parentElement.style.display = "none";
       }
-
-      var obj = document.getElementById("tech").children[0].children;
-      for (const key in obj) {
-        let el = obj[key];
-        el.addEventListener("click", function () {
-          document.getElementById(`tech-modal-${key}`).style.display = "block";
-        });
-      }
-      //     $("#tech .cards").each(function(index, value) {
-      //   console.log(`${value}:${index}`);
-      //   value.click(function(){
-      //     $("#tech-modal-${index}").style.display = "block";
-      //   })
-      // });
-      //     $("#cultural .cards").each(function(index, value) {
-      // //   console.log(`${value}:${index}`);
-      //   value.click(function(){
-      //     $("#cultural-modal-${index}").style.display = "block";
-      //   })
-      // });
-      //     $("#splash .cards").each(function(index, value) {
-      // //   console.log(`${value}:${index}`);
-      //   value.click(function(){
-      //     $("#splash-modal-${index}").style.display = "block";
-      //   })
-      // });
     </script>
     <script src="../js/modal.js"></script>
   </body>

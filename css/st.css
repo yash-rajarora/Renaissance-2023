@@ -5,6 +5,15 @@ body{
 	  background-attachment: fixed;
 	  background-position-y: bottom ;
 }
+@media (max-width: 640px){
+	body{
+	  background-image: url("../assets/bg/mobile-bg-plain.webp");
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  background-attachment: fixed;
+	  background-position-y: bottom ;
+	}
+  }
 #top-spacing{
     padding: 20px;
 }

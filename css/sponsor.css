@@ -12,7 +12,7 @@ body {
 }
 @media (max-width: 1000px){
 	body{
-	  background-image: url("../assets/images/background-plain.webp");
+	  background-image: url("../assets/bg/mobile-bg-plain.webp");
 	  background-repeat: repeat-y;
 	  background-size: cover;
 	  background-attachment: fixed;
