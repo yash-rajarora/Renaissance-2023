@@ -6,10 +6,10 @@ body{
     background-position-y: bottom ;
     overflow-x: hidden;
 }
-  .outline-thick{
+  /* .outline-thick{
     border: var(--primary) 8px solid;
     border-radius: 21px;
-  }
+  } */
   .outline-thick img{
     border-radius: 10px;
   } 
