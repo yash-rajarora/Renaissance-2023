@@ -58,7 +58,7 @@ body{
   .landing-section {
     height: 100vh;
     /* background-image: url("../assets/images/mobile logos-01.webp"),url("../assets/images/home page mobile-01.webp"); */
-    background-image: url("../assets/bg/mobile-homepage.webp");
+    background-image:url("../assets/bg/mobile-homepage.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
@@ -133,6 +133,7 @@ body{
   animation-iteration-count: infinite;
   position: relative;
   bottom: -50vh;
+  height: fit-content;
 }
 
 @keyframes fly-up {
