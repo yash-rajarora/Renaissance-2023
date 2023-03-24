@@ -18,9 +18,15 @@
   --accent-green-translucent: rgba(34, 193, 74, 0.2);
   --roboto: Arial, Helvetica, sans-serif;
   --bs-nav-link-color: rgb(234, 178, 118);
+  --bs-link-color: rgb(234, 178, 118);
+  --bs-link-hover-color:white;
 }
 html{
   font-size: 16px;
+}
+
+a{
+  text-decoration: none;
 }
 
 h1{
