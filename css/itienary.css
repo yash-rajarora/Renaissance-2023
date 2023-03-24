@@ -170,6 +170,7 @@ body{
   }
   .timeline > .column > .row p{
     font-size: 20px;
+    padding: 0;
   }
 
   .timeline > .column > .row > .time {
