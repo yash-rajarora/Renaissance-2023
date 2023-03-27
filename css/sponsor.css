@@ -88,10 +88,24 @@ div.card {
 div.card img {
 	max-width: 300px;
 }
+div.card1 img {
+	max-width: 500px;
+}
 
 div.card .card__image-holder {
 	background: rgba(0, 0, 0, 0.1);
 	height: 200px;
 	width: 300px;
 }
-
+.img-mobile {
+	display: none;
+  }
+  @media screen and (max-width: 600px) {
+	.img-mobile {
+	  display: block;
+	  margin: auto;
+	}
+	.img-desktop {
+	  display: none;
+	}
+  }

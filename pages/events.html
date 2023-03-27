@@ -1,1489 +1,2087 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/activities.css" />
-    <link rel="stylesheet" href="../css/button.css" />
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="../assets/logo/REN 23 logo.png" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <title>Events & Activities | Renaissance 2023</title>
-    <style>
-      .modal-overlay {
-        display: none;
-        background-color: rgba(6, 12, 34, 0.8);
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        z-index: 1050;
-      }
-      .modal-body {
-        border-radius: 25px;
-        padding: 2rem;
-        min-height: 50vh;
-        display: block;
-        color: black;
-        background-color: white;
-        margin: 5rem auto;
-        max-width: 700px;
-        max-height: 80vh;
-        width: 90vw;
-        overflow-y: auto;
-        overflow-wrap: anywhere;
-        scrollbar-width: none;
-      }
-    </style>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/activities.css" />
+  <link rel="stylesheet" href="../css/button.css" />
 
-  <body>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-0">
-      <div class="container-fluid d-flex justify-content-start">
-        <!-- <a class="navbar-brand cat mobile-only" href="index.html">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../assets/logo/REN 23 logo.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <title>Events & Activities | Renaissance 2023</title>
+  <style>
+    .modal-overlay {
+      display: none;
+      background-color: rgba(6, 12, 34, 0.8);
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 1050;
+    }
+
+    .modal-body {
+      border-radius: 25px;
+      padding: 2rem;
+      min-height: 50vh;
+      display: block;
+      color: black;
+      background-color: white;
+      margin: 5rem auto;
+      max-width: 700px;
+      max-height: 80vh;
+      width: 90vw;
+      overflow-y: auto;
+      overflow-wrap: anywhere;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-0">
+    <div class="container-fluid d-flex justify-content-start">
+      <!-- <a class="navbar-brand cat mobile-only" href="index.html">
         <img src="logo.png" height="45" alt="logo" />
       </a> -->
-        <button class="drawer-toggler mobile-only btn px-4" id="drawer-toggler">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <h4 class="text-light my-auto mobile-only">Renaissance</h4>
-        <div class="navbar-collapse collapse">
-          <!-- <a class="navbar-brand cat mx-5" href="index.html">
+      <button class="drawer-toggler mobile-only btn px-4" id="drawer-toggler">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <h4 class="text-light my-auto mobile-only">Renaissance</h4>
+      <div class="navbar-collapse collapse">
+        <!-- <a class="navbar-brand cat mx-5" href="index.html">
           <img src="logo.png" height="45" alt="logo" />
         </a> -->
-          <ul class="navbar-nav m-auto">
-            <div class="nav-item mx-2">
-              <div class="container-fluid d-flex">
-                <a class="nav-link active" href="../index.html">
-                  <div class="button draw">Home</div>
-                </a>
-              </div>
+        <ul class="navbar-nav m-auto">
+          <div class="nav-item mx-2">
+            <div class="container-fluid d-flex">
+              <a class="nav-link active" href="../index.html">
+                <div class="button draw">Home</div>
+              </a>
             </div>
-            <li class="nav-item mx-2">
-              <div class="container-fluid d-flex">
-                <a class="nav-link active" href="../index.html#celebrity-section">
-                  <div class="button draw">Celebrity</div>
-                </a>
-              </div>
-            </li>
-            <li class="nav-item mx-2">
-              <div class="container-fluid d-flex">
-                <a class="nav-link active" href="events.html">
-                  <div class="button draw">Events</div>
-                </a>
-              </div>
-            </li>
-            <li class="nav-item mx-2">
-              <div class="container-fluid d-flex">
-                <a class="nav-link active" href="itienary.html">
-                  <div class="button draw">Itinerary</div>
-                </a>
-              </div>
-            </li>
-            <li class="nav-item mx-2">
-              <div class="container-fluid d-flex">
-                <a class="nav-link active" href="sponsor.html">
-                  <div class="button draw">Sponsors</div>
-                </a>
-              </div>
-            </li>
-            <li class="nav-item mx-2">
-              <div class="container-fluid d-flex">
-                <a class="nav-link active" href="about.html">
-                  <div class="button draw">About</div>
-                </a>
-              </div>
-            </li>
-            <li class="nav-item mx-2">
-              <div class="container-fluid d-flex">
-                <a class="nav-link active" target="_blank" href="https://forms.gle/VEkbQ1fEFFq7HkCm9">
-                  <div class="button draw">Register now</div>
-                </a>
-              </div>
-            </li>
-            <li class="nav-item mx-2">
-              <div class="container-fluid d-flex">
-                <a class="nav-link active" href="#footer">
-                  <div class="button draw">Contact Us</div>
-                </a>
-              </div>
-            </li>
-          </ul>
-        </div>
+          </div>
+          <li class="nav-item mx-2">
+            <div class="container-fluid d-flex">
+              <a class="nav-link active" href="../index.html#celebrity-section">
+                <div class="button draw">Celebrity</div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item mx-2">
+            <div class="container-fluid d-flex">
+              <a class="nav-link active" href="events.html">
+                <div class="button draw">Events</div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item mx-2">
+            <div class="container-fluid d-flex">
+              <a class="nav-link active" href="itienary.html">
+                <div class="button draw">Itinerary</div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item mx-2">
+            <div class="container-fluid d-flex">
+              <a class="nav-link active" href="sponsor.html">
+                <div class="button draw">Sponsors</div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item mx-2">
+            <div class="container-fluid d-flex">
+              <a class="nav-link active" href="about.html">
+                <div class="button draw">About</div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item mx-2">
+            <div class="container-fluid d-flex">
+              <a class="nav-link active" target="_blank" href="https://forms.gle/VEkbQ1fEFFq7HkCm9">
+                <div class="button draw">Register now</div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item mx-2">
+            <div class="container-fluid d-flex">
+              <a class="nav-link active" href="#footer">
+                <div class="button draw">Contact Us</div>
+              </a>
+            </div>
+          </li>
+        </ul>
       </div>
-    </nav>
-
-    <!-- =-=-=-=-=-=-=-=-=-=-=-=-= Drawer Starts =-=-=-=-=-=-==-=-=-=-===-=-= -->
-    <div class="drawer drawer-inactive navbar-collapse fixed-top" expanded="false" id="drawer">
-      <div class="d-flex dog p-3 justify-content-between" style="background-color: rgba(9, 10, 16, 1)">
-        <h3>Menu</h3>
-        <button class="btn btn-outline-danger my-auto" id="drawer-close-btn">&#10006;</button>
-      </div>
-      <ul class="navbar-nav p-5">
-        <li class="nav-item">
-          <div class="container-fluid">
-            <a class="nav-link active d-flex px-2" href="../index.html">
-              <h4 class="my-auto mouse">Home</h4>
-            </a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="container-fluid">
-            <a class="nav-link active d-flex px-2" href="../index.html#celebrity-section">
-              <h4 class="my-auto mouse">Celebrity</h4>
-            </a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="container-fluid">
-            <a class="nav-link active d-flex px-2" href="events.html">
-              <h4 class="my-auto mouse">Events</h4>
-            </a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="container-fluid">
-            <a class="nav-link active d-flex px-2" href="itienary.html">
-              <h4 class="my-auto mouse">Itinerary</h4>
-            </a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="container-fluid">
-            <a class="nav-link active d-flex px-2" href="sponsor.html">
-              <h4 class="my-auto mouse">Sponsors</h4>
-            </a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="container-fluid">
-            <a class="nav-link active d-flex px-2" href="about.html">
-              <h4 class="my-auto mouse">About</h4>
-            </a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="container-fluid">
-            <a class="nav-link active d-flex px-2" href="thttps://forms.gle/VEkbQ1fEFFq7HkCm9">
-              <h4 class="my-auto mouse">Register now</h4>
-            </a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="container-fluid">
-            <a class="nav-link active d-flex px-2" href="#footer">
-              <h4 class="my-auto mouse">Contact Us</h4>
-            </a>
-          </div>
-        </li>
-      </ul>
     </div>
-    <div id="mobile-body-overly"></div>
-    <!-- navbar end -->
-    <section id="background_img">
-      <div class="heading">
-        <img src="../assets/banners/events.webp" class="heading_img" />
-      </div>
-      <div class="top-button">
-        <button class="button-top cultural-btn" onclick="addAnimation()" id="show-tech">TECHNICAL</button>
-        <button class="button-top tech-btn" onclick="addAnimation2()" id="show-cultural">CULTURAL</button>
-        <button class="button-top splash-btn" onclick="addAnimation2()" id="show-splash">SPLASH</button>
-      </div>
+  </nav>
 
-      <!-- =-=-=-=-=-=- Modal start here =-=-=-=-=-=-=- -->
-      <div id="splash-modal-0" class="modal-overlay">
-        <div class="modal-body">
-          <div class="d-flex justify-content-between">
-            <h2>Roadies</h2>
-            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
-          </div>
-          <h3 class="my-4">About:-</h3>
-          <p>“ Pack your bags - Get ready for the ultimate challenge!”</p>
-          <p>
-            Roadies is an best fun game in which the contestants will be assigned different task to test their strength
-            and intelligence level. The task range from endurance-based physical challenges to puzzle-solving and
-            decision-making challenges that require intelligence and quick thinking.
-          </p>
-          <h4 class="my-2">Winning prize</h4>
-          1st - Yet to be decided <br />
-          2nd - yet to be decided <br />
-
-          <h4>Rules</h4>
-          • Rules will be declared on the event day <br />
-
-          <h4>Registration</h4>
-          • Registration fee : 300 per person <br />
-          • Participation E-certificate to all eligible candidates <br />
-          • For queries <br />
-          Aman Dhakad:-6367610145 <br />
-          Himanshu Dhaka:- 9982903848 <br />
-          <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">register now</a>
+  <!-- =-=-=-=-=-=-=-=-=-=-=-=-= Drawer Starts =-=-=-=-=-=-==-=-=-=-===-=-= -->
+  <div class="drawer drawer-inactive navbar-collapse fixed-top" expanded="false" id="drawer">
+    <div class="d-flex dog p-3 justify-content-between" style="background-color: rgba(9, 10, 16, 1)">
+      <h3>Menu</h3>
+      <button class="btn btn-outline-danger my-auto" id="drawer-close-btn">&#10006;</button>
+    </div>
+    <ul class="navbar-nav p-5">
+      <li class="nav-item">
+        <div class="container-fluid">
+          <a class="nav-link active d-flex px-2" href="../index.html">
+            <h4 class="my-auto mouse">Home</h4>
+          </a>
         </div>
-      </div>
-      <div id="splash-modal-1" class="modal-overlay">
-        <div class="modal-body">
-          <div class="d-flex justify-content-between">
-            <h2>Game of Series</h2>
-            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
-          </div>
-          <h3 class="my-4">About:-</h3>
-          <p>“GAME OF SERIES“</p>
-          <p>
-            Who isn’t a fan of web series? Game of series is all about guessing the names of Web series through hints
-            provided. But is your memory sharp enough to recall the names , lets see!!!
-          </p>
-
-          <h3>Rules</h3>
-          • There will ne be 3-4 Rounds. Teams will be shortlist accordingly. <br />
-          • Rounds will be related to audio, video,quizzes etc. <br />
-
-          <h3>Registration</h3>
-          • Registration fee: Rs 500 <br />
-          • Winner prize : Rs 2000 <br />
-          • Runner up prize : Rs 1000 <br />
-          • Participation E-certificate to all other eligible candidates. <br />
-          For queries contact:- <br />
-          Janvi Motwani : 6350306286 <br />
-          Apoorva Agarwal : 89557 32958 <br />
-          <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">register now</a>
+      </li>
+      <li class="nav-item">
+        <div class="container-fluid">
+          <a class="nav-link active d-flex px-2" href="../index.html#celebrity-section">
+            <h4 class="my-auto mouse">Celebrity</h4>
+          </a>
         </div>
-      </div>
-      <div id="splash-modal-2" class="modal-overlay">
-        <div class="modal-body">
-          <div class="d-flex justify-content-between">
-            <h2>Gully Cricket</h2>
-            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
-          </div>
-          <h3 class="my-4">About:-</h3>
-          <p>
-            Gully Cricket is a term used to describe backyard cricket. It's a game that can be played anywhere and
-            everywhere: in a parking lot, on a beach or an empty street. You can even play it in the corridor of your
-            house.
-          </p>
-
-          <h3>Rules</h3>
-          Type: Team <br />
-          EVENT RULES: <br />
-          -BASIC FORMAT <br />
-          *This is a knockout gully tournament. <br />
-          *6 players per team. <br />
-          *Game will be of 5 overs a side. <br />
-          *Registration fees paid is non refundable. <br />
-          *A player or a team can be disqualified under indisciplinary acts on the ground. <br />
-
-          BATTING RULES <br />
-          <p>
-            *HIT OVER THE BOUNDARY - Its not six:If the batsman hits direct over the boundary,he is out, though if the
-            ball crosses the boundary line grounded, its a four.
-          </p>
-          <p>
-            *TRY BALL - A player cannot be given out on the first ball of the innings i.e. the very first ball of
-            innings played by the batsman is a free hit.
-          </p>
-
-          FIELDING RULES <br />
-          <p>
-            *ONE TIP ONE HAND OUT-No juggling is permitted- the 'tip catch' with one hand must be clean; its is not out
-            if you used your other hand to support the hand taking the tip catch; if you nicked it onto your body,that
-            will be countes as a tip/bounce and you would have to be caught with one hand to be out.
-          </p>
-          -IMPORTANT <br />
-          <p>*In fielding, unlike boys, the girls can catch the ball with 2 hands on 1 tip and its out.</p>
-
-          <h3>Registration</h3>
-          REGISTRATION FEE – 600RS/- (100 PER HEAD) <br />
-          Winning Prizes 🏆<br />
-          First - 3000 Rs/- <br />
-          Second - 1000 Rs/- <br />
-          <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">register now</a>
+      </li>
+      <li class="nav-item">
+        <div class="container-fluid">
+          <a class="nav-link active d-flex px-2" href="events.html">
+            <h4 class="my-auto mouse">Events</h4>
+          </a>
         </div>
-      </div>
-      <div id="splash-modal-3" class="modal-overlay">
-        <div class="modal-body">
-          <div class="d-flex justify-content-between">
-            <h2>Street Football</h2>
-            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
-          </div>
-          <h3 class="my-4">About:-</h3>
-          <p>
-            What is Street Football? Street Football is a style of soccer that develops players' creativity,
-            decision-making and agility in a fast-moving game. It challenges players to use their strengths and turn
-            them into strategies on a smaller field.
-          </p>
-
-          <h3>Rules</h3>
-          Team Size: 7 members(2 substitute) <br />
-          Rules will be declared on the event day. <br />
-
-          <h3>Registration</h3>
-          Registration fee: Rs 700(per team) <br />
-          Winner prize: Yet to be decided <br />
-          Runner up prize: Yet to be decided <br />
-
-          Participation E-certificate to all other eligible candidates. <br />
-          For queries contact-: <br />
-          Abhinav Singh Shekhawat - 6377080671 <br />
-          Himanshu Dhaka - 9982903848 <br />
-          <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">register now</a>
+      </li>
+      <li class="nav-item">
+        <div class="container-fluid">
+          <a class="nav-link active d-flex px-2" href="itienary.html">
+            <h4 class="my-auto mouse">Itinerary</h4>
+          </a>
         </div>
+      </li>
+      <li class="nav-item">
+        <div class="container-fluid">
+          <a class="nav-link active d-flex px-2" href="sponsor.html">
+            <h4 class="my-auto mouse">Sponsors</h4>
+          </a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <div class="container-fluid">
+          <a class="nav-link active d-flex px-2" href="about.html">
+            <h4 class="my-auto mouse">About</h4>
+          </a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <div class="container-fluid">
+          <a class="nav-link active d-flex px-2" href="thttps://forms.gle/VEkbQ1fEFFq7HkCm9">
+            <h4 class="my-auto mouse">Register now</h4>
+          </a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <div class="container-fluid">
+          <a class="nav-link active d-flex px-2" href="#footer">
+            <h4 class="my-auto mouse">Contact Us</h4>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="mobile-body-overly"></div>
+  <!-- navbar end -->
+  <section id="background_img">
+    <div class="heading">
+      <img src="../assets/banners/events.webp" class="heading_img" />
+    </div>
+    <div class="top-button">
+      <button class="button-top cultural-btn" onclick="addAnimation()" id="show-tech">TECHNICAL</button>
+      <button class="button-top tech-btn" onclick="addAnimation2()" id="show-cultural">CULTURAL</button>
+      <button class="button-top splash-btn" onclick="addAnimation2()" id="show-splash">SPLASH</button>
+    </div>
+
+    <!-- =-=-=-=-=-=- Modal start here =-=-=-=-=-=-=- -->
+    <div id="splash-modal-0" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>Roadies</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+        </div>
+        <h3 class="my-4">About:-</h3>
+        <p>“ Pack your bags - Get ready for the ultimate challenge!”</p>
+        <p>
+          Roadies is an best fun game in which the contestants will be assigned different task to test their strength
+          and intelligence level. The task range from endurance-based physical challenges to puzzle-solving and
+          decision-making challenges that require intelligence and quick thinking.
+        </p>
+        <h4 class="my-2">Total Prize Pool:</h4>
+        <span>Rs 3000</span>
+
+        <h4>Rules</h4>
+        • Rules will be declared on the event day <br />
+
+        <h4>Registration</h4>
+        • Registration fee : 300 per person <br />
+        • Participation Certificate will be provided to all eligible participants. <br />
+        • For queries <br />
+        Aman Dhakad:-6367610145 <br />
+        Himanshu Dhaka:- 9982903848 <br />
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
       </div>
-      <div id="splash-modal-4" class="modal-overlay">
-        <div class="modal-body">
-          <div class="d-flex justify-content-between">
+    </div>
+    <div id="splash-modal-1" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>Game of Series</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+        </div>
+        <h3 class="my-4">About:-</h3>
+        <p>“GAME OF SERIES“</p>
+        <p>
+          Who isn’t a fan of web series? Game of series is all about guessing the names of Web series through hints
+          provided. But is your memory sharp enough to recall the names , lets see!!!
+        </p>
+
+        <h3>Rules</h3>
+        • There will ne be 3-4 Rounds. Teams will be shortlist accordingly. <br />
+        • Rounds will be related to audio, video,quizzes etc. <br />
+
+        <h3>Registration</h3>
+        • Registration fee: Rs 200 <br />
+        • Winner prize : Rs 2000 <br />
+        • Runner up prize : Rs 1000 <br />
+        • Participation Certificate will be provided to all eligible participants. <br />
+        For queries contact:- <br />
+        Janvi Motwani : 6350306286 <br />
+        Apoorva Agarwal : 89557 32958 <br />
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+    <div id="splash-modal-2" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>Gully Cricket</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+        </div>
+        <h3 class="my-4">About:-</h3>
+        <p>
+          Gully Cricket is a term used to describe backyard cricket. It's a game that can be played anywhere and
+          everywhere: in a parking lot, on a beach or an empty street. You can even play it in the corridor of your
+          house.
+        </p>
+
+        <h3>Rules</h3>
+        Type: Team <br />
+        EVENT RULES: <br />
+        -BASIC FORMAT <br />
+        *This is a knockout gully tournament. <br />
+        *6 players per team. <br />
+        *Game will be of 5 overs a side. <br />
+        *Registration fees paid is non refundable. <br />
+        *A player or a team can be disqualified under indisciplinary acts on the ground. <br />
+
+        BATTING RULES <br />
+        <p>
+          *HIT OVER THE BOUNDARY - Its not six:If the batsman hits direct over the boundary,he is out, though if the
+          ball crosses the boundary line grounded, its a four.
+        </p>
+        <p>
+          *TRY BALL - A player cannot be given out on the first ball of the innings i.e. the very first ball of
+          innings played by the batsman is a free hit.
+        </p>
+
+        FIELDING RULES <br />
+        <p>
+          *ONE TIP ONE HAND OUT-No juggling is permitted- the 'tip catch' with one hand must be clean; its is not out
+          if you used your other hand to support the hand taking the tip catch; if you nicked it onto your body,that
+          will be countes as a tip/bounce and you would have to be caught with one hand to be out.
+        </p>
+        -IMPORTANT <br />
+        <p>*In fielding, unlike boys, the girls can catch the ball with 2 hands on 1 tip and its out.</p>
+
+        <h3>Registration</h3>
+        REGISTRATION FEE - 100 per person <br />
+        Winning Prizes 🏆<br />
+        First - Rs 3000 <br />
+        Second - Rs 1000 <br />
+
+
+        Participation Certificate will be provided to all eligible participants. <br>
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+    <div id="splash-modal-3" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>Street Football</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+        </div>
+        <h3 class="my-4">About:-</h3>
+        <p>
+          What is Street Football? Street Football is a style of soccer that develops players' creativity,
+          decision-making and agility in a fast-moving game. It challenges players to use their strengths and turn
+          them into strategies on a smaller field.
+        </p>
+
+        <h3>Rules</h3>
+        Team Size: 7 members(2 substitute) <br />
+        Rules will be declared on the event day. <br />
+
+        <h3>Registration</h3>
+        Registration fee: Rs 1400(per team) <br />
+        Total Prize Pool: Rs 3000 <br />
+
+
+        Participation Certificate will be provided to all eligible participants. <br />
+        For queries contact-: <br />
+        Abhinav Singh Shekhawat - 6377080671 <br />
+        Himanshu Dhaka - 9982903848 <br />
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+    <div id="splash-modal-4" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
           <h2>Lan Gaming</h2>
           <button class="btn btn-outline-danger" onclick="closeModal(this)">&times;</button>
         </div>
-          <h3 class="my-4">About:-</h3>
-          <p>
-            LAN Gaming generally includes games played over local area network and online. The games we have included are as follows:-</p>
-            •	BGMI - SQUAD (Classic) <br>
-            •	BGMI - DUO (TDM) <br>
-            •	VALORANT <br>
-            •	LUDO <br>
-            • CHESS <br>
-  
-            <h4 class="my-2">Rules</h4>
-            ●	A Team will comprise of 4-5players <br>
-            ●	All the teams will be provided with a list of items. <br>
-            ●	Team members will have to complete the task within a time limit of 60 minutes.<br>
-            ●	Team can either beg, borrow or steal the items that are enlisted and provided to them <br>
-            ●	Items will be categorised into three types i.e., 5 pointers , 4 pointers and 2pointers. <br>
-            ●	Teams will have to get themselves registered before the commencement of the event. <br>
-            ●	Stealing expensive items is not allowed.Your team will be disqualified if you do so. <br>
-            ●	After the completion of the task the teams will are required to report to the coordinators for evaluation. <br>
-            ●	Teams will be judged on first come, first serve basis and also the items they were able to collect. <br>
-  
-            <h4>Registration</h4>
-            ●	Registration fee -₹ 600 per team <br>
-            ●	Early bird offer - ₹500 per team (valid till 10th may) <br>
-            ●	Winner prize - ₹2500 <br>
-            ●	Runner up prize - ₹1500 <br>
-            ●	Participation E-certification to all other eligible candidates <br>
-            
-            <p>FOR QUERIES CONTACT</p>
-            ●	Anubhav Choudhary - 7412885533 <br>
-            <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">register now</a>
-        </div>
+        <h3 class="my-4">About:-</h3>
+        <p>
+          LAN Gaming generally includes games played over local area network and online. The games we have included are
+          as follows:-</p>
+        • BGMI - SQUAD (Classic) <br>
+        • BGMI - DUO (TDM) <br>
+        • VALORANT <br>
+        • LUDO <br>
+        • CHESS <br>
+
+        <h4 class="my-2">Rules</h4>
+        <h5>1.Battleground Mobile India</h5>
+        1. It will be played in squad and duo mode. <br>
+2. Squad mode will be classic and duo mode will be TDM. <br>
+3. The participants should have their own device. <br>
+4. Squad mode:- 1. (Qualifiers round)--teams will be divided in different groups based on registration and each group will play a minimum of 2 matches in ERANGLE amd MIRAMAR. 2.(Final round)-- there will be 16 teams in final and 3 matches will be played in the same maps as above. <br>
+5. Duo Mode :- All matches will be played in TDM and and will be knockout. <br>
+6. If the participant is playing from outside the college then he will have to give his POV (i.e. they have to record the gameplay). <br>
+7. Game rules will be declared before the event. <br>
+<h5>Valorant</h5>
+1. It will be played in squad mode(5 men). <br> 
+2. The participants should have their own device an network. <br>
+3. There will be knockout matches. <br>
+4. If the participant is playing from outside the college then he will have to give his POV (i.e. they have to record the gameplay). <br>
+5. Game rules will be declared before the event. <br>
+<h5>Ludo</h5>
+1. The participant should have their own device. <br>
+2. It will be played in college only. <br>
+3. There will be knockout matches. <br>
+4. Game rules will be declared before the event. <br>
+<h5>Chess</h5>
+1. The participants should have their own device. <br>
+2. It will be played in college only. <br>
+3. There will be knockout matches. <br>
+4. Game rules will be declared before the event. <br>
+
+
+
+        <h4>Registration</h4>
+        ● Registration fee -₹ 100 per person. <br>
+        ● Total Prizepool - 12000/- <br>
+        ● Participation Certificate will be provided to all eligible participants. <br>
+
+        <p>FOR QUERIES CONTACT</p>
+        ● Jitendra Saini - 9571981709 <br>
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
       </div>
-      <div id="splash-modal-5" class="modal-overlay">
-        <div class="modal-body">
-          <div class="d-flex justify-content-between">
-            <h2>Treasure Hunt</h2>
-            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
-          </div>
-          <h3 class="my-4">About:-</h3>
-          <p>
-            “Rise n shine. It’s huntin’ time!” “Our treasure hunts are information-based scavenger hunts, or puzzle
-            hunts. Each team is presented with a group of puzzles, or clues, which teams must solve. After solving all
-            the clues teams will return their answer sheets to the designated endpoint. The earliest entry with the most
-            correct answers wins.”
-          </p>
-          <h4 class="my-2">Rules</h4>
-          <p>• Rules will be declared on the event day</p>
-          <h4>Registration</h4>
-          • Registration fee: 500 per team <br />
-          • Winner prize: Yet to be decided… <br />
-          • Runner up prize: Yet to be decided… <br />
-          • Participation E-certificate to all other eligible candidates. <br />
-          • For queries contact:- <br />
-          Yogesh Kumar Dadhich:- 6367374282 Himanshu Dhaka:- 99829 03848 <br>
-          <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">register now</a>
+    </div>
+    <div id="splash-modal-5" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>Treasure Hunt</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
         </div>
+        <h3 class="my-4">About:-</h3>
+        <p>
+          “Rise n shine. It’s huntin’ time!” “Our treasure hunts are information-based scavenger hunts, or puzzle
+          hunts. Each team is presented with a group of puzzles, or clues, which teams must solve. After solving all
+          the clues teams will return their answer sheets to the designated endpoint. The earliest entry with the most
+          correct answers wins.”
+        </p>
+        <h4 class="my-2">Rules</h4>
+        <p>• Rules will be declared on the event day</p>
+        <h4>Registration</h4>
+        • Registration fee: 300 per person. <br />
+        • Total Prize Pool: 3000/- <br />
+
+        • Participation Certificate will be provided to all eligible participants. <br />
+        • For queries contact:- <br />
+        Yogesh Kumar Dadhich:- 6367374282 Himanshu Dhaka:- 99829 03848 <br>
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
       </div>
-      <div id="splash-modal-6" class="modal-overlay">
-        <div class="modal-body">
-          <div class="d-flex justify-content-between">
-            <h2>Beg Borrow Steal</h2>
-            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
-          </div>
-          <h3 class="my-4">About:-</h3>
-          <p>
-            ”To do whatever is necessary to get something that is wanted or needed” Get ready to put all your resources
-            and contacts to a test to fetch the most radical and extraordinary things in this epic race. In this game
-            show you can win money by begging, borrowing or stealing things. Participants will be given a list of things
-            that they have to fetch within a time span.
-          </p>
-          <h4 class="my-2">Rules</h4>
-          ● A Team will comprise of 4-5players <br />
-          ● All the teams will be provided with a list of items. <br />
-          ● Team members will have to complete the task within a time limit of 60 minutes.<br />
-          ● Team can either beg, borrow or steal the items that are enlisted and provided to them <br />
-          ● Items will be categorised into three types i.e., 5 pointers , 4 pointers and 2pointers. <br />
-          ● Teams will have to get themselves registered before the commencement of the event. <br />
-          ● Stealing expensive items is not allowed.Your team will be disqualified if you do so. <br />
-          ● After the completion of the task the teams will are required to report to the coordinators for evaluation.
-          <br />
-          ● Teams will be judged on first come, first serve basis and also the items they were able to collect. <br />
-
-          <h4>Registration</h4>
-          ● Registration fee -₹ 600 per team <br />
-          ● Early bird offer - ₹500 per team (valid till 10th may) <br />
-          ● Winner prize - ₹2500 <br />
-          ● Runner up prize - ₹1500 <br />
-          ● Participation E-certification to all other eligible candidates <br />
-
-          <p>FOR QUERIES CONTACT</p>
-          ● Anubhav Choudhary - 7412885533 <br />
-          <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">register now</a>
+    </div>
+    <div id="splash-modal-6" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>Beg Borrow Steal</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
         </div>
-      </div>      
-      <div id="splash-modal-7" class="modal-overlay">
-        <div class="modal-body">
-          <div class="d-flex justify-content-between">
-            <h2>IPL Auction</h2>
-            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
-          </div>
-          <h3 class="my-4">About:-</h3>
-          “Let the bidding war begin at IPL auction!!” <br />
+        <h3 class="my-4">About:-</h3>
+        <p>
+          ”To do whatever is necessary to get something that is wanted or needed” Get ready to put all your resources
+          and contacts to a test to fetch the most radical and extraordinary things in this epic race. In this game
+          show you can win money by begging, borrowing or stealing things. Participants will be given a list of things
+          that they have to fetch within a time span.
+        </p>
+        <h4 class="my-2">Rules</h4>
+        ● A Team will comprise of 4-5players <br />
+        ● All the teams will be provided with a list of items. <br />
+        ● Team members will have to complete the task within a time limit of 60 minutes.<br />
+        ● Team can either beg, borrow or steal the items that are enlisted and provided to them <br />
+        ● Items will be categorised into three types i.e., 5 pointers , 4 pointers and 2pointers. <br />
+        ● Teams will have to get themselves registered before the commencement of the event. <br />
+        ● Stealing expensive items is not allowed.Your team will be disqualified if you do so. <br />
+        ● After the completion of the task the teams will are required to report to the coordinators for evaluation.
+        <br />
+        ● Teams will be judged on first come, first serve basis and also the items they were able to collect. <br />
 
-          “Experience the excitement of IPL auction; pick your champions!” <br />
+        <h4>Registration</h4>
+        ● Registration fee -₹ 200 per head <br />
+        ● Winner prize - ₹2500 <br />
+        ● Runner up prize - ₹1500 <br />
+        ● Participation Certificate will be provided to all eligible participants. <br />
 
-          <p>
-            “Our IPL auction: where champions are bought; is a highly anticipated mind game and intense bidding war
-            where players are bought and sold by sqaud team(4 heads per team). A dedicated auctioneer controls the
-            cricket fever which is about to get intense with IPL auction. After a fierce battle, the auction ends with a
-            winning squad with highest bid for every IPL team.
-          </p>
-
-          Your winning team is just a bid away. ” <br />
-
-          <h3>Rules</h3>
-          • Rules will be declared on the event day. <br />
-
-          <h3>Registration</h3>
-          • Registration fee: 400 per team(4 heads per team) <br />
-          • Total prize pool: Rs 3500/- <br />
-          * Prize money will distribute in between winners and runner-up. <br />
-          • For queries contact:- <br />
-          Aryan Jangid: 8741838864 <br />
-          <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">register now</a>
-        </div>
+        <p>FOR QUERIES CONTACT</p>
+        ● Anubhav Choudhary - 7412885533 <br />
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
       </div>
-      <div id="splash-modal-8" class="modal-overlay">
-        <div class="modal-body">
-          <div class="d-flex justify-content-between">
-            <h2>IPL Auction</h2>
-            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
-          </div>
-          <h3 class="my-4">About:-</h3>
-          “Let the bidding war begin at IPL auction!!” <br />
-
-          “Experience the excitement of IPL auction; pick your champions!” <br />
-
-          <p>
-            “Our IPL auction: where champions are bought; is a highly anticipated mind game and intense bidding war
-            where players are bought and sold by sqaud team(4 heads per team). A dedicated auctioneer controls the
-            cricket fever which is about to get intense with IPL auction. After a fierce battle, the auction ends with a
-            winning squad with highest bid for every IPL team.
-          </p>
-
-          Your winning team is just a bid away. ” <br />
-
-          <h3>Rules</h3>
-          • Rules will be declared on the event day. <br />
-
-          <h3>Registration</h3>
-          • Registration fee: 400 per team(4 heads per team) <br />
-          • Total prize pool: Rs 3500/- <br />
-          * Prize money will distribute in between winners and runner-up. <br />
-          • For queries contact:- <br />
-          Aryan Jangid: 8741838864 <br />
-          <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">register now</a>
+    </div>
+    <div id="splash-modal-7" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>IPL Auction</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
         </div>
+        <h3 class="my-4">About:-</h3>
+        “Let the bidding war begin at IPL auction!!” <br />
+
+        “Experience the excitement of IPL auction; pick your champions!” <br />
+
+        <p>
+          “Our IPL auction: where champions are bought; is a highly anticipated mind game and intense bidding war
+          where players are bought and sold by sqaud team(4 heads per team). A dedicated auctioneer controls the
+          cricket fever which is about to get intense with IPL auction. After a fierce battle, the auction ends with a
+          winning squad with highest bid for every IPL team.
+        </p>
+
+        Your winning team is just a bid away. ” <br />
+
+        <h3>Rules</h3>
+        • Rules will be declared on the event day. <br />
+
+        <h3>Registration</h3>
+        • Registration fee: 800 per team(4 heads per team) <br />
+        • Total prize pool: Rs 3500/- <br />
+        * Prize money will distribute in between winners and runner-up. <br />
+        • For queries contact:- <br />
+        Aryan Jangid: 8741838864 <br />
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
       </div>
-
-      <!-- CULTURAL MODAL -->
-      <div id="cultural-modal-0" class="modal-overlay">
-        <div class="modal-body">
-          <div class="d-flex justify-content-between">
-            <h2>BEAT THE BEATS</h2>
-            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
-          </div>
-          <h3 class="my-4">About the event:</h3>
-          <p>
-            Beat the beats is a solo event which celebrates the diversity of music. The musician performs a piece by
-            playing the music on instruments, showcasing their talent and creativity. The competition gives a platform
-            to the musicians to sway the hearts of the audience with their enthralling performances. Redefine the music
-            as we know by adding your beats to it.
-          </p>
-
-          <h4>Rules and Regulations:</h4>
-          • The competition has only one round. <br />
-          • Time limit for the performance is 1 minute 30 seconds to 2 minutes. <br />
-          • Marks will be deducted for exceeding the time limit. <br />
-          • Participants must carry their own instruments and are responsible for their safety. •
-          <p>
-            In case of technical/equipment failure, if not caused by the contestant’s fault, they will be given a chance
-            to restart the performance else no extra time will be provided.
-          </p>
-          • Mics and cords will be provided and must be informed prior to the day of the event. <br />
-          • Drummers must carry their drumsticks and drums will be provided. <br />
-          • Backing track is allowed and should be sent three days prior to the event on the mail-
-          beatthebeats.renaissance.jecrc@gmail.com along with the contestant’s name. <br />
-          • Open entries are allowed. <br />
-          • Participants must carry their original id with them. <br />
-          • Decision of judges will be final and non-disputable. <br />
-
-          <h4>Criteria for Marking:</h4>
-          • Technicality (Tone, intonation, and dynamics)<br />
-          • Sense of Rhythm<br />
-          • Virtuoso/Technique<br />
-          • Instrumental Proficiency<br />
-
-          <h4>Registration:</h4>
-          Registration fee: - Rs. 200 (Per member) <br />
-          Prize- <br />
-          • 1st position- Rs 6000/- <br />
-          • 2nd position- Rs 4000/- <br /> 
-          • 3rd position- Rs 2500/- <br />
-          Participation certificate to all other eligible teams. <br />
-
-          <h4>For queries contact:</h4>
-          Shubhankar- 8209017116 <br />
-          Garvita- 7425840800 <br />
-          <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">register now</a>
+    </div>
+    <div id="splash-modal-9" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>SNAKE & LADDER</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
         </div>
+        <h3 class="my-4">Event Description:
+        </h3>
+
+
+        <p>
+          Players roll a die and navigate the board. Landing on a ladder advances a player to a square further up the
+          board, while landing on a snake means they have to go back to a previous square. The aim of the game is to
+          reach the final square.
+
+        </p>
+
+
+        <h3>Rules and regulations:
+        </h3>
+        •Each team must have 2 player, one will throw dice and other will
+
+        be act as token . <br />
+
+
+        •Each player puts their token on the 'start here' space. <br>
+
+        • If your counter lands at the bottom of a ladder, you can move up to the top of the ladder. <br>
+
+
+        • If your counter lands on the head of a snake, you must slide down to the bottom of the snake. <br>
+
+        • The first player to get to the space that says 'home' is the winner. <br>
+
+
+
+        <h3>Registration</h3>
+        ENTRY FEE: Rs. 200 <br>
+        Winning Prize – Rs.1000 <br>
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
       </div>
+    </div>
 
-      <div id="cultural-modal-1" class="modal-overlay">
-        <div class="modal-body">
-          <div class="d-flex justify-content-between">
-            <h2>OPEN MIC</h2>
-            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
-          </div>
-          <h3 class="my-4">About the event:</h3>
-          <p></p>
-
-          <h4>Rules and Regulations:</h4>
-          • The presentation will be in solo and the performance must consist of a single act with no blackouts. <br />
-          • Miming is STRICTLY not allowed. <br />
-          • Clothing or actions that could be perceived as obscene, lewd, vulgar, or plainly offensive is strictly
-          prohibited. <br />
-          • Duration limits: 3-5 minutes, Negative marks for exceeding the time limit. <br />
-          • Only two Hand Props are allowed (need to be discussed with Core JECRC College). <br />
-          • Language can be Bilingual, regional touch can be given. <br />
-          • Electronic sound can be used as the background music to set out the tune and the theme of the play. <br />
-          • Individuals should carry their background music in their respective Pen drives. <br />
-          • Decision of judges will be final and non-disputable. <br />
-          • Any adaptation from some original piece of work should be mentioned with the script. <br />
-          • Participant will be judged based on voice modulation, flow of expression, acting skills and content and
-          overall expression. <br />
-          • Identity cards are mandatory for entry. <br />
-          • Participants should report the venue 1 hour before event timings. <br />
-
-          <h4>Registration:</h4>
-          Registration fee: - Rs. 200 Per person <br />
-          Prize- <br />
-          • 1st position- Rs 6000/- <br />
-          • 2nd position- Rs 4000/- <br />
-          • 3rd position- Rs 2500/- <br />
-          Participation certificate to all other eligible teams. <br />
-
-          <h4>For queries contact:</h4>
-          Vipin- 9983672198 <br />
-          Garvita- 7425840800 <br />
-          <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">register now</a>
+    <!-- CULTURAL MODAL -->
+    <div id="cultural-modal-0" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>BEAT THE BEATS</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
         </div>
-      </div>
+        <h3 class="my-4">About the event:</h3>
+        <p>
+          Beat the beats is a solo event which celebrates the diversity of music. The musician performs a piece by
+          playing the music on instruments, showcasing their talent and creativity. The competition gives a platform
+          to the musicians to sway the hearts of the audience with their enthralling performances. Redefine the music
+          as we know by adding your beats to it.
+        </p>
 
-      <div id="cultural-modal-2" class="modal-overlay">
-        <div class="modal-body">
-          <div class="d-flex justify-content-between">
+        <h4>Rules and Regulations:</h4>
+        • The competition has only one round. <br />
+        • Time limit for the performance is 1 minute 30 seconds to 2 minutes. <br />
+        • Marks will be deducted for exceeding the time limit. <br />
+        • Participants must carry their own instruments and are responsible for their safety. •
+        <p>
+          In case of technical/equipment failure, if not caused by the contestant’s fault, they will be given a chance
+          to restart the performance else no extra time will be provided.
+        </p>
+        • Mics and cords will be provided and must be informed prior to the day of the event. <br />
+        • Drummers must carry their drumsticks and drums will be provided. <br />
+        • Backing track is allowed and should be sent three days prior to the event on the mail-
+        beatthebeats.renaissance.jecrc@gmail.com along with the contestant’s name. <br />
+        • Open entries are allowed. <br />
+        • Participants must carry their original id with them. <br />
+        • Decision of judges will be final and non-disputable. <br />
+
+        <h4>Criteria for Marking:</h4>
+        • Technicality (Tone, intonation, and dynamics)<br />
+        • Sense of Rhythm<br />
+        • Virtuoso/Technique<br />
+        • Instrumental Proficiency<br />
+
+        <h4>Registration:</h4>
+        Registration fee: - Rs. 200 (Per member) <br />
+        Prize- <br />
+        • 1st position- Rs 6000/- <br />
+        • 2nd position- Rs 4000/- <br />
+        • 3rd position- Rs 2500/- <br />
+        Participation certificate to all other eligible teams. <br />
+
+        <h4>For queries contact:</h4>
+        Shubhankar- 8209017116 <br />
+        Garvita- 7425840800 <br />
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+
+    <div id="cultural-modal-1" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>OPEN MIC</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+        </div>
+        <h3 class="my-4">About the event:</h3>
+        <p>Liberate your thoughts with an open mic and let the audience experience how you see the world,
+          through their words.
+          The Open mic event is a way to spark inspiration into the hearts of others. The solo event
+          witnesses theperformance of participants in 4 categories: poetry,shayari, comedy and storytelling.</p>
+
+        <h4>Rules and Regulations:</h4>
+        • The presentation will be in solo and the performance must consist of a single act with no blackouts. <br />
+        • Miming is STRICTLY not allowed. <br />
+        • Clothing or actions that could be perceived as obscene, lewd, vulgar, or plainly offensive is strictly
+        prohibited. <br />
+        • Duration limits: 3-5 minutes, Negative marks for exceeding the time limit. <br />
+        • Only two Hand Props are allowed (need to be discussed with Core JECRC College). <br />
+        • Language can be Bilingual, regional touch can be given. <br />
+        • Electronic sound can be used as the background music to set out the tune and the theme of the play. <br />
+        • Individuals should carry their background music in their respective Pen drives. <br />
+        • Decision of judges will be final and non-disputable. <br />
+        • Any adaptation from some original piece of work should be mentioned with the script. <br />
+        • Participant will be judged based on voice modulation, flow of expression, acting skills and content and
+        overall expression. <br />
+        • Identity cards are mandatory for entry. <br />
+        • Participants should report the venue 1 hour before event timings. <br />
+
+        <h4>Registration:</h4>
+        Registration fee: - Rs. 200 Per person <br />
+        Prize- <br />
+        • 1st position- Rs 6000/- <br />
+        • 2nd position- Rs 4000/- <br />
+        • 3rd position- Rs 2500/- <br />
+        Participation certificate to all other eligible teams. <br />
+
+        <h4>For queries contact:</h4>
+        Vipin- 9983672198 <br />
+        Garvita- 7425840800 <br />
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+
+    <div id="cultural-modal-2" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
           <h2>BREAKIN’ BATTLE (STREET DANCE)</h2>
           <button class="btn btn-outline-danger" onclick="closeModal(this)">&times;</button>
         </div>
-          <h3 class="my-4">About the event:</h3>
-           <p>This group event is open to all dance crews, stepping up the game of dance battles. Renaissance will
-            witness the uproar of this event for the first time. With the audience going wild over the moves of
-            dancers, this event brings out the creativity of the contestants and celebrates dance in an honest way.</p>
+        <h3 class="my-4">About the event:</h3>
+        <p>This group event is open to all dance crews, stepping up the game of dance battles. Renaissance will
+          witness the uproar of this event for the first time. With the audience going wild over the moves of
+          dancers, this event brings out the creativity of the contestants and celebrates dance in an honest way.</p>
 
 
-            <h4>Rules and Regulations:</h4>
-            
-            • The event is open to all dance crews. <br>
-            • Team size must be between 3 to 6 members. <br>
-            • Participants must bring their original ID with them. <br>
-            • The event has 2 rounds and every round is an elimination round. <br>
-            • Music will be provided for all rounds. <br>
-            • Props are not allowed. <br>
-            • Contestants should not get physically violent during battles; else their crew will be disqualified. <br>
-            • Any kind of misbehavior will not be tolerated. <br>
-            • All dance crews must report 1 hour prior to the event. <br>
-           
+        <h4>Rules and Regulations:</h4>
 
-                
-            <h4>Round 1 : Showcase</h4>
-           • The dance crews will be given 3-3:30 minutes each to showcase their moves on the song getting
-            played.
-            • This is an elimination round.
-            • Only top 4 teams will enter the next round.
-            • Judging criteria is based on team coordination, choreography, technique, and sense of rhythm.
-            
-            <h4>Round 2: Battle Begins</h4>
+        • The event is open to all dance crews. <br>
+        • Team size must be between 3 to 6 members. <br>
+        • Participants must bring their original ID with them. <br>
+        • The event has 2 rounds and every round is an elimination round. <br>
+        • Music will be provided for all rounds. <br>
+        • Props are not allowed. <br>
+        • Contestants should not get physically violent during battles; else their crew will be disqualified. <br>
+        • Any kind of misbehavior will not be tolerated. <br>
+        • All dance crews must report 1 hour prior to the event. <br>
 
-            • One member from each crew will come forward and pick a folded paper slip to determine the order of battle. <br>
-            • Two teams will battle at a time and the team scoring less will be eliminated. <br>
-            • The two opposing teams will battle each other for 3 rounds. The team itself will decide which three dancers from their crew will perform in the battle from their side. <br>
-            • Each member from the crew will be given 1 minute for the battle. <br>
-            • Judgement criteria is based on originality, moves, technique and sense of rhythm. <br>
-            • The top 2 teams will again battle in the same format for the winning title. <br>
 
-             <h4>Registration:</h4>
-             Registration fee: - Rs. 300 Per member <br>
-             Prize- <br>
-             •  1st position- Rs 10000/- <br>
-             •  2nd position- Rs 5000/- <br>
-            
-             Participation certificate to all other eligible teams. <br>
 
-            <h4>For queries contact:</h4>
-            Vinay- 9887999486 <br>
-            Vipin- 9983672198 <br>
-            <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">register now</a>
-          </div>
-        </div>
+        <h4>Round 1 : Showcase</h4>
+        • The dance crews will be given 3-3:30 minutes each to showcase their moves on the song getting
+        played.
+        • This is an elimination round.
+        • Only top 4 teams will enter the next round.
+        • Judging criteria is based on team coordination, choreography, technique, and sense of rhythm.
 
-      <div id="cultural-modal-3" class="modal-overlay">
-        <div class="modal-body">
-          <div class="d-flex justify-content-between">
-            <h2>ROCKATHON (MUSIC BAND)</h2>
-            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
-          </div>
-          <h3 class="my-4">About the event:</h3>
-          <p>
-            The loudmouth, the screaming, the headbanging, and the mass venting are back. The supreme battle forthe ROCK
-            WARRIORS, where music has a whole new definition is here. Let us celebrate music with the ultimate Rock
-            Band.
-          </p>
+        <h4>Round 2: Battle Begins</h4>
 
-          <p>
-            ROCKATHON is going to set fire and make the crowd go wild with Rock Music allowing young bands from across
-            the country to battle with each other. Rockathon is all set to become the best platformsfor rock bands to
-            showcase their musical talents.
-          </p>
+        • One member from each crew will come forward and pick a folded paper slip to determine the order of battle.
+        <br>
+        • Two teams will battle at a time and the team scoring less will be eliminated. <br>
+        • The two opposing teams will battle each other for 3 rounds. The team itself will decide which three dancers
+        from their crew will perform in the battle from their side. <br>
+        • Each member from the crew will be given 1 minute for the battle. <br>
+        • Judgement criteria is based on originality, moves, technique and sense of rhythm. <br>
+        • The top 2 teams will again battle in the same format for the winning title. <br>
 
-          JECRC RENAISSANCE'23 invites entries for the ROCK BAND <br />
-          COMPETITION,ROCKATHON- THE BATTLE OF BANDS <br />
+        <h4>Registration:</h4>
+        Registration fee: - Rs. 300 Per member <br>
+        Prize- <br>
+        • 1st position- Rs 10000/- <br>
+        • 2nd position- Rs 5000/- <br>
 
-          <h4>Rules and Regulations:</h4>
-          • Each band will be given a max time of 15+3 mins including the soundcheck. <br />
-          • Marks will be deducted if the band exceeds the allotted time limit. <br />
-          • Open entries are allowed. <br />
-          • Band can have a maximum of 10 members. <br />
-          • Each band will be provided with a standard drum kit including one ride & one hi-hat. The drummers must carry
-          their extra drum cymbals. The guitarists are advised to carry their own processors & adapters. <br />
-          • The use of slang words is strictly prohibited. All song content must be family-friendly as this isan
-          all-ages event! <br />
-          • A panel of judges will score the bands on several criteria including Composition & arrangement, and
-          Creativity. Technical Ability & Musicianship, and Stage presence. <br />
-          • The judge’s decision will be final and binding. <br />
-          • All genres of music are accepted. <br />
-          • Participants should carry their original id with them. <br />
-          • In case of equipment failure, If not caused by the contestant’s fault, they will be given chance to restart
-          the performance, else no extra time will be provided. <br />
-          • Failure to comply with the rules and regulations may result in disqualification. <br />
-          <h4>Registration:</h4>
-          Registration fee- Rs 300 per member <br />
-          Prize- <br />
-          • 1st position- Rs 18000/- <br />
-          • 2nd position- Rs 12000/- <br />
-          <p>Participation certificate will be given to all participants.</p>
+        Participation certificate to all other eligible teams. <br>
 
-          <h4>For queries contact:</h4>
-          Shivam- 8107061914 Radhika- 8905866105 <br>
-          <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">register now</a>
-        </div>
+        <h4>For queries contact:</h4>
+        Vinay- 9887999486 <br>
+        Vipin- 9983672198 <br>
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
       </div>
+    </div>
 
-      <div id="cultural-modal-4" class="modal-overlay">
-        <div class="modal-body">
-          <div class="d-flex justify-content-between">
-            <h2>NAVRAS (MONO ACT)</h2>
-            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
-          </div>
-          <h3 class="my-4">About the event:</h3>
-          <p>
-            Mono act is a theater stage activity where one person performs and presents his/her artistic and acting
-            skills. The mono act competition gives the platform for the actors to portray the unsaid and give a
-            mesmerizing act with their outstanding performances. With the beautiful expressions, thoughts, props, and a
-            lot of zeal and enthusiasm the actor can not only improve their personality but also bring the best out of
-            them. Keeping the fire of artistic creativity alive, this competition is the place for your expressions. The
-            stageis all set to bound the audience with a great act!
-          </p>
-
-          <h4>Rules and Regulations:</h4>
-          • The presentation will be in solo and the performance must consist of a single act with no blackouts. <br />
-          • Miming is STRICTLY not allowed. <br />
-          • Clothing or actions that could be perceived as obscene, lewd, vulgar, or plainly offensive is strictly
-          prohibited. <br />
-          • Duration limits: 3-5 minutes, Negative marks for exceeding the time limit. <br />
-          • Only two Hand Props are allowed (need to be discussed with Core JECRC College). <br />
-          • Language can be Bilingual, regional touch can be given. <br />
-          • Electronic sound can be used as the background music to set out the tune and the theme of the play. <br />
-          • Individuals should carry their background music in their respective Pen drives. <br />
-          • Decision of judges will be final and non-disputable. <br />
-          • Any adaptation from some original piece of work should be mentioned with the script. <br />
-          • Participant will be judged based on voice modulation, flow of expression, acting skills and content and
-          overall expression. <br />
-          • Identity cards are mandatory for entry. <br />
-          • Participants should report the venue 1 hour before event timings. <br />
-
-          <h4>Registration:</h4>
-          Registration fee: - Rs. 200 Per person <br />
-          Prize- <br />
-          • 1st position- Rs 6000/- <br />
-          • 2nd position- Rs 4000/- <br />
-          • 3rd position- Rs 2500/- <br />
-          Participation certificate to all other eligible teams. <br />
-
-          <h4>For queries contact:</h4>
-          Vipin- 9983672198 <br />
-          Garvita- 7425840800 <br />
-          <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">register now</a>
+    <div id="cultural-modal-3" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>ROCKATHON (MUSIC BAND)</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
         </div>
+        <h3 class="my-4">About the event:</h3>
+        <p>
+          The loudmouth, the screaming, the headbanging, and the mass venting are back. The supreme battle forthe ROCK
+          WARRIORS, where music has a whole new definition is here. Let us celebrate music with the ultimate Rock
+          Band.
+        </p>
+
+        <p>
+          ROCKATHON is going to set fire and make the crowd go wild with Rock Music allowing young bands from across
+          the country to battle with each other. Rockathon is all set to become the best platformsfor rock bands to
+          showcase their musical talents.
+        </p>
+
+        JECRC RENAISSANCE'23 invites entries for the ROCK BAND <br />
+        COMPETITION,ROCKATHON- THE BATTLE OF BANDS <br />
+
+        <h4>Rules and Regulations:</h4>
+        • Each band will be given a max time of 15+3 mins including the soundcheck. <br />
+        • Marks will be deducted if the band exceeds the allotted time limit. <br />
+        • Open entries are allowed. <br />
+        • Band can have a maximum of 10 members. <br />
+        • Each band will be provided with a standard drum kit including one ride & one hi-hat. The drummers must carry
+        their extra drum cymbals. The guitarists are advised to carry their own processors & adapters. <br />
+        • The use of slang words is strictly prohibited. All song content must be family-friendly as this isan
+        all-ages event! <br />
+        • A panel of judges will score the bands on several criteria including Composition & arrangement, and
+        Creativity. Technical Ability & Musicianship, and Stage presence. <br />
+        • The judge’s decision will be final and binding. <br />
+        • All genres of music are accepted. <br />
+        • Participants should carry their original id with them. <br />
+        • In case of equipment failure, If not caused by the contestant’s fault, they will be given chance to restart
+        the performance, else no extra time will be provided. <br />
+        • Failure to comply with the rules and regulations may result in disqualification. <br />
+        <h4>Registration:</h4>
+        Registration fee- Rs 300 per member <br />
+        Prize- <br />
+        • 1st position- Rs 18000/- <br />
+        • 2nd position- Rs 12000/- <br />
+        <p>Participation certificate will be given to all participants.</p>
+
+        <h4>For queries contact:</h4>
+        Shivam- 8107061914 Radhika- 8905866105 <br>
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
       </div>
+    </div>
 
-      <div id="cultural-modal-5" class="modal-overlay">
-        <div class="modal-body">
-          <div class="d-flex justify-content-between">
-            <h2>SAARE-GA (SOLO SINGING)</h2>
-            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
-          </div>
-          <h3 class="my-4">About the event:</h3>
-          <p>
-            What makes your day complete? What gives soul to the universe, wings to your mind, flight to your
-            imagination? What is the one thing which is loved by all of us? “MUSIC”, grab the opportunity and
-            showcaseyoursinging talent with “SAARE-GA”.
-          </p>
-
-          <h4>Rules and Regulations:</h4>
-          • Only one entry is allowed per participant. <br />
-          • Open entries are allowed. <br />
-          • Rap portions or refrains are not permissible. <br />
-          • Participants will not be allowed to refer to the lyrics while singing. <br />
-          • Choice of song is open to the participants. <br />
-          • The song should not have any slangs or derogatory language. <br />
-          • Participants can perform in Hindi, Punjabi, or English. <br />
-          • Participants should possess a valid original photo ID card. <br />
-          • Participants must perform with Karaoke track. <br />
-          • Karaoke track will not be provided, you must bring it yourself (MP3 format in Pen Drive).<br />
-          • Karaoke should not have backing vocals Participant can play instrument but cannot bring a companion.
-          Instrument should be bought by the participant itself. <br />
-          • Decision of judges will be final and binding. <br />
-
-          <h4>Preliminary Round:</h4>
-          • Time Limit:1-1.5 minute <br />
-          • Participants selected in this round will perform on stage round. <br />
-          • The participants will be judged on the song selection, voice stability, coordination with music and
-          expressions. <br />
-
-          <h4>Stage Round:</h4>
-          • It will be a final round. Time limit: 3-3.5 minutes(performance). <br />
-          • Negative marking for exceeding time limit. <br />
-          • Marking criteria includes song selection, voice stability, coordination with music and expressions. <br />
-
-          <h4>Registration:</h4>
-          Registration fee: - Rs. 200 (Per member) <br />
-          Prize- <br />
-          • 1st position- Rs 6000/- <br />
-          • 2nd position- Rs 4000/- <br />
-          • 3rd position- Rs 2500/- <br />
-          Participation certificate to all other eligible teams. <br />
-
-          <h4>For queries contact:</h4>
-          Garvita – 7425840800 <br />
-          Naveen- 9950236502 <br />
-          <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">register now</a>
+    <div id="cultural-modal-4" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>NAVRAS (MONO ACT)</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
         </div>
+        <h3 class="my-4">About the event:</h3>
+        <p>
+          Mono act is a theater stage activity where one person performs and presents his/her artistic and acting
+          skills. The mono act competition gives the platform for the actors to portray the unsaid and give a
+          mesmerizing act with their outstanding performances. With the beautiful expressions, thoughts, props, and a
+          lot of zeal and enthusiasm the actor can not only improve their personality but also bring the best out of
+          them. Keeping the fire of artistic creativity alive, this competition is the place for your expressions. The
+          stageis all set to bound the audience with a great act!
+        </p>
+
+        <h4>Rules and Regulations:</h4>
+        • The presentation will be in solo and the performance must consist of a single act with no blackouts. <br />
+        • Miming is STRICTLY not allowed. <br />
+        • Clothing or actions that could be perceived as obscene, lewd, vulgar, or plainly offensive is strictly
+        prohibited. <br />
+        • Duration limits: 3-5 minutes, Negative marks for exceeding the time limit. <br />
+        • Only two Hand Props are allowed (need to be discussed with Core JECRC College). <br />
+        • Language can be Bilingual, regional touch can be given. <br />
+        • Electronic sound can be used as the background music to set out the tune and the theme of the play. <br />
+        • Individuals should carry their background music in their respective Pen drives. <br />
+        • Decision of judges will be final and non-disputable. <br />
+        • Any adaptation from some original piece of work should be mentioned with the script. <br />
+        • Participant will be judged based on voice modulation, flow of expression, acting skills and content and
+        overall expression. <br />
+        • Identity cards are mandatory for entry. <br />
+        • Participants should report the venue 1 hour before event timings. <br />
+
+        <h4>Registration:</h4>
+        Registration fee: - Rs. 200 Per person <br />
+        Prize- <br />
+        • 1st position- Rs 6000/- <br />
+        • 2nd position- Rs 4000/- <br />
+        • 3rd position- Rs 2500/- <br />
+        Participation certificate to all other eligible teams. <br />
+
+        <h4>For queries contact:</h4>
+        Vipin- 9983672198 <br />
+        Garvita- 7425840800 <br />
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
       </div>
-      
+    </div>
 
-      <div id="cultural-modal-6" class="modal-overlay">
-        <div class="modal-body">
-          <div class="d-flex justify-content-between">
-            <h2>FOOTLOOSE (SOLO DANCE)</h2>
-            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
-          </div>
-          <h3 class="my-4">About the event:</h3>
-          <p>
-            Dance is the expression of one’s soul. Bear witness to the performance of exceptional dancers in this solo
-            dance event. The participants face challenging rounds which bring out the creativity and dancing skills of
-            the dancers.
-          </p>
-
-          <h4>Rules and Regulations:</h4>
-          • Each participating college can send any number of entries. <br />
-          • Open entries are also allowed. <br />
-          • Participants should bring their College ID/Aadhar Card for identification. <br />
-          • All dance forms are allowed.<br />
-          • Participants should perform dangerous moves at their own risk.<br />
-          • Vulgarity and obscenity will lead to disqualification.<br />
-          • Participants need to bring their costumes and music in a pen drive. <br />
-          • The decision of the judge will be final in case of any dispute and adhered to by all. <br />
-
-          The event is divided into 3 rounds: <br />
-
-          <h4>Round 1: Happy feet- The Showcase</h4>
-          • Participants will showcase their prepared performance on the track of their own choice. <br />
-          • The time limit of each participant must be 1 minute. <br />
-          • No extra marks will be provided for theme-based performances. <br />
-          • The performance will be judged based on the originality of the dance and interaction with the audience.
-          <br />
-
-          <h4>Round 2: War of Dance- Dance Battle</h4>
-          • Participants will face off in a dance battle. <br />
-          • The order of participants will be decided by the number they pick from a bowl of folded paper Slips. <br />
-          • The time limit will be 1 minute for each participant. <br />
-          • The song will be provided. <br />
-          • Marking will be done based on the quality of moves and synchronization with music. <br />
-
-          <h4>Round 3: Bop 'Til You Drop- Prop Mania</h4>
-          • Participants will be provided a prop and song 5 minutes before their performance. <br />
-          • The time limit of each participant will be 1 minute. <br />
-          • Judging criteria will be based on the quality of moves, use of prop, creativity & synchronization with
-          music. <br />
-
-          <h4>Registration:</h4>
-          Registration fee: Rs 250 per participant <br />
-          Prize- <br />
-          • 1st position- Rs 11500/- <br />
-          • 2nd position- Rs 8500/- <br />
-
-          Participation certificate will be given to all participants. <br />
-          <li class="cards">
-            <img src="../assets/posters/splash/website poster (9)-01.png" alt="">
-          </li>
-          <h4>For further queries, contact:</h4>
-          Shivam- 8107061914 <br />
-          Vinay- 9887999486 <br />
-          <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">register now</a>
+    <div id="cultural-modal-5" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>SAARE-GA (SOLO SINGING)</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
         </div>
+        <h3 class="my-4">About the event:</h3>
+        <p>
+          What makes your day complete? What gives soul to the universe, wings to your mind, flight to your
+          imagination? What is the one thing which is loved by all of us? “MUSIC”, grab the opportunity and
+          showcaseyoursinging talent with “SAARE-GA”.
+        </p>
+
+        <h4>Rules and Regulations:</h4>
+        • Only one entry is allowed per participant. <br />
+        • Open entries are allowed. <br />
+        • Rap portions or refrains are not permissible. <br />
+        • Participants will not be allowed to refer to the lyrics while singing. <br />
+        • Choice of song is open to the participants. <br />
+        • The song should not have any slangs or derogatory language. <br />
+        • Participants can perform in Hindi, Punjabi, or English. <br />
+        • Participants should possess a valid original photo ID card. <br />
+        • Participants must perform with Karaoke track. <br />
+        • Karaoke track will not be provided, you must bring it yourself (MP3 format in Pen Drive).<br />
+        • Karaoke should not have backing vocals Participant can play instrument but cannot bring a companion.
+        Instrument should be bought by the participant itself. <br />
+        • Decision of judges will be final and binding. <br />
+
+        <h4>Preliminary Round:</h4>
+        • Time Limit:1-1.5 minute <br />
+        • Participants selected in this round will perform on stage round. <br />
+        • The participants will be judged on the song selection, voice stability, coordination with music and
+        expressions. <br />
+
+        <h4>Stage Round:</h4>
+        • It will be a final round. Time limit: 3-3.5 minutes(performance). <br />
+        • Negative marking for exceeding time limit. <br />
+        • Marking criteria includes song selection, voice stability, coordination with music and expressions. <br />
+
+        <h4>Registration:</h4>
+        Registration fee: - Rs. 200 (Per member) <br />
+        Prize- <br />
+        • 1st position- Rs 6000/- <br />
+        • 2nd position- Rs 4000/- <br />
+        • 3rd position- Rs 2500/- <br />
+        Participation certificate to all other eligible teams. <br />
+
+        <h4>For queries contact:</h4>
+        Garvita – 7425840800 <br />
+        Naveen- 9950236502 <br />
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
       </div>
+    </div>
 
-      <div id="cultural-modal-7" class="modal-overlay">
-        <div class="modal-body">
-          <div class="d-flex justify-content-between">
-            <h2>ADAA (FASHION SHOW)</h2>
-            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
-          </div>
-          <h3 class="my-4">About the event:</h3>
-          <p>
-            ADAA is a platform provided by JECRC to showcase your fashion talent. Bring out your fiery look, fierce
-            walk, and down the ramp. "ADAA The fashion show" where models from various genres will be competing against
-            each other. It is a perfect blend of different styles and trends.
-          </p>
 
-          <h4>Rules and Regulations:</h4>
-          • Team members - Max 20, Min 12 (Including Backstage Members). <br />
-          • Duration of performance - Min 8 Minutes to Max 12 Minutes. <br />
-          • At the time of registration, the participants must bring their own college identity cards. <br />
-          •
-          <p>
-            Teams are required to bring their own music on pen drives or external storage in MP3 or appropriate sound
-            format. Teams are required to give 2 copies and handed over to the organizers at least 3 hours before the
-            event commences.
-          </p>
-          • Props should be arranged by the team on their own. Use of fire, water animals, or hazardous material is
-          prohibited. <br />
-          • Teams exceeding the time limit will be negatively marked. <br />
-          • Green rooms will be allotted after reporting with the team <br />
-          • Usage of fire on the stage is prohibited and teams doing so will be disqualified. <br />
-          • Backstage helpers should not exceed 3 (Three) in number. <br />
-          • No extra time will be given for the introduction. <br />
-          • Exceeding the time limit will result in negative marking.<br />
-          • The vulgarity of any kind will lead to disqualification.<br />
-          • Decision of the judges in all matters will be final and binding.<br />
-
-          <p>The event is categorized into two rounds:</p>
-
-          <h4>Criteria for marking:</h4>
-          • Music. <br />
-          • Sequencing. <br />
-          • Choreography. <br />
-          • Models. <br />
-          • Expression. <br />
-          • Creativity in theme <br />
-
-          <h4>Registration:</h4>
-          Registration fee: - Rs. 300 (Per member) <br />
-          Prize- <br />
-          • 1st position- Rs 30000/- <br />
-          • 2nd position- Rs 20000/- <br />
-          Participation certificate to all other eligible teams. <br />
-
-          <h4>For queries contact:</h4>
-          Radhika- 8905866105 <br />
-          Shubhankar- 8209017116 <br />
-          <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">register now</a>
+    <div id="cultural-modal-6" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>FOOTLOOSE (SOLO DANCE)</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
         </div>
-      </div>
+        <h3 class="my-4">About the event:</h3>
+        <p>
+          Dance is the expression of one’s soul. Bear witness to the performance of exceptional dancers in this solo
+          dance event. The participants face challenging rounds which bring out the creativity and dancing skills of
+          the dancers.
+        </p>
 
-      <div id="cultural-modal-8" class="modal-overlay">
-        <div class="modal-body">
-          <div class="d-flex justify-content-between">
+        <h4>Rules and Regulations:</h4>
+        • Each participating college can send any number of entries. <br />
+        • Open entries are also allowed. <br />
+        • Participants should bring their College ID/Aadhar Card for identification. <br />
+        • All dance forms are allowed.<br />
+        • Participants should perform dangerous moves at their own risk.<br />
+        • Vulgarity and obscenity will lead to disqualification.<br />
+        • Participants need to bring their costumes and music in a pen drive. <br />
+        • The decision of the judge will be final in case of any dispute and adhered to by all. <br />
+
+        The event is divided into 3 rounds: <br />
+
+        <h4>Round 1: Happy feet- The Showcase</h4>
+        • Participants will showcase their prepared performance on the track of their own choice. <br />
+        • The time limit of each participant must be 1 minute. <br />
+        • No extra marks will be provided for theme-based performances. <br />
+        • The performance will be judged based on the originality of the dance and interaction with the audience.
+        <br />
+
+        <h4>Round 2: War of Dance- Dance Battle</h4>
+        • Participants will face off in a dance battle. <br />
+        • The order of participants will be decided by the number they pick from a bowl of folded paper Slips. <br />
+        • The time limit will be 1 minute for each participant. <br />
+        • The song will be provided. <br />
+        • Marking will be done based on the quality of moves and synchronization with music. <br />
+
+        <h4>Round 3: Bop 'Til You Drop- Prop Mania</h4>
+        • Participants will be provided a prop and song 5 minutes before their performance. <br />
+        • The time limit of each participant will be 1 minute. <br />
+        • Judging criteria will be based on the quality of moves, use of prop, creativity & synchronization with
+        music. <br />
+
+        <h4>Registration:</h4>
+        Registration fee: Rs 250 per participant <br />
+        Prize- <br />
+        • 1st position- Rs 11500/- <br />
+        • 2nd position- Rs 8500/- <br />
+
+        Participation certificate will be given to all participants. <br />
+        <h4>For further queries, contact:</h4>
+        Shivam- 8107061914 <br />
+        Vinay- 9887999486 <br />
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+
+    <div id="cultural-modal-7" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>ADAA (FASHION SHOW)</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+        </div>
+        <h3 class="my-4">About the event:</h3>
+        <p>
+          ADAA is a platform provided by JECRC to showcase your fashion talent. Bring out your fiery look, fierce
+          walk, and down the ramp. "ADAA The fashion show" where models from various genres will be competing against
+          each other. It is a perfect blend of different styles and trends.
+        </p>
+
+        <h4>Rules and Regulations:</h4>
+        • Team members - Max 20, Min 12 (Including Backstage Members). <br />
+        • Duration of performance - Min 8 Minutes to Max 12 Minutes. <br />
+        • At the time of registration, the participants must bring their own college identity cards. <br />
+        •
+        <p>
+          Teams are required to bring their own music on pen drives or external storage in MP3 or appropriate sound
+          format. Teams are required to give 2 copies and handed over to the organizers at least 3 hours before the
+          event commences.
+        </p>
+        • Props should be arranged by the team on their own. Use of fire, water animals, or hazardous material is
+        prohibited. <br />
+        • Teams exceeding the time limit will be negatively marked. <br />
+        • Green rooms will be allotted after reporting with the team <br />
+        • Usage of fire on the stage is prohibited and teams doing so will be disqualified. <br />
+        • Backstage helpers should not exceed 3 (Three) in number. <br />
+        • No extra time will be given for the introduction. <br />
+        • Exceeding the time limit will result in negative marking.<br />
+        • The vulgarity of any kind will lead to disqualification.<br />
+        • Decision of the judges in all matters will be final and binding.<br />
+
+        <p>The event is categorized into two rounds:</p>
+
+        <h4>Criteria for marking:</h4>
+        • Music. <br />
+        • Sequencing. <br />
+        • Choreography. <br />
+        • Models. <br />
+        • Expression. <br />
+        • Creativity in theme <br />
+
+        <h4>Registration:</h4>
+        Registration fee: - Rs. 300 (Per member) <br />
+        Prize- <br />
+        • 1st position- Rs 30000/- <br />
+        • 2nd position- Rs 20000/- <br />
+        Participation certificate to all other eligible teams. <br />
+
+        <h4>For queries contact:</h4>
+        Radhika- 8905866105 <br />
+        Shubhankar- 8209017116 <br />
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+
+    <div id="cultural-modal-8" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
           <h2>SHOR BAZZAR (STREET PLAY) </h2>
           <button class="btn btn-outline-danger" onclick="closeModal(this)">&times;</button>
         </div>
-          <h3 class="my-4">About the event:</h3>
-          <p>“Street Play is a mirror, a sharp reflection of the society.”</p>
+        <h3 class="my-4">About the event:</h3>
+        <p>“Street Play is a mirror, a sharp reflection of the society.”</p>
 
-       <p>Street theatre is a form of theatrical performance and presentation in outdoor public spaces. Most street
-        plays based on public problems and solutions are Staged. Again it's time to shout out loud... Halla Bol !!</p>
+        <p>Street theatre is a form of theatrical performance and presentation in outdoor public spaces. Most street
+          plays based on public problems and solutions are Staged. Again it's time to shout out loud... Halla Bol !!</p>
 
         <p>Street Plays bring to you right from the street, a loud and larger-than-life, exchange of ideologies with
           drama full of drums. Street Plays as a form of communication are deeply rooted in Indian Culture .
           Renaissance’23 allows every student to come and convey social and political messages in an entertaining
           environment.</p>
-            
-            <h4>Rules and Regulations:</h4>
-            • From each college, only one team is allowed. Team size-20+2<br>
-           
-            • Time Limit: 15-22 minutes. After that negative marking will start. If play runs even after 25
-               minutes,the team can also be disqualified. <br>
-            • Language can be Bilingual, regional touch can be given. <br>
-            • Only self-written/prepared play is allowed. Plagiarized content will lead to disqualification. <br>
-            • Clothing or actions that could be perceived as obscene, lewd, vulgar, or plainly offensive is
-              strictly prohibited. <br>
-            • No electrical musical instruments or devices are allowed. <br>
-            • Use of Gulal Colors and Flammable things is STRICTLY prohibited. <br>
-            • All participants must carry their Institute’s ID Cards. <br>
-            • All participants must report to the venue at least one hour prior to the commencement of the
-              event. <br>
-            • The decision of the Judges will be final and binding on all teams. <br>
-            
-           <h4>Criteria for Marking:</h4>
-           • Topic Selection <br>
-           • Clarity of Message <br>
-           • Script <br>
-           • Team work <br>
-           • Presentation <br>
-           •
-           
 
-             <h4>Registration:</h4>
-             Registration fee: - Rs. 250 Per member <br>
-             Prize- <br>
-             •  1st position- Rs 25000/- <br>
-             •  2nd position- Rs 15000/- <br>
-            
-             Participation certificate to all other eligible teams. <br>
+        <h4>Rules and Regulations:</h4>
+        • From each college, only one team is allowed. Team size-20+2<br>
 
-            <h4>For queries contact:</h4>
-            Naveen- 9950236502 <br>
-            Vipin- 9983672198 <br>
-            <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">register now</a>
-          </div>
-        </div>
-      
+        • Time Limit: 15-22 minutes. After that negative marking will start. If play runs even after 25
+        minutes,the team can also be disqualified. <br>
+        • Language can be Bilingual, regional touch can be given. <br>
+        • Only self-written/prepared play is allowed. Plagiarized content will lead to disqualification. <br>
+        • Clothing or actions that could be perceived as obscene, lewd, vulgar, or plainly offensive is
+        strictly prohibited. <br>
+        • No electrical musical instruments or devices are allowed. <br>
+        • Use of Gulal Colors and Flammable things is STRICTLY prohibited. <br>
+        • All participants must carry their Institute’s ID Cards. <br>
+        • All participants must report to the venue at least one hour prior to the commencement of the
+        event. <br>
+        • The decision of the Judges will be final and binding on all teams. <br>
 
-      <div id="cultural-modal-9" class="modal-overlay">
-        <div class="modal-body">
-          <div class="d-flex justify-content-between">
-            <h2>RAPZAP (SOLO RAP)</h2>
-            <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
-          </div>
-          <h3 class="my-4">About the event:</h3>
-          <p>
-            Expressing your thoughts in the form music is much easier than saying it. RAP ZAP is a one day event
-            consisting of battles between the rappers to determine who is the best of em all. The event will consist of
-            two rounds and a tie breaker if needed.
-          </p>
+        <h4>Criteria for Marking:</h4>
+        • Topic Selection <br>
+        • Clarity of Message <br>
+        • Script <br>
+        • Team work <br>
+        • Presentation <br>
+        •
 
-          <h4>Rules and Regulations:</h4>
-          • Participants must bring their College ID/Aadhar Card for identification. <br />
-          • Participants must perform only self-written content. Plagiarism will lead to disqualification.<br />
-          • The participants in this round can perform solo or duets.<br />
-          • The participants must sing songs of the rap genre only. <br />
-          • Karaoke is allowed. <br />
-          • The language of rap can be English, Hindi, or Regional.<br />
-          • Any use of offensive language will lead to disqualification.<br />
-          • Participants should report to the event 1 hour before.<br />
 
-          <p>The event is categorized into two rounds:</p>
+        <h4>Registration:</h4>
+        Registration fee: - Rs. 250 Per member <br>
+        Prize- <br>
+        • 1st position- Rs 25000/- <br>
+        • 2nd position- Rs 15000/- <br>
 
-          <h4>Prelims:</h4>
-          • The prelims round will be online. <br />
-          • The participant must send a video of the performance via mail or WhatsApp. <br />
-          • The minimum time limit for the video would be 1 minute. <br />
-          • According to the result of the prelims round, the contestants will be notify one week earlier. <br />
+        Participation certificate to all other eligible teams. <br>
 
-          <h4>Final round:</h4>
-          • The time limit in finals would be 2:30 to 3 min. <br />
-          • There will be negative marking for exceeding the time limit. <br />
-          • The content should not hurt someone emotionally and should not contain any religious content.The final
-          decision made by the judge will be based on the participant’s stage presence, the accent or language,
-          interaction with the crowd, etc. <br />
-          • In case of any dispute, the decision will be final and adhered to by all.The contestants should bring their
-          own tracks in a pen drive. <br />
-          • The tracks should be strictly instrumental, any other backing tracks will be disqualified. <br />
-
-          <h4>Registration:</h4>
-          Registration fee: Rs 200/- per participant <br />
-          Prize: • 1st position- Rs 6000/- <br />
-          • 2nd position- Rs 4000/- <br />
-          • 3rd position- Rs 2500/- <br />
-
-          <p>Participation certificate will be given to all participants.</p>
-          <h4>For further queries, contact:</h4>
-          Radhika- 8905866105 <br />
-          Vinay- 9887999486 <br />
-          <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">register now</a>
-        </div>
+        <h4>For queries contact:</h4>
+        Naveen- 9950236502 <br>
+        Vipin- 9983672198 <br>
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
       </div>
-      
-      <div id="cultural-modal-10" class="modal-overlay">
-        <div class="modal-body">
-          <div class="d-flex justify-content-between">
+    </div>
+
+
+    <div id="cultural-modal-9" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>RAPZAP (SOLO RAP)</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+        </div>
+        <h3 class="my-4">About the event:</h3>
+        <p>
+          Expressing your thoughts in the form music is much easier than saying it. RAP ZAP is a one day event
+          consisting of battles between the rappers to determine who is the best of em all. The event will consist of
+          two rounds and a tie breaker if needed.
+        </p>
+
+        <h4>Rules and Regulations:</h4>
+        • Participants must bring their College ID/Aadhar Card for identification. <br />
+        • Participants must perform only self-written content. Plagiarism will lead to disqualification.<br />
+        • The participants in this round can perform solo or duets.<br />
+        • The participants must sing songs of the rap genre only. <br />
+        • Karaoke is allowed. <br />
+        • The language of rap can be English, Hindi, or Regional.<br />
+        • Any use of offensive language will lead to disqualification.<br />
+        • Participants should report to the event 1 hour before.<br />
+
+        <p>The event is categorized into two rounds:</p>
+
+        <h4>Prelims:</h4>
+        • The prelims round will be online. <br />
+        • The participant must send a video of the performance via mail or WhatsApp. <br />
+        • The minimum time limit for the video would be 1 minute. <br />
+        • According to the result of the prelims round, the contestants will be notify one week earlier. <br />
+
+        <h4>Final round:</h4>
+        • The time limit in finals would be 2:30 to 3 min. <br />
+        • There will be negative marking for exceeding the time limit. <br />
+        • The content should not hurt someone emotionally and should not contain any religious content.The final
+        decision made by the judge will be based on the participant’s stage presence, the accent or language,
+        interaction with the crowd, etc. <br />
+        • In case of any dispute, the decision will be final and adhered to by all.The contestants should bring their
+        own tracks in a pen drive. <br />
+        • The tracks should be strictly instrumental, any other backing tracks will be disqualified. <br />
+
+        <h4>Registration:</h4>
+        Registration fee: Rs 200/- per participant <br />
+        Prize: • 1st position- Rs 6000/- <br />
+        • 2nd position- Rs 4000/- <br />
+        • 3rd position- Rs 2500/- <br />
+
+        <p>Participation certificate will be given to all participants.</p>
+        <h4>For further queries, contact:</h4>
+        Radhika- 8905866105 <br />
+        Vinay- 9887999486 <br />
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+
+    <div id="cultural-modal-10" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
           <h2>BOOTSTRAPPING (GROUP DANCE)</h2>
           <button class="btn btn-outline-danger" onclick="closeModal(this)">&times;</button>
         </div>
-          <h3 class="my-4">About the event:</h3>
+        <h3 class="my-4">About the event:</h3>
 
-          <p>Dance is the purest form of expression of all emotions. Some great words quote "Dance is the movement
-of the soul on nature's rhythm." Dancing is a pious form of art cherished both by the performer and the
-viewer.It is a great honor for us to present enthusiastic dancers across India with this platform of
-Bootstrapping'23 and have your college dance team as a part of the group dance competition. With
-utmost pleasure, we inviteyour participation to make Renaissance'23 more valuable.</p>
+        <p>Dance is the purest form of expression of all emotions. Some great words quote "Dance is the movement
+          of the soul on nature's rhythm." Dancing is a pious form of art cherished both by the performer and the
+          viewer.It is a great honor for us to present enthusiastic dancers across India with this platform of
+          Bootstrapping'23 and have your college dance team as a part of the group dance competition. With
+          utmost pleasure, we inviteyour participation to make Renaissance'23 more valuable.</p>
 
 
-            <h4>Rules and Regulations:</h4>
-            
-            • Multiple entries from the same college are allowed. <br>
-            • College ID cards are mandatory for entry. <br>
-            • The minimum number of participants should be 5 and the maximum is 25 {on stage: max(15)} <br>
-            • Pre-recorded music should be brought in a pen drive in .mp3 format only <br>
-            • Bootstrapping has only one round– <br>
-                
-            <h4>Round 1 (Showcase Round):</h4>
-            
-            • The time limit should not exceed 7+1 minutes. <br>
-            • Individuality and originality of the dance are encouraged. <br>
-            • Obscenity of any kind is not allowed and will lead to immediate disqualification. <br>
-            • Use of props is allowed. <br>
-            • The use of fireworks & fire acts, colors, and water is not allowed. <br>
-            • No extra marks for props, costumes, and theme-based performances. <br>
-            • If choreography appears to be copied, negative marks will be awarded <br>
-            • A panel of judges will score the teams on several criteria including Choreography, Expression,
-              Innovation, Energy, Stage Presence. <br>
-            • There is no restriction on the theme. All the participants in a group should belong to the same
-              technical or management institution. The decision of the judges and the organizing committee
-              will be final. <br>
-          
+        <h4>Rules and Regulations:</h4>
 
-             <h4>Registration:</h4>
-             Registration fee: - Rs. 300 Per Team member <br>
-             Prize- <br>
-             •  1st position- Rs 30000/- <br>
-             •  2nd position- Rs 20000/- <br>
-            
-             Participation certificate to all other eligible teams. <br>
+        • Multiple entries from the same college are allowed. <br>
+        • College ID cards are mandatory for entry. <br>
+        • The minimum number of participants should be 5 and the maximum is 25 {on stage: max(15)} <br>
+        • Pre-recorded music should be brought in a pen drive in .mp3 format only <br>
+        • Bootstrapping has only one round– <br>
 
-            <h4>For queries contact:</h4>
-            Shivam – 8107061914 <br>
-            Radhika– 8905866105 <br>
-            <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">register now</a>
-          </div>
+        <h4>Round 1 (Showcase Round):</h4>
+
+        • The time limit should not exceed 7+1 minutes. <br>
+        • Individuality and originality of the dance are encouraged. <br>
+        • Obscenity of any kind is not allowed and will lead to immediate disqualification. <br>
+        • Use of props is allowed. <br>
+        • The use of fireworks & fire acts, colors, and water is not allowed. <br>
+        • No extra marks for props, costumes, and theme-based performances. <br>
+        • If choreography appears to be copied, negative marks will be awarded <br>
+        • A panel of judges will score the teams on several criteria including Choreography, Expression,
+        Innovation, Energy, Stage Presence. <br>
+        • There is no restriction on the theme. All the participants in a group should belong to the same
+        technical or management institution. The decision of the judges and the organizing committee
+        will be final. <br>
+
+
+        <h4>Registration:</h4>
+        Registration fee: - Rs. 300 Per Team member <br>
+        Prize- <br>
+        • 1st position- Rs 30000/- <br>
+        • 2nd position- Rs 20000/- <br>
+
+        Participation certificate to all other eligible teams. <br>
+
+        <h4>For queries contact:</h4>
+        Shivam - 8107061914 <br>
+        Radhika - 8905866105 <br>
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+    <!-- technical model -->
+    <!-- <div id="tech-modal-5" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>3D-MANIA</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
         </div>
-        <!-- technical model -->
-        <div id="tech-modal-4" class="modal-overlay">
-          <div class="modal-body">
-            <div class="d-flex justify-content-between">
-              <h2>3D-MANIA</h2>
-              <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
-            </div>
-    
-            <h4>RULES:</h4>
-            <span>This event is divided into three parts.</span>
-            <h4>Round 1:</h4>
-            1. Quiz (15 question/15 marks/10 min.) <br>
-            2. 2D-drawing (1 drawing/25 marks/30 min.) <br>
-            <h4>Round 2:</h4>
-            <p>The student who qualifies 1
-              st round will only move to the second round. Contestants
-              will be given a 3D drawing and its all three views (F.V., T.V., and S.V.) would have to be drawn
-              with dimensions in 90 min. (60 marks)</p>
-            <h4>Round 3:</h4>
-            <p>Printing of top 5 participants’ drawing using 3D printer.</p>
-            <b>Final result will be declared on the basis of all three stages.</b>
-    
-            <h4>Evaluation Criteria:</h4>
-            • Time<br />
-            • Accuracy<br />
-            <h4>For queries contact:</h4>
-            Harshita Chawrani -91-9680941119 <br>
-            Jitendra Vaishnav -91-8696110538 <br>
-          </div>
-        </div>
-        <div id="tech-modal-9" class="modal-overlay">
-          <div class="modal-body">
-            <div class="d-flex justify-content-between">
-              <h2>Tug of war</h2>
-              <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
-            </div>
-            <h4>Problem statement:</h4>
-            <p>The game aims at clashing and clattering of two solid bots connected by rope such that they try to pull
-              each other in the famous game "TUG of WAR". The bot wins if it drags the other bot across the center
-              line.
-            </p>
-            <h4>Arena:</h4>
-            The arena will be divided into 2 zones. <br>
-            1. Zone 1 has the hurdles of speed breakers made by semi - cylindrical pipes. <br>
-            2. Zone 2 has the hurdle of few stones and pebbles. <br>
-            3. Bots are tied head to head via a rope. <br>
-            Note: The actual arena may slightly vary instead of practical issues <br>
-            <h4>Gameplay:</h4>
-            <p>The game starts with two bots tied head-to-head with a rope. The bots need to pull each other and
-              drag the opponent bot to their respective side</p>
-            <h4>Obstacles:</h4>
-            <ul>
-              <li>It will be an elimination round and one team from each round will be eliminated.</li>
-              <li>There will be obstacles (semi cylindrical pipes) in zone 1 of the arena.</li>
-              <li>There will be obstacles (sand & pebbles) in zone 2 of the arena.</li>
-              <li>Bots need to pull the opponent bot into their zone (after the opponent bot crosses the center).</li>
-              <li>Maximum time of 3 minutes will be given in total for the game to finish.</li>
-              <li>Teams qualifying after the first round will compete in second round.</li>
-              <li>After 3 minutes, if no bot is able to drag the bot into their zone, bots will be given points as 
-                per the position of opponent bot in the arena.</li>
-              <li>Teams wins if it defeats all the other teams.</li>
-            </ul>
-            <h4>Marking Scheme:</h4>
-            <ul>
-              <li>If a bot successfully pulls the opponent bot towards its side after passing all the hurdles, the 
-                team gains 50 points & is declared as the winner.</li>
-              <li>At the end of battle, if none of the bot manages to pull the other one to their side, bots will be
-                awarded points on the basis of position of opponent bot i.e. how close they were able to drag 
-                the opponent bot towards their side.</li>
-              <li>If Bot1 is in Zone 1 – Bot2 will get 5 points</li>
-              <li>If Bot1 crosses Zone 1 & is in Zone 2 – Bot2 will get 15 points
-              </li>
-              <li>If Bot1 crosses Zone 2 & is in Zone 3 – Bot2 will get 30 points.</li>
-              <li>In case of an tie , time taken by the bot to pull the opponent bot in the zone (at the end of 
-                time) will decide winner of the match</li>
-              <li>awarded points on the basis of position of the opponent bot, i.e. how close they were able to 
-                drag the opponent bot towards their side.</li>
-              <li>In case of disfiguring of an attachment or bad functionality of bot during the battle, 10 points
-                will get deducted from the defaulter bot.</li>
-              <li>In case the rope connecting two bots is loosened or disconnected, the rope will be tied again 
-                & the match will start from the previously crossed checkpoint. Time will be stop for the 
-                duration for which the rope is being tied again. Time will resume again after the rope is tied 
-                again. </li>
-              <li>The winner of the battle will be the one who has maximum points earned or pulled the 
-                opponent bot towards its side.
-                </li>
-            </ul>
-            <h4>Bot Specification:</h4>
-            <ul>
-              <li>Bot can be wired or wireless.</li>
-              <li>Maximum allowed weight of the bot is 5 Kg(including Battery Weight).</li>
-              <li>Bots should have on-board power supply.
-              </li>
-              <li>The bot should fit in a box of dimensions:300mm x 300mm x 250 mm</li>
-              <li>The potential difference between any two points on the bot should not exceed 24 volts.</li>
-              <li>In case of wired bots the length of the wire should not be more than 3 metre.</li>
-              <li>The bot cannot be constructed using readymade Lego kits or any readymade mechanism. But, 
-                You can make use of readymade gear assemblies and readymade wireless modules if 
-                required. disqualification</li>
-              <li>The robots shall be inspected before the event. Failing the inspection shall lead to
-                Disqualification.
-                </li>
-              <li>Pneumatic/Hydraulic/Cutter/Projectile/Entanglement etc. mechanisms are NOT allowed. 
-                Damaging the arena in any way will lead to disqualification</li>
-              <li>There must a provision to tie a rope at the head of the bot. You are not allowed to wound the
-                rope around or over the bot</li>
-              <li>All the attachments (for tying of the ropes, for increasing the weight, for shifting of CG, CM)</li>
-            </ul>
-    
-            <h4>Rules and Regulations:</h4>
-            <ul>
-              <li>Each team can have a maximum 3 and minimum 1 participants.</li>
-              <li>One person cannot be part of two teams.</li>
-              <li>During the battle, contestants are not allowed to touch their bots.</li>
-              <li>Only one member will be allowed to control the bot.</li>
-              <li>In case the bot stops working during the battle, only one chance will be given to the team to 
-                fix the issue for a time of one minute. Battle time will be stopped during this and will resume 
-                after 1 minute automatically
-                </li>
-              <li>If bot fails again, time will not be stopped, however, the team can fix their bot. Time taken to 
-                fix the bot will be added to the time of the bot & team will be disqualified if it takes more 
-                than 2 minutes to fix the bot.</li>
-              <li>Wire should remain slack at all times. In case the wire is not slack, warning will be given for 
-                the first time & thereafter 5 point will be deducted every time.</li>
-              <li>The event may be recorded by an overhead camera provided by the organizers.
-              </li>
-              <li>No AC power supply will be provided, participants are requested to use only DC power 
-                supply. The organizers reserve the right to change the rules as they seem fit.</li>
-              <li>When a team is called for match, they must report within five minutes.</li>
-              <li>Judge's decision will be final.</li>
-            </ul>
-            <h4>Team Specification:</h4>
-            <p>A team may consist of a maximum of 3 participants and minimum 1 participant. </p>
-           <h4>Certificate policy:</h4>
-           1. Top three teams will be rewarded and given prizes. <br>
-           2. Certificates of participation will be only given to the participating teams. <br>
-            <h4>Registration Amount:</h4>
-            <p>Rs 600/- (per Team)</p>
-            <h4>Prize Money:</h4>
-            <p>20K Worth.</p>
-            <h4>For queries contact:</h4>
-            Akshat Khandelwal: 7790911532 <br>
-            Aayu: 8825312144 <br>
-          </div>
-        </div>
-        
-      
-      
-      
-      <!-- =-=-=-=-=-=-=-=-=-=-=- Modal end here =-=--=-=--=-=-=-=- -->
 
-      <!-- card section -->
+        <h4>RULES:</h4>
+        <span>This event is divided into three parts.</span>
+        <h4>Round 1:</h4>
+        1. Quiz (15 question/15 marks/10 min.) <br>
+        2. 2D-drawing (1 drawing/25 marks/30 min.) <br>
+        <h4>Round 2:</h4>
+        <p>The student who qualifies 1
+          st round will only move to the second round. Contestants
+          will be given a 3D drawing and its all three views (F.V., T.V., and S.V.) would have to be drawn
+          with dimensions in 90 min. (60 marks)</p>
+        <h4>Round 3:</h4>
+        <p>Printing of top 5 participants’ drawing using 3D printer.</p>
+        <b>Final result will be declared on the basis of all three stages.</b>
 
-      <!-- tech section -->
-      <section id="tech" class="hidden-section">
+        <h4>Evaluation Criteria:</h4>
+        • Time<br />
+        • Accuracy<br />
+        <h4>For queries contact:</h4>
+        Harshita Chawrani -91-9680941119 <br>
+        Jitendra Vaishnav -91-8696110538 <br>
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+    <div id="tech-modal-22" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>J Gate</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+        </div>
+        <h4>About the Event: </h4>
+        <p>The event here explores the basic civil engineering knowledge
+          from the first year and General awareness . This event is a
+          quiz competition comprising of two rounds. First round will
+          be having multiple choice questions followed by second round
+          which is a final round; it will be having questions of basic
+          civil engineering knowledge, Yearly syllabus and general
+          awareness.
+        </p>
+        <h4>RULES:</h4>
+        1. It is a Single participant game. <br>
+        2. Use of mobile phones, calculator or any other electrionic
+        accessories is prohibited. <br>
+        3. The judge's decision will be final and can't be argued. <br>
+        <b> Registration fee :</b> Rs 150/- <br>
+        <b> Winner :</b> Rs 3,000/- <br>
+        <b> Runner up :</b> Rs 2,000/- <br>
+        <b> 2nd Runner up :</b> Rs 1,000/- <br>
+        So what are you waiting for ?? <br>
+        Just grab the opportunity and showcase <br>
+        your talent with “J-GATE” <br>
+        <h4>For queries contact:</h4>
+        Garbhit Kumawat-9413446881 <br>
+        Avika Mour-7878121776 <br>
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+    <div id="tech-modal-30" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>D-CODE</h2>
+          <button class="btn btn-outline-danger" onclick="closeModal(this)">&times;</button>
+        </div>
+        <h3 class="my-4">About the event:</h3>
+        <p>• This is a coding competition event where student will be given an
+          output of the program and he has to code the program according to
+          the outcome as per desired logics. This will be one hour event.</p>
+
+
+        <h4>Rules and Regulations:</h4>
+
+        1. 60 minutes/1hour will be given to the participant. <br>
+        2. It is a solo event. <br>
+        3. Participants will be given an output and they have to write code for
+        that output. <br>
+        4. Code must be written only in C/C++ language ( Turbo C++ compiler
+        will be given to you) and it must be easy to understand. <br>
+        5. If any team is found copying a code that has already been
+        debugged/Switching on the screen, then he/she will be disqualified. <br>
+        6. Use of mobile and internet is not allowed. <br>
+        7. The winner will be decided on the basis of time taken to write the correct code. <br>
+        <h4>Registration:</h4>
+        Registration fee -Rs 250/- per head <br>
+        Prize- <br>
+        • 1st position - Rs 3100/-
+        • 10 consolation prize – (500*10) Rs 5000/- <br>
+
+        Participation certificate will be given to all participants. <br>
+
+        <h4>For queries contact:</h4>
+        Himani Munjal : 9636696752 <br>
+        Piyush Gupta - 7297078087 <br>
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+
+    <div id="tech-modal-3" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>IT HACKATHON</h2>
+          <button class="btn btn-outline-danger" onclick="closeModal(this)">&times;</button>
+        </div>
+        <h3 class="my-4">About the event:</h3>
+        <p>•• IT HACKATHON is a technical event that invites computer
+          programmers to built a program. It is a problem solving
+          events(coding contest).The coding contest will be of 2hrs during
+          which all the teams will be given a real time problem statement. On
+          the basis of these problem statements, you will have to develop
+          solutions</p>
+
+
+        <h4>Rules and Regulations:</h4>
+        • Team size may be either 1 or maximum 3 members in single team. <br>
+        • No plagiarism/copy-paste will be entertained, If found, the team will
+        be disqualified from the event. <br>
+        • The competition will be of 2 hrs during which the participants
+        have to write your own program. <br>
+        • Teams can use libraries, frameworks or open-source code in their
+        projects. <br>
+        <h4>Registration:</h4>
+        Registration fee -Rs 250/- per head <br>
+        Prize- <br>
+        • 1st position-5100/- <br>
+        • 2nd position-3100/- <br>
+        • 3rd position-2100/- <br>
+
+
+
+        <h4>For queries contact:</h4>
+        Shivam Garg - 8949499256 <br>
+        Neeraj Borana - 9784032358 <br>
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+
+    <div id="tech-modal-27" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>MASTER OF LOGIC</h2>
+          <button class="btn btn-outline-danger" onclick="closeModal(this)">&times;</button>
+        </div>
+        <h3 class="my-4">About the event:</h3>
+        <p>Master of Logics is a technical event to challenge coders
+          coding skills. The event consists of three rounds - a Technical
+          Quiz, logo identification and a programming round, which will
+          test the understanding of the C programming language,
+          Computer Science fundamentals as well as ability of
+          participants to identify and test the coordination of their
+          coding skills with their creative minds.</p>
+
+
+        <h4>Rules and Regulations:</h4>
+        • Use of any technical instrument is strictly prohibited during
+        the round. <br>
+        • You will not be allowed to use any kind of outside reference. <br>
+        • Participants are requested to carry their college identity
+        cards along with them. <br>
+        • Students from any institute or stream are allowed to
+        participate individually. <br>
+        <h4>Registration:</h4>
+        Registration fee -Rs 250/- per head <br>
+        Prize: <br>
+        • 1st position- Rs 3100/- <br>
+        • 10 consolation prizes- Rs 500/- <br>
+        Participation certificate will be given to all participants. <br>
+
+
+        <h4>For queries contact:</h4>
+        Kamal Verma - 6367883159 <br>
+        Pankaj Sain - 6378079876 <br>
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+
+    <div id="tech-modal-29" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>Subito</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+        </div>
+        <h3 class="my-4">Introduction:</h3>
+        • Їe Solo Development Competition gives the platform to Developers to showcase their
+        Styling Skills using HTML and CSS. <br>
+        • An event of replicating the given image using HTML and Cascading Style Sheets (CSS) <br>
+
+        <h4>2. General Instruction</h4>
+        • Їere will be two rounds in the event. <br>
+        • First Round: In the first round participants will be given an image, the diЎculty level will
+        be cakewalk. First round will be of 40 mins and participants will be automatically
+        eliminated if he/she is unable to replicate the given image on time and top participants
+        will be qualified to round 2. <br>
+        • Second Round: Їe second round will be of 1hour, where diЎculty will slightly increase. <br>
+        • Participants who make it first to complete the given task will be declared as the winner. <br>
+        • Plaƞorm will be noƟfied to parƟcipants before one day of the event. All
+        parƟcipants have to work on the same plaƞorm. <br>
+        • The event will be of 3 hours duraƟon. <br>
+        • ParƟcipants will be given a problem challenge. <br>
+        • Plagiarism in the code will lead to disqualificaƟon. <br>
+
+        <h4>3. Organizing CommiƩee</h4>
+        • All decision regarding scoring, and Ɵming are made by the organizing officials <br>
+        <h4>5. Entry Fees:</h4>
+        Rs. 350/- (solo parƟcipant) <br>
+
+        <h4>6. Prize Money: </h4>
+        7K Worth. <br>
+
+
+        <h4>7. Contacts:</h4>
+
+        • Bhavya Bansal: 9119212793 <br>
+        • Mohit Parwani: 9664042586 <br>
+
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+
+      </div>
+    </div>
+    <div id="tech-modal-1" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>WEB 3.0 Build-a-thon</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+        </div>
+        <h3 class="my-4">Details:</h3>
+        Firstly there with be a session on Web 3.0 Fundamentals with Projects Submission guidelines
+        and help which includes: <br>
+        Introduction of Router Protocol <br>
+        Introduction to Web 3.0 <br>
+        Project submission guidelines and material on the next day. <br>
+
+        • Timing would be 24hours and submission will be online <br>
+        • The candidates have to deploy there project and upload videos of their project on Devfolio. <br>
+        • And its mandatory to attend the Web 3.0 Fundamentals session by the Judges before the build-a-thon. <br>
+        •The projects are evaluated on Creativity and Techstack. <br>
+
+        <h4>Rules : </h4>
+        Every candidate has to make a working project on the following : <br>
+        Problem Statements <br>
+        •Web 3 <br>
+        Decentralise the internet. Build the next generation of web products on crypto, from
+        social media to TK. <br>
+        •Payments <br>
+        Connect users to crypto. Build projects that help everyone pay for things in crypto. <br>
+        •De-Fi <br>
+        Leave traditional finance behind. Design DEXs, lending platforms, and new decentralised applications to free
+        consumers. <br>
+        •Daos
+        Organise without bureaucracy. Create a decentralized autonomous organization to accomplish nearly anything
+        without bloated leadership. <br>
+        •NFT <br>
+        Create and develop innovative projects utilizing Non-Fungible Tokens (NFTs) technology and its real-world
+        applications <br>
+        •Gaming <br>
+        Create the future of gaming. Shape blockchain-based games, NFTs, and more to allow players to directly interact
+        with p2p market. <br>
+        •Women Hack
+        To encourages and empowers female participants to showcase their skills and ideas in the field oftechnology.
+        <br>
+
+
+        <h4>Prize</h4>
+        3000, 2000,1000 to the winners respectively. <br>
+
+        <h4> Contact:</h4>
+        Organizer <br>
+        Ayushi George <br>
+        8058184584 <br>
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+
+    <div id="tech-modal-37" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>Virtual Vision</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+        </div>
+        <h3 class="my-4">1. Introduction</h3>
+        <p>The Virtual Vision is an event that invites students to create immersive videos using AR/VR technology</p>
+
+        <h4>2. General Instruction</h4>
+        Theme: The theme of the video should be based on the college fest It can be a creative interpretation of the
+        theme, but it must be relevant to the event. <br>
+
+        • Tools and Resources : Participants can use any AR/VR video making tools and resources available to them. They
+        can also use any 3D modeling, animation, and audio editing software to create their videos. <br>
+
+        • Video Length : The video should not exceed five minutes in length, including credits and any other
+        introductory or closing statements <br>
+
+        • Video Format: The video should be in a standard format, such as .mp4, .mov, or .avi and should be compatible
+        with most AR/VR video players. <br>
+
+        • Submission: Participants should submit their videos by the deadline provided. The submission should include a
+        brief description of the video , the team time, and the name of all team member. <br>
+        <h4>3. Organizing Committee:</h4>
+
+        • By submitting a video, participants grant the event organizers the right to use the video for promotional
+        purposes, with due credit given to the creators. <br>
+
+        <h4>4. Evaluation:</h4>
+
+        The videos will be evaluated by a panel of judges based on the following criteria: <br>
+
+        • Creativity and originality <br>
+
+        • Technical skills and execution <br>
+
+        • Adherence to the theme of the college fest <br>
+
+        <h4>5. Certificate Policy</h4>
+
+        1. Top three teams will be rewarded and given prizes. <br>
+        2. Certificates of participation will be only given to the participating teams. <br>
+
+        <h4>6. Entry fee: </h4>
+        Rs 500/- (Per team) <br>
+
+        <h4>7. Prize Money:</h4>
+        6K Worth. <br>
+
+        <h4>8. Contacts: </h4>
+
+        khushi Garg : 9785226238 <br>
+        Manish : 9983941734 <br>
+        Shivam : 7568990822 <br>
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+
+      </div>
+    </div>
+    <div id="tech-modal-25" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>Programmer's Playground</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+        </div>
+        <h3 class="my-4">1. Introduction</h3>
+        <p>The Brommer's Playground is an event that invites students to create immersive Projects.</p>
+
+        <h4>2. General Instruction</h4>
+        • Each team can have a maximum of 4 members. <br>
+
+        • You have to bring your own laptops and prepare a presentation. <br>
+
+
+        • All decisions regarding scoring, gameplay, quizzes and timing are made by the organizing officials. <br>
+
+        • Participants should submit their Projects by the deadline provided. The submission should include a brief
+        description <br>
+
+
+        <h4>3. Organizing Committee:</h4>
+
+        • All decisions regarding scoring, gameplay, quizzes and timing are made by the organizing officials.<br>
+        <h4>4. Evaluation:</h4>
+
+        • Participants should submit their Projects by the deadline provided. The submission should include a brief
+        description. <br>
+
+        <h5>• 5. Rules : </h5>
+        • There are 3 following rounds: <br>
+
+        • First one is the Front-End Project based on real time problem statements. <br>
+
+        • Second one is Creative mund where you have to make a video or reel based on provided images and videos. <br>
+
+        • Third one is the Quiz round. <br>
+
+        <h4>6. Entry fee: </h4>
+        Rs 800/- (Per team) <br>
+
+        <h4>7. Prize Money:</h4>
+        7K Worth. <br>
+
+        <h4>8. Contacts: </h4>
+
+        Sarthak Jain: 7728858711 <br>
+        Sarthak Kamar: 9784350274 <br>
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+
+
+    <div id="tech-modal-39" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>Best out of Waste</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+        </div>
+        <h4>About the event:</h4>
+        <p>The event here explores the creativity and understanding of the
+          waste management. It Create awareness among students to use
+          the waste products in best possible way. </p>
+        <h4>RULES:</h4>
+        1.Using recyclable and reusable waste to create a fantastic
+        and usable product. <br>
+        2.Do not purchase an item from the market use only those
+        present at home <br>
+        3. Min use of 5 items from the given list. <br>
+        4.Use any type of adhesive. <br>
+        5. Any type of colors can be used. <br>
+        6.Creating a short video of the whole process and sharing it in
+        the meeting. <br>
+        7.explanation of item used during event time. <br>
+        8.Can't use the whole object i.e. Whole bottle with cap
+        Can't use a premade object like frames, pen stand, etc. <br>
+        <p>Participants must carry their own pair of ruler, scissors or any
+          other cutting tool. </p>
+        <b> Entry Fees:</b> INR 250 <br>
+        <h4>Prize:</h4>
+        1st prize- INR 3000 <br>
+        2nd prize- INR 2000 <br>
+        3rd prize- INR 1000 <br>
+        <h4>For queries contact:</h4>
+        Rehansh Sharma - 8559881735 <br>
+        Priyanka Sharma - 8899346616 <br>
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+
+    <div id="tech-modal-15" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>Zenith-Reach Towards Sky</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+        </div>
+        <h4>About the event:</h4>
+        <p>The event here explores the creativity and understanding of
+          the structure.
+          In this event, participants have to construct a structure of roof
+          and floor standing more or less permanently in one place
+          provided props. </p>
+        <h4>RULES:</h4>
+        1.The participating team must not comprise of more than 3
+        persons. <br>
+        2.Use of props other than provided is prohibited. <br>
+        3.Use of supports is however allowed. <br>
+        4.Newspapers and Thermocols will be provided by the
+        organizers to the participating team. <br>
+        <p>Participants must carry their own pair of ruler, scissors or any
+          other cutting tool. </p>
+        <b> Entry Fees:</b> INR 250 <br>
+        <h4>Prize:</h4>
+        1st prize- INR 3000 <br>
+        2nd prize- INR 2000 <br>
+        3rd prize- INR 1000 <br>
+        <h4>For queries contact:</h4>
+        Garbhit Kumawat - 9413446881 <br>
+        Hanumant Singh - 9116485975 <br>
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+    <div id="tech-modal-11" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2>CAD Darshan</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+        </div>
+        <h4>About the event:</h4>
+        <p>The event here explores the understanding of AutoCAD.
+          This event will be conducted in two rounds.
+          First round comprising the questions based on basic AutoCAD
+          knowledge followed by second round in which participants will have to
+          draw the plan of dimensions provided. </p>
+        <h4>RULES:</h4>
+        1. It is an individual Participant's event. <br>
+        2. Participant will have to work on AutoCAD 2010. <br>
+        3. Use of any other electronic device and accessories is strictly
+        prohibited. <br>
+        4. Judge's decision will be final, can't be argued. <br>
+
+        <b> Entry Fees:</b> INR 150 per person <br>
+        <h4>Prize:</h4>
+        1st prize- INR 3000 <br>
+        2nd prize- INR 2000 <br>
+        3rd prize- INR 1000 <br>
+        Participation certificate will be given to all participants. <br>
+        <h4>For queries contact:</h4>
+        Chelsi Nagar - 6350650559 <br>
+        Avika Gaur - 7878121776 <br>
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+    <div id="tech-modal-10" class="modal-overlay">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <h2> Robo Tug of war</h2>
+          <button class="btn btn-outline-danger my-auto" onclick="closeModal(this)">&times;</button>
+        </div>
+        <h4>Problem statement:</h4>
+        <p>The game aims at clashing and clattering of two solid bots connected by rope such that they try to pull
+          each other in the famous game "TUG of WAR". The bot wins if it drags the other bot across the center
+          line.
+        </p>
+        <h4>Arena:</h4>
+        The arena will be divided into 2 zones. <br>
+        1. Zone 1 has the hurdles of speed breakers made by semi - cylindrical pipes. <br>
+        2. Zone 2 has the hurdle of few stones and pebbles. <br>
+        3. Bots are tied head to head via a rope. <br>
+        Note: The actual arena may slightly vary instead of practical issues <br>
+        <h4>Gameplay:</h4>
+        <p>The game starts with two bots tied head-to-head with a rope. The bots need to pull each other and
+          drag the opponent bot to their respective side</p>
+        <h4>Obstacles:</h4>
+        <ul>
+          <li>It will be an elimination round and one team from each round will be eliminated.</li>
+          <li>There will be obstacles (semi cylindrical pipes) in zone 1 of the arena.</li>
+          <li>There will be obstacles (sand & pebbles) in zone 2 of the arena.</li>
+          <li>Bots need to pull the opponent bot into their zone (after the opponent bot crosses the center).</li>
+          <li>Maximum time of 3 minutes will be given in total for the game to finish.</li>
+          <li>Teams qualifying after the first round will compete in second round.</li>
+          <li>After 3 minutes, if no bot is able to drag the bot into their zone, bots will be given points as
+            per the position of opponent bot in the arena.</li>
+          <li>Teams wins if it defeats all the other teams.</li>
+        </ul>
+        <h4>Marking Scheme:</h4>
+        <ul>
+          <li>If a bot successfully pulls the opponent bot towards its side after passing all the hurdles, the
+            team gains 50 points & is declared as the winner.</li>
+          <li>At the end of battle, if none of the bot manages to pull the other one to their side, bots will be
+            awarded points on the basis of position of opponent bot i.e. how close they were able to drag
+            the opponent bot towards their side.</li>
+          <li>If Bot1 is in Zone 1 - Bot2 will get 5 points</li>
+          <li>If Bot1 crosses Zone 1 & is in Zone 2 - Bot2 will get 15 points
+          </li>
+          <li>If Bot1 crosses Zone 2 & is in Zone 3 - Bot2 will get 30 points.</li>
+          <li>In case of an tie , time taken by the bot to pull the opponent bot in the zone (at the end of
+            time) will decide winner of the match</li>
+          <li>awarded points on the basis of position of the opponent bot, i.e. how close they were able to
+            drag the opponent bot towards their side.</li>
+          <li>In case of disfiguring of an attachment or bad functionality of bot during the battle, 10 points
+            will get deducted from the defaulter bot.</li>
+          <li>In case the rope connecting two bots is loosened or disconnected, the rope will be tied again
+            & the match will start from the previously crossed checkpoint. Time will be stop for the
+            duration for which the rope is being tied again. Time will resume again after the rope is tied
+            again. </li>
+          <li>The winner of the battle will be the one who has maximum points earned or pulled the
+            opponent bot towards its side.
+          </li>
+        </ul>
+        <h4>Bot Specification:</h4>
+        <ul>
+          <li>Bot can be wired or wireless.</li>
+          <li>Maximum allowed weight of the bot is 5 Kg(including Battery Weight).</li>
+          <li>Bots should have on-board power supply.
+          </li>
+          <li>The bot should fit in a box of dimensions:300mm x 300mm x 250 mm</li>
+          <li>The potential difference between any two points on the bot should not exceed 24 volts.</li>
+          <li>In case of wired bots the length of the wire should not be more than 3 metre.</li>
+          <li>The bot cannot be constructed using readymade Lego kits or any readymade mechanism. But,
+            You can make use of readymade gear assemblies and readymade wireless modules if
+            required. disqualification</li>
+          <li>The robots shall be inspected before the event. Failing the inspection shall lead to
+            Disqualification.
+          </li>
+          <li>Pneumatic/Hydraulic/Cutter/Projectile/Entanglement etc. mechanisms are NOT allowed.
+            Damaging the arena in any way will lead to disqualification</li>
+          <li>There must a provision to tie a rope at the head of the bot. You are not allowed to wound the
+            rope around or over the bot</li>
+          <li>All the attachments (for tying of the ropes, for increasing the weight, for shifting of CG, CM)</li>
+        </ul>
+
+        <h4>Rules and Regulations:</h4>
+        <ul>
+          <li>Each team can have a maximum 3 and minimum 1 participants.</li>
+          <li>One person cannot be part of two teams.</li>
+          <li>During the battle, contestants are not allowed to touch their bots.</li>
+          <li>Only one member will be allowed to control the bot.</li>
+          <li>In case the bot stops working during the battle, only one chance will be given to the team to
+            fix the issue for a time of one minute. Battle time will be stopped during this and will resume
+            after 1 minute automatically
+          </li>
+          <li>If bot fails again, time will not be stopped, however, the team can fix their bot. Time taken to
+            fix the bot will be added to the time of the bot & team will be disqualified if it takes more
+            than 2 minutes to fix the bot.</li>
+          <li>Wire should remain slack at all times. In case the wire is not slack, warning will be given for
+            the first time & thereafter 5 point will be deducted every time.</li>
+          <li>The event may be recorded by an overhead camera provided by the organizers.
+          </li>
+          <li>No AC power supply will be provided, participants are requested to use only DC power
+            supply. The organizers reserve the right to change the rules as they seem fit.</li>
+          <li>When a team is called for match, they must report within five minutes.</li>
+          <li>Judge's decision will be final.</li>
+        </ul>
+        <h4>Team Specification:</h4>
+        <p>A team may consist of a maximum of 3 participants and minimum 1 participant. </p>
+        <h4>Certificate policy:</h4>
+        1. Top three teams will be rewarded and given prizes. <br>
+        2. Certificates of participation will be only given to the participating teams. <br>
+        <h4>Registration Amount:</h4>
+        <p>Rs 600/- (per Team)</p>
+        <h4>Prize Money:</h4>
+        <p>20K Worth.</p>
+        <h4>For queries contact:</h4>
+        Akshat Khandelwal: 7790911532 <br>
+        Aayu: 8825312144 <br>
+        <br><a href="https://forms.gle/VEkbQ1fEFFq7HkCm9" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div> -->
+
+
+
+
+    <!-- =-=-=-=-=-=-=-=-=-=-=- Modal end here =-=--=-=--=-=-=-=- -->
+
+    <!-- card section -->
+
+    <!-- tech section -->
+    <section id="tech" class="hidden-section">
+      <div class="top-button">
+        <button class="button-top cultural-btn" id="show-day1">Day 1</button>
+        <button class="button-top tech-btn" id="show-day2">Day 2</button>
+        <button class="button-top splash-btn" id="show-day3">Day 3</button>
+      </div>
+      <section id="day1" class="visible-section">
         <ul class="cards-list">
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-01.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-          
-
-          
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-02.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-          
-
-          
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-03.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-          
-
-          
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-04.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-          
-
-          
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-05.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-          
-
-          
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-06.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-          
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-01.png" alt="" 
+               />
+          </li>
 
 
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-07.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-          
 
-          
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-08.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-          
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-02.png" alt="" 
+               />
+          </li>
 
-          
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-09.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-          
 
-          
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-10.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-         
 
-          
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-11.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-          
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-03.png" alt="" 
+              />
+          </li>
 
-          
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-12.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-          
 
-          
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHNICAL DAY-2 WEBSITE icon-01.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-          
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 2 WEBSITE icon-02.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 2 WEBSITE icon-03.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 2 WEBSITE icon-04.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 2 WEBSITE icon-05.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 2 WEBSITE icon-06.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 2 WEBSITE icon-07.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 2 WEBSITE icon-08.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 2 WEBSITE icon-09.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 2 WEBSITE icon-10.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 2 WEBSITE icon-11.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 2 WEBSITE icon-12.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 2 WEBSITE icon-13.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 2 WEBSITE icon-14.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE icon-01.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE icon-02.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE icon-03.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE icon-04.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE icon-05.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE icon-06.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE icon-07.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE icon-08.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE icon-09.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE icon-10.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE icon-11.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            <li class="cards">
-              <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE icon-12.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
-            </li>
-            
+
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-04.png" alt="" 
+              />
+          </li>
+
+
+
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-05.png" alt="" 
+               />
+          </li>
+
+
+
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-06.png" alt="" 
+               />
+          </li>
+
+
+
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-07.png" alt="" 
+               />
+          </li>
+
+
+
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-08.png" alt="" 
+              />
+          </li>
+
+
+
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-09.png" alt="" 
+               />
+          </li>
+
+
+
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-10.png" alt="" 
+               />
+          </li>
+
+
+
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-11.png" alt="" 
+             />
+          </li>
+
+
+
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHANICAL DAY 1 WEBSITE icon-12.png" alt="" 
+               />
+          </li>
+
         </ul>
       </section>
-
-      <!-- cultural event -->
-      <section id="cultural" class="visible-section">
+      <section id="day2" class="hidden-section">
         <ul class="cards-list">
+
           <li class="cards">
-            <img src="../assets/posters/cultural/website poster final-01.png" alt="" class="modal-trigger" data-target="cultural-modal-0" />
+            <img src="../assets/posters/technical/TECHNICAL DAY-2 WEBSITE icon-01.png" alt="" 
+               />
           </li>
 
           <li class="cards">
-            <img src="../assets/posters/cultural/website poster final-02.png" alt="" class="modal-trigger" data-target="cultural-modal-1"/>
+            <img src="../assets/posters/technical/TECHNICAL DAY-2 WEBSITE icon-02.png" alt="" 
+               />
           </li>
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHNICAL DAY-2 WEBSITE icon-03.png" alt="" 
+               />
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHNICAL DAY-2 WEBSITE icon-04.png" alt=""
+               />
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHNICAL DAY-2 WEBSITE icon-05.png" alt="" 
+              />
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHNICAL DAY-2 WEBSITE icon-06.png" alt="" 
+               />
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHNICAL DAY-2 WEBSITE icon-07.png" alt="" 
+               />
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHNICAL DAY-2 WEBSITE icon-08.png" alt="" 
+               />
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHNICAL DAY-2 WEBSITE icon-09.png" alt="" 
+               />
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHNICAL DAY-2 WEBSITE icon-10.png" alt="" 
+               />
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHNICAL DAY-2 WEBSITE icon-11.png" alt="" 
+               />
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHNICAL DAY-2 WEBSITE icon-12.png" alt="" 
+               />
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHNICAL DAY-2 WEBSITE icon-13.png" alt="" 
+               />
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHNICAL DAY-2 WEBSITE icon-14.png" alt="" 
+               />
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHANICAL DAY 2 WEBSITE icon-15.png" alt="" 
+               />
+          </li>
+        </ul>
+      </section>
+      <section id="day3" class="hidden-section">
+        <ul class="cards-list">
 
           <li class="cards">
-            <img src="../assets/posters/cultural/website poster final-03.png" alt="" class="modal-trigger" data-target="cultural-modal-2"/>
+            <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE-01.png" alt="" 
+               />
           </li>
-
           <li class="cards">
-            <img src="../assets/posters/cultural/website poster final-04.png" alt="" class="modal-trigger" data-target="cultural-modal-3"/>
+            <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE-02.png" alt="" 
+               />
           </li>
-
           <li class="cards">
-            <img src="../assets/posters/cultural/website poster final-05.png" alt="" class="modal-trigger" data-target="cultural-modal-4"/>
+            <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE-03.png" alt="" 
+               />
           </li>
-
           <li class="cards">
-            <img src="../assets/posters/cultural/website poster final-06.png" alt="" class="modal-trigger" data-target="cultural-modal-5"/>
+            <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE-04.png" alt="" 
+              />
           </li>
-
           <li class="cards">
-            <img src="../assets/posters/cultural/website poster final-07.png" alt="" class="modal-trigger" data-target="cultural-modal-6"/>
+            <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE-05.png" alt="" 
+              />
           </li>
-
           <li class="cards">
-            <img src="../assets/posters/cultural/website poster final-08.png" alt="" class="modal-trigger" data-target="cultural-modal-7"/>
+            <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE-06.png" alt="" 
+               />
           </li>
-
           <li class="cards">
-            <img src="../assets/posters/cultural/website poster final-09.png" alt="" class="modal-trigger" data-target="cultural-modal-8"/>
+            <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE-07.png" alt="" 
+               />
           </li>
-
           <li class="cards">
-            <img src="../assets/posters/cultural/website poster final-10.png" alt="" class="modal-trigger" data-target="cultural-modal-9"/>
+            <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE-08.png" alt="" 
+               />
           </li>
-
           <li class="cards">
-            <img src="../assets/posters/cultural/website poster final-11.png" alt="" class="modal-trigger" data-target="cultural-modal-10"/>
+            <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE-09.png" alt="" 
+               />
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE-10.png" alt="" 
+               />
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE-11.png" alt="" 
+              />
+          </li>
+          <li class="cards">
+            <img src="../assets/posters/technical/TECHANICAL DAY 3 WEBSITE-12.png" alt="" 
+               />
           </li>
 
         </ul>
       </section>
+    </section>
 
-      <!-- splash section -->
-
-      <section id="splash" class="hidden-section">
+    <!-- cultural event -->
+    <section id="cultural" class="visible-section">
+      <div class="top-button">
+        <button class="button-top cultural-btn" id="show-day01">Day 1</button>
+        <button class="button-top tech-btn" id="show-day02">Day 2</button>
+        <button class="button-top splash-btn" id="show-day03">Day 3</button>
+      </div>
+      <section id="day01" class="visible-section">
         <ul class="cards-list">
           <li class="cards">
-            <img src="../assets/posters/splash/website poster (9)-01.png" alt="" class="modal-trigger" data-target="splash-modal-0"/>
+            <img src="../assets/posters/cultural/website poster final-01.png"  alt="" class="modal-trigger" 
+              data-target="cultural-modal-0" />
+          </li>
+
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-02.png" alt="" class="modal-trigger"
+              data-target="cultural-modal-1" />
+          </li>
+
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-03.png" alt="" class="modal-trigger"
+              data-target="cultural-modal-2" />
+          </li>
+
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-04.png" alt="" class="modal-trigger"
+              data-target="cultural-modal-3" />
+          </li>
+        </ul>
+      </section>
+      <section id="day02" class="hidden-section">
+        <ul class="cards-list">
+
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-05.png" alt="" class="modal-trigger"
+              data-target="cultural-modal-4" />
+          </li>
+
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-06.png" alt="" class="modal-trigger"
+              data-target="cultural-modal-5" />
+          </li>
+
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-07.png" alt="" class="modal-trigger"
+              data-target="cultural-modal-6" />
+          </li>
+
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-08.png" alt="" class="modal-trigger"
+              data-target="cultural-modal-7" />
+          </li>
+        </ul>
+      </section>
+      <section id="day03" class="hidden-section">
+        <ul class="cards-list">
+
+
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-09.png" alt="" class="modal-trigger"
+              data-target="cultural-modal-8" />
+          </li>
+
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-10.png" alt="" class="modal-trigger"
+              data-target="cultural-modal-9" />
+          </li>
+
+          <li class="cards">
+            <img src="../assets/posters/cultural/website poster final-11.png" alt="" class="modal-trigger"
+              data-target="cultural-modal-10" />
+          </li>
+
+        </ul>
+      </section>
+    </section>
+
+    <!-- splash section -->
+
+    <section id="splash" class="hidden-section">
+      <div class="top-button">
+        <button class="button-top cultural-btn" id="show-day001">Day 1</button>
+        <button class="button-top tech-btn" id="show-day002">Day 2</button>
+        <button class="button-top splash-btn" id="show-day003">Day 3</button>
+      </div>
+      <section id="day001" class="visible-section">
+        <ul class="cards-list">
+          <li class="cards">
+            <img src="../assets/posters/splash/website poster (9)-08.png" alt="" class="modal-trigger"
+              data-target="splash-modal-7" />
           </li>
           <li class="cards">
-            <img src="../assets/posters/splash/website poster (9)-02.png" alt="" class="modal-trigger" data-target="splash-modal-1"/>
+            <img src="../assets/posters/splash/website poster (9)-02.png" alt="" class="modal-trigger"
+              data-target="splash-modal-1" />
           </li>
           <li class="cards">
-            <img src="../assets/posters/splash/website poster (9)-03.png" alt="" class="modal-trigger" data-target="splash-modal-2"/>
+            <img src="../assets/posters/splash/website poster (9)-03.png" alt="" class="modal-trigger"
+              data-target="splash-modal-2" />
           </li>
           <li class="cards">
-            <img src="../assets/posters/splash/website poster (9)-04.png" alt="" class="modal-trigger" data-target="splash-modal-3"/>
+            <img src="../assets/posters/splash/website poster (9)-04.png" alt="" class="modal-trigger"
+              data-target="splash-modal-3" />
+          </li>
+        </ul>
+      </section>
+      <section id="day002" class="hidden-section">
+        <ul class="cards-list">
+          <li class="cards">
+            <img src="../assets/posters/splash/website poster (9)-05.png" alt="" class="modal-trigger"
+              data-target="splash-modal-4" />
+          </li>
+
+          <li class="cards">
+            <img src="../assets/posters/splash/website poster (9)-07.png" alt="" class="modal-trigger"
+              data-target="splash-modal-6" />
+          </li>
+
+          <li class="cards">
+            <img src="../assets/posters/splash/website poster (9)-01.png" alt="" class="modal-trigger"
+              data-target="splash-modal-0" />
+          </li>
+        </ul>
+      </section>
+      <section id="day003" class="hidden-section">
+        <ul class="cards-list">
+          <li class="cards">
+            <img src="../assets/posters/splash/website poster (9)-06.png" alt="" class="modal-trigger"
+              data-target="splash-modal-5" />
           </li>
           <li class="cards">
-            <img src="../assets/posters/splash/website poster (9)-05.png" alt="" class="modal-trigger" data-target="splash-modal-4"/>
-          </li>
-          <li class="cards">
-            <img src="../assets/posters/splash/website poster (9)-06.png" alt="" class="modal-trigger" data-target="splash-modal-5"/>
-          </li>
-          <li class="cards">
-            <img src="../assets/posters/splash/website poster (9)-07.png" alt="" class="modal-trigger" data-target="splash-modal-6"/>
-          </li>
-          <li class="cards">
-            <img src="../assets/posters/splash/website poster (9)-08.png" alt="" class="modal-trigger" data-target="splash-modal-7"/>
-          </li>
-          <li class="cards">
-            <img src="../assets/posters/splash/website poster (9)-09.png" alt="" class="modal-trigger" data-target=""/>
+            <img src="../assets/posters/splash/website poster (9)-09.png" alt="" class="modal-trigger"
+              data-target="splash-modal-9" />
           </li>
         </ul>
       </section>
@@ -1495,18 +2093,27 @@ utmost pleasure, we inviteyour participation to make Renaissance'23 more valuabl
             <div class="my-4"><img src="../assets/logo/REN 23 logo.png" class="footer-logo" /></div>
           </div>
           <div class="col-xs-12 col-sm-3 column text-center d-flex flex-column">
+            <div class="my-4"><img src="../assets/logo/student council white (1).png" class="footer-logo" /></div>
+          </div>
+          <div class="col-xs-12 col-sm-3 column text-center d-flex flex-column">
             <h4>Contact Us</h4>
             <hr class="mb-4 underline" />
             <ul class="list-unstyled py-4">
               <li>
-                <a href="tel:9782971327" class="nav-link">Technical Head: +919782971327</a><h6>(Roonak Khandelwal)</h6>
+                <a href="tel:9782971327" class="nav-link">Technical Head: +919782971327</a>
+                <h6>(Roonak Khandelwal)</h6>
               </li>
               <li>
-                <a href="tel:8209017116" class="nav-link">Cultural Head: +918209017116</a><h6>(Shubhanker)</h6>
+                <a href="tel:8209017116" class="nav-link">Cultural Head: +918209017116</a>
+                <h6>(Shubhanker)</h6>
               </li>
               <li>
-                <a href="tel:7240578521" class="nav-link">Splash Head: +917240578521</a><h6>(Rajeev Sharma)</h6>
+                <a href="tel:7240578521" class="nav-link">Splash Head: +917240578521</a>
+                <h6>(Rajeev Sharma)</h6>
               </li>
+            </li>
+            <a href="tel:7742044215" class="nav-link">For Registration: +917742044215</a><h6>(Tanishk Maheshwari)</h6> <br><br>
+            <li>
               <li>
                 <a href="mailto:renaissance@jecrc.ac.in" class="nav-link">renaissance@jecrc.ac.in</a>
               </li>
@@ -1515,49 +2122,66 @@ utmost pleasure, we inviteyour participation to make Renaissance'23 more valuabl
           <div class="col-xs-12 col-sm-3 text-center d-flex flex-column">
             <h4>Follow Us</h4>
             <hr class="underline" />
+
             <div class="row justify-content-center">
-              <h6 class="my-3">JECRC Renaissance</h6>
+              <h6 class="my-3">JECRC Foundation</h6>
               <div class="d-flex justify-content-center">
                 <div class="m-2">
-                  <a rel="nofollow" target="_blank" class="navbar-brand" href="https://youtube.com/@TheJECRCRenaissance" title="Twitter">
+                  <a rel="nofollow" target="_blank" class="navbar-brand"
+                    href="https://www.youtube.com/@jecrcfoundation2150" title="Twitter">
                     <img loading="lazy" src="../assets/icons/youtube.png" height="40px" />
                   </a>
                 </div>
                 <div class="m-2">
-                  <a rel="nofollow" target="_blank" class="navbar-brand" href="https://www.facebook.com/jecrcrenaissance/" title="Facebook">
+                  <a rel="nofollow" target="_blank" class="navbar-brand"
+                    href="https://www.facebook.com/JECRCfoundation/" title="Facebook">
                     <img loading="lazy" src="../assets/icons/facebook.png" height="40px" />
                   </a>
                 </div>
                 <div class="m-2">
-                  <a target="_blank"
-                    rel="nofollow"
-                    class="navbar-brand"
-                    href="https://www.instagram.com/jecrcrenaissance/"
-                    title="instagram">
+                  <a target="_blank" rel="nofollow" class="navbar-brand"
+                    href="https://www.instagram.com/jecrcfoundationofficial/" title="instagram">
                     <img loading="lazy" src="../assets/icons/instagram.png" height="40px" />
                   </a>
                 </div>
               </div>
             </div>
             <div class="row justify-content-center">
-              <h6 class="my-3">JECRC Foundation</h6>
+              <h6 class="my-3">JECRC Renaissance</h6>
               <div class="d-flex justify-content-center">
                 <div class="m-2">
-                  <a rel="nofollow" target="_blank" class="navbar-brand" href="https://www.youtube.com/@jecrcfoundation2150" title="Twitter">
+                  <a rel="nofollow" target="_blank" class="navbar-brand" href="https://youtube.com/@TheJECRCRenaissance"
+                    title="Twitter">
                     <img loading="lazy" src="../assets/icons/youtube.png" height="40px" />
                   </a>
                 </div>
                 <div class="m-2">
-                  <a rel="nofollow" target="_blank" class="navbar-brand" href="https://www.facebook.com/JECRCfoundation/" title="Facebook">
+                  <a rel="nofollow" target="_blank" class="navbar-brand"
+                    href="https://www.facebook.com/jecrcrenaissance/" title="Facebook">
                     <img loading="lazy" src="../assets/icons/facebook.png" height="40px" />
                   </a>
                 </div>
                 <div class="m-2">
-                  <a target="_blank"
-                    rel="nofollow"
-                    class="navbar-brand"
-                    href="https://www.instagram.com/jecrcfoundationofficial/"
-                    title="instagram">
+                  <a target="_blank" rel="nofollow" class="navbar-brand"
+                    href="https://www.instagram.com/jecrcrenaissance/" title="instagram">
+                    <img loading="lazy" src="../assets/icons/instagram.png" height="40px" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <h6 class="my-3">Media Partner</h6>
+              <div class="d-flex justify-content-center">
+                <div class="m-2">
+                  <a rel="nofollow" target="_blank" class="navbar-brand"
+                    href="https://instagram.com/fotografreaks_jecrc_" title="instagram">
+                    <img loading="lazy" src="../assets/icons/IMG_1067.PNG" height="40px" />
+                  </a>
+                </div>
+
+                <div class="m-2">
+                  <a target="_blank" rel="nofollow" class="navbar-brand"
+                    href="https://instagram.com/fotografreaks_jecrc_" title="instagram">
                     <img loading="lazy" src="../assets/icons/instagram.png" height="40px" />
                   </a>
                 </div>
@@ -1569,22 +2193,26 @@ utmost pleasure, we inviteyour participation to make Renaissance'23 more valuabl
       <div class="d-flex flex-column text-center py-4 m-0" style="background-color: rgba(20, 22, 30, 1)">
         <div class="copyright m-auto">
           <p class="my-2">&copy; Copyright <strong>Jecrc Foundation</strong>. All Rights Reserved</p>
+          <a href="privacy_policy.html">Privacy Policy</a>
         </div>
         <div class="credits m-auto">
-          <p class="my-2">Developed by</p>
-          <p class="my-2">Graphics Designed by 
-          <a target="_blank" href="https://instagram.com/shubham_saharan4?igshid=ZDdkNTZiNTM=">Shubham Saharan</a>|
-          <a target="_blank" href="https://www.linkedin.com/in/dhruv-sharma-8b2403229">Dhruv Sharma</a>|
-          <a target="_blank" href="https://instagram.com/raginijoshi_?igshid=ZDdkNTZiNTM=">Ragini Joshi</a>|
-          <a target="_blank" href="https://instagram.com/sameer__mittal__?igshid=ZDdkNTZiNTM=">Sameer Mittal</a>
-        </p>
+          <p class="my-2">Developed by
+            <a target="_blank" href="https://www.linkedin.com/in/yash-raj-arora-432728239">Yash Raj Arora </a>|
+            <a target="_blank" href="https://www.linkedin.com/in/khushal-jangid-22793222b">Khushal Jangid </a>|
+            <a target="_blank" href="https://www.linkedin.com/in/riya-goyal-711994225">Riya </a>|
+            <a target="_blank" href="https://www.linkedin.com/in/archit-jain-378106231">Archit Jain </a>
+          </p>
+          <p class="my-2">Graphics Designed by
+            <a target="_blank" href="https://instagram.com/shubham_saharan4?igshid=ZDdkNTZiNTM=">Shubham Saharan </a>|
+            <a target="_blank" href="https://www.linkedin.com/in/dhruv-sharma-8b2403229">Dhruv Sharma </a>|
+            <a target="_blank" href="https://instagram.com/raginijoshi_?igshid=ZDdkNTZiNTM=">Ragini Joshi </a>|
+            <a target="_blank" href="https://instagram.com/sameer__mittal__?igshid=ZDdkNTZiNTM=">Sameer Mittal </a>
+          </p>
         </div>
       </div>
     </footer>
-    <script
-      src="https://code.jquery.com/jquery-3.6.4.min.js"
-      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
-      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="../js/activities.js"></script>
     <script src="../js/main.js"></script>
     <script>
@@ -1593,5 +2221,6 @@ utmost pleasure, we inviteyour participation to make Renaissance'23 more valuabl
       }
     </script>
     <script src="../js/modal.js"></script>
-  </body>
+</body>
+
 </html>
